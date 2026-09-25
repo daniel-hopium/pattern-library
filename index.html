@@ -985,6 +985,90 @@ dialog.sheet{margin:auto auto 0;width:min(560px,100%);max-width:100%;border-radi
 .du-tools{display:flex;flex-wrap:wrap;gap:4px}
 .du-tool{display:grid;justify-items:center;gap:2px;min-width:64px;padding:6px 4px;border:0;border-radius:var(--radius-sm);background:transparent;color:var(--ink);font:inherit;font-size:.75rem;cursor:pointer}
 .du-tool:hover{background:var(--surface-2)}
+/* Gut & Schlecht: weitere Paare */
+.du-pw{display:flex;gap:8px}
+.du-pw .input{flex:1;min-width:0}
+.du-w4{flex:0 0 4.5em}
+.du-iban{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.du-iban .input{padding:0 4px;text-align:center;font-family:var(--font-mono);font-size:.875rem}
+.du-tog-bad{min-height:44px;padding:0 16px;border:1.5px solid var(--line-strong);border-radius:var(--radius-ctl);background:var(--surface);color:var(--ink);font:inherit;font-weight:700;cursor:pointer}
+.du-tog-bad.on{background:var(--surface-2)}
+.du-state{font:600 .8125rem/1 var(--font-mono);color:var(--muted);min-width:2.2em}
+.du-kebab .ic{width:20px;height:20px}
+.du-spin-inline{position:static;display:inline-block;vertical-align:-3px;margin-right:6px}
+.du-errbox{display:grid;gap:8px;justify-items:start;padding:14px;border:1.5px solid var(--danger);border-radius:var(--radius-sm);background:var(--surface)}
+.du-errbox b{display:flex;gap:6px;align-items:center;color:var(--danger)}
+.du-errbox p{margin:0;font-size:.9375rem}
+.du-code{font:500 .75rem/1.2 var(--font-mono);color:var(--muted)}
+.du-like[aria-pressed="true"]{color:var(--danger);border-color:currentColor}
+.du-like[aria-pressed="true"] .ic{fill:currentColor}
+.du-empty-bad{margin:0;color:var(--muted);font-size:.875rem}
+.du-empty{display:grid;justify-items:center;text-align:center;gap:6px;padding:8px}
+.du-empty>.ic{width:36px;height:36px;color:var(--muted)}
+.du-paper{padding:14px;border-radius:var(--radius-sm);background:#FFFFFF;border:1px solid var(--line)}
+.du-paper p{margin:4px 0 0}
+.du-num{border-collapse:collapse;width:100%;font-size:.9375rem}
+.du-num td{padding:6px 8px;border-bottom:1px solid var(--line)}
+.du-num td:last-child{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.du-num-bad td:last-child{text-align:left;font-variant-numeric:proportional-nums}
+.du-prod{display:grid;gap:4px;justify-items:start}
+.du-prod p{margin:0}
+.du-prod-bad p{font-size:.9375rem}
+.du-prod-t{font-weight:700;font-size:1.0625rem}
+.du-prod-d{font-size:.875rem;color:var(--muted)}
+.du-prod p.du-prod-p{font:800 1.375rem/1.2 var(--font-display);margin:6px 0 8px}
+.du-prox-bad{display:grid;gap:14px}
+.du-prox-bad label{font-weight:700}
+.du-prox-good{gap:22px}
+.du-tabs{display:flex;gap:2px;border-bottom:1px solid var(--line);overflow-x:auto}
+.du-tabs button{min-height:44px;padding:0 10px;border:0;border-bottom:3px solid transparent;margin-bottom:-1px;background:transparent;color:var(--muted);font:inherit;font-weight:700;cursor:pointer;white-space:nowrap}
+.du-tabs-bad button{color:var(--ink);font-weight:400;border-bottom:0;margin:0}
+.du-tabs-bad button.on{color:color-mix(in srgb,var(--ink) 75%,var(--brand))}
+.du-tabs-good [aria-selected="true"]{color:var(--brand);border-bottom-color:var(--brand)}
+.du-panel{margin:12px 0 0}
+.du-ext{font-size:.8125rem}
+.du-acc-i{border:1px solid var(--line);border-radius:var(--radius-sm);margin-bottom:6px;background:var(--surface)}
+.du-acc-h{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 8px 6px 14px;font-weight:700}
+.du-chev{width:24px;height:24px;display:grid;place-items:center;padding:0;border:0;border-radius:4px;background:transparent;color:var(--ink);cursor:pointer;flex:none}
+.du-chev .ic{width:16px;height:16px}
+.du-chev[aria-expanded="true"] .ic{transform:rotate(180deg)}
+.du-acc-b{margin:0;padding:0 14px 12px;font-size:.9375rem}
+.du-car{display:grid;gap:8px}
+.du-slide{margin:0;min-height:6.5em;padding:12px 14px;border-radius:var(--radius-sm);background:var(--brand-soft)}
+.du-car-ctl{justify-content:center}
+.du-car-n{font:600 .875rem/1 var(--font-mono);min-width:3em;text-align:center}
+.du-search{display:flex;gap:8px}
+.du-search .input{flex:1;min-width:0}
+.du-res{margin:10px 0 0;font-size:.9375rem}
+.du-res p{margin:4px 0 0}
+.du-res ul{margin:6px 0 0;padding-left:1.2em}
+.du-article{position:relative;min-height:190px}
+.du-article>p{margin:0;font-size:.9375rem}
+.du-pop{position:absolute;inset:4px;display:grid;align-content:center;justify-items:center;gap:6px;text-align:center;padding:16px;border-radius:var(--radius-lg);background:var(--surface);box-shadow:var(--shadow);border:1px solid var(--line)}
+.du-pop p{margin:0;font-size:.9375rem}
+.du-pop-x{position:absolute;top:4px;right:6px;width:18px;height:18px;padding:0;border:0;background:transparent;color:var(--muted);font-size:13px;line-height:1;cursor:pointer}
+.du-inline-offer{margin-top:12px;padding:10px 12px;border-radius:var(--radius-sm);background:var(--surface-2);font-size:.9375rem}
+.du-sticky{height:210px;overflow:auto;position:relative;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--surface)}
+.du-sticky p{margin:10px 12px;font-size:.875rem}
+.du-sticky-h{position:sticky;top:0;padding:8px 12px;background:var(--surface-2);font-weight:700;font-size:.875rem;border-bottom:1px solid var(--line)}
+.du-sticky-big{padding:18px 12px;font-size:1rem}
+.du-sticky-f{position:sticky;bottom:0;display:flex;gap:8px;align-items:center;justify-content:space-between;padding:10px 12px;background:var(--toast-bg);color:var(--toast-ink);font-size:.875rem}
+.du-nav{display:flex;justify-content:space-between;align-items:center;gap:8px 14px;flex-wrap:wrap}
+.du-nav-list{list-style:none;margin:6px 0 0;padding:6px;border:1px solid var(--line);border-radius:var(--radius-sm);display:grid;gap:2px}
+.du-nav-list li{padding:8px}
+.du-nav-inline{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.9375rem}
+.du-known{display:inline-flex;align-items:center;gap:3px;margin-left:8px;font:700 .75rem/1 var(--font-body);color:var(--success);vertical-align:middle}
+.du-known .ic{width:15px;height:15px;stroke-width:2.6}
+/* Quiz: Einstellungen und Auswertung */
+.du-setup{display:grid;gap:18px;position:relative}
+.lesson .du-setup h2{margin:0}
+.du-know{display:grid;gap:6px;max-width:26rem;position:relative}
+.du-know p{margin:0;font-size:.9375rem;font-weight:700}
+.du-pool{margin:0;font-weight:700;color:var(--muted)}
+.du-quit{margin-left:auto}
+.du-end-card ul.du-areas{list-style:none;padding:0;max-width:24rem;gap:0}
+.du-areas li{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px solid var(--line)}
+.du-frac{font:600 .875rem/1.4 var(--font-mono);white-space:nowrap}
 /* Quiz */
 .du-quiz{margin-top:24px;position:relative}
 .du-qhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
@@ -3486,7 +3570,7 @@ const KOMPASS=[
 const K_BY_ID=Object.fromEntries(KOMPASS.map(k=>[k.id,k]));
 
 /* ---------- Gut & Schlecht ---------- */
-const D_GROUPS=['Formulare','Buttons & Klicks','Feedback','Text & Layout'];
+const D_GROUPS=['Formulare','Buttons & Klicks','Feedback','Text & Layout','Navigation & Inhalte'];
 const duValid=v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
 const duTime=()=>new Intl.DateTimeFormat('de-AT',{hour:'2-digit',minute:'2-digit'}).format(new Date());
 function duList(el,names,bad){
@@ -3507,6 +3591,7 @@ function duList(el,names,bad){
   draw();
 }
 
+const duLorem=()=>['Bestellungen bis 14 Uhr verlassen unser Lager am selben Werktag.','Die Zustellung dauert innerhalb Österreichs ein bis zwei Werktage, nach Deutschland zwei bis drei.','Ab 50 Euro Bestellwert ist der Versand kostenlos, darunter kostet er 4,90 Euro.','Rücksendungen sind innerhalb von 30 Tagen kostenlos. Das Etikett liegt dem Paket bei.','Die Erstattung geht auf das ursprüngliche Zahlungsmittel, meist innerhalb von fünf Werktagen.','Bei Fragen erreichst du den Kundendienst werktags von 8 bis 18 Uhr.'].map(t=>`<p>${t}</p>`).join('');
 /* Jedes Paar: bad/good sind HTML mit {p} als eindeutigem Präfix, init(el) macht sie lebendig */
 const DUELS=[
 {id:'radio-label',grp:0,topic:'Radio-Buttons',title:'Radio-Button: Der Text gehört zur Klickfläche',lesson:'forms',
@@ -3669,7 +3754,172 @@ const DUELS=[
  try:'Was macht das zweite und das dritte Symbol?',
  bad:`<div class="du-tools">${['star','tag','copy','file','more'].map((n,i)=>`<button type="button" class="icon-btn" aria-label="${['Favorit','Etikett','Duplizieren','Exportieren','Mehr'][i]}">${ic(n)}</button>`).join('')}</div>`,
  good:`<div class="du-tools">${['star','tag','copy','file','more'].map((n,i)=>`<button type="button" class="du-tool">${ic(n)}<span>${['Favorit','Etikett','Duplizieren','Exportieren','Mehr'][i]}</span></button>`).join('')}</div>`,
- why:'Nur wenige Icons sind wirklich eindeutig: Suche, Schließen, vielleicht Drucken. Alles andere ist ein Ratespiel („Mystery Meat Navigation“). Ein kurzes Label darunter kostet etwas Platz und spart jedes Rätseln – und Sprachsteuerung braucht einen sichtbaren Namen.'}
+ why:'Nur wenige Icons sind wirklich eindeutig: Suche, Schließen, vielleicht Drucken. Alles andere ist ein Ratespiel („Mystery Meat Navigation“). Ein kurzes Label darunter kostet etwas Platz und spart jedes Rätseln – und Sprachsteuerung braucht einen sichtbaren Namen.'},
+/* Formulare */
+{id:'password-toggle',grp:0,topic:'Passwortfeld',title:'Passwort anzeigen lassen',lesson:'forms',
+ try:'Tipp ein Passwort mit Sonderzeichen. Bist du sicher, dass es stimmt?',
+ bad:`<div class="field"><label for="{p}">Passwort</label><input class="input" id="{p}" type="password" autocomplete="new-password"></div>`,
+ good:`<div class="field"><label for="{p}">Passwort</label><div class="du-pw"><input class="input" id="{p}" type="password" autocomplete="new-password"><button type="button" class="btn btn-secondary du-sm" aria-pressed="false" aria-controls="{p}">Anzeigen</button></div></div>`,
+ init:{good(el){const i=$('input',el),b=$('button',el);b.addEventListener('click',()=>{const on=i.type==='password';i.type=on?'text':'password';b.setAttribute('aria-pressed',String(on))})}},
+ why:'Im Punktefeld sieht niemand seine Tippfehler – am Handy erst recht. Ein „Anzeigen“-Knopf spart Fehlversuche und macht das zweite Feld „Passwort wiederholen“ überflüssig.'},
+{id:'required-mark',grp:0,topic:'Pflichtfelder',title:'Sagen, was Pflicht ist – bevor jemand absendet',lesson:'forms',
+ try:'Füll nur den Namen aus und schick ab.',
+ bad:`<form class="du-stack" novalidate><p class="du-banner" hidden>Bitte alle Pflichtfelder ausfüllen.</p><div class="field"><label for="{p}-a">Name</label><input class="input" id="{p}-a"></div><div class="field"><label for="{p}-b">E-Mail</label><input class="input" id="{p}-b" type="email"></div><div class="field"><label for="{p}-c">Firma</label><input class="input" id="{p}-c"></div><div><button class="btn btn-primary">Absenden</button></div></form>`,
+ good:`<form class="du-stack" novalidate><p class="hint">Alle Felder sind Pflicht, außer sie sind als optional markiert.</p><div class="field"><label for="{p}-a">Name</label><input class="input" id="{p}-a" aria-describedby="{p}-ae"><p class="err" id="{p}-ae" hidden></p></div><div class="field"><label for="{p}-b">E-Mail</label><input class="input" id="{p}-b" type="email" aria-describedby="{p}-be"><p class="err" id="{p}-be" hidden></p></div><div class="field"><label for="{p}-c">Firma <span class="opt">optional</span></label><input class="input" id="{p}-c"></div><div><button class="btn btn-primary">Absenden</button></div></form>`,
+ init:{bad(el){$('form',el).addEventListener('submit',e=>{e.preventDefault();const ok=$$('input',el).every(i=>i.value.trim());$('.du-banner',el).hidden=ok;if(ok)toast({msg:'Abgeschickt.',type:'success',duration:2500})})},
+  good(el){duFieldErrors(el,['Bitte deinen Namen eingeben.','Bitte eine E-Mail-Adresse eingeben, etwa name@firma.at.'])}},
+ why:'Wer nicht weiß, was Pflicht ist, füllt vorsichtshalber alles aus – oder erfährt es erst beim Absenden. Sind die meisten Felder Pflicht, markiert man die Ausnahmen mit „optional“: kürzer und eindeutiger als ein Sternchen, das erst erklärt werden muss.'},
+{id:'date-input',grp:0,topic:'Geburtsdatum',title:'Bekannte Daten tippen, nicht durch Listen scrollen',lesson:'forms',
+ try:'Gib den 27. März 1990 ein.',
+ bad:`<fieldset class="du-fs"><legend>Geburtsdatum</legend><div class="du-row2"><select aria-label="Tag">${Array.from({length:31},(_,i)=>`<option>${i+1}</option>`).join('')}</select><select aria-label="Monat">${['Jänner','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'].map(m=>`<option>${m}</option>`).join('')}</select><select aria-label="Jahr">${Array.from({length:127},(_,i)=>`<option>${2026-i}</option>`).join('')}</select></div></fieldset>`,
+ good:`<fieldset class="du-fs"><legend>Geburtsdatum</legend><p class="hint" id="{p}-h" style="margin-bottom:8px">Zum Beispiel 27 3 1990</p><div class="du-row2"><div class="field du-w4"><label for="{p}-d">Tag</label><input class="input" id="{p}-d" inputmode="numeric" autocomplete="bday-day" aria-describedby="{p}-h"></div><div class="field du-w4"><label for="{p}-m">Monat</label><input class="input" id="{p}-m" inputmode="numeric" autocomplete="bday-month"></div><div class="field du-w6"><label for="{p}-y">Jahr</label><input class="input" id="{p}-y" inputmode="numeric" autocomplete="bday-year"></div></div></fieldset>`,
+ why:'Das eigene Geburtsdatum kennt man auswendig und tippt es in Sekunden – im Jahres-Dropdown scrollt man durch über hundert Einträge. Drei kurze Felder mit Beispiel sind am schnellsten. Für Termine in naher Zukunft ist dagegen ein Kalender gut.'},
+{id:'iban-split',grp:0,topic:'IBAN-Eingabe',title:'Ein Feld statt Kästchen, die von selbst weiterspringen',lesson:'forms',
+ try:'Kopier diese IBAN und füg sie in beide Varianten ein: AT61 1904 3002 3457 3201',
+ bad:`<fieldset class="du-fs"><legend>IBAN</legend><div class="du-iban">${[1,2,3,4,5].map(n=>`<input class="input" maxlength="4" aria-label="IBAN Block ${n}" autocomplete="off">`).join('')}</div></fieldset>`,
+ good:`<div class="field"><label for="{p}">IBAN</label><input class="input" id="{p}" autocomplete="off" spellcheck="false" aria-describedby="{p}-h"><p class="hint" id="{p}-h">Leerzeichen sind egal.</p></div>`,
+ init:{bad(el){const is=$$('input',el);is.forEach((inp,k)=>inp.addEventListener('input',()=>{if(inp.value.length>=4&&is[k+1])is[k+1].focus()}))},
+  good(el){const i=$('input',el);i.addEventListener('blur',()=>{i.value=i.value.replace(/\s+/g,'').toUpperCase().replace(/(.{4})/g,'$1 ').trim()})}},
+ why:'Aufgeteilte Kästchen brechen Einfügen und Autofill: Hier landen nur die ersten vier Zeichen. Wer sich vertippt und korrigiert, springt ungewollt weiter. Ein einziges Feld, das Leerzeichen erlaubt und danach sauber formatiert, ist robuster.'},
+{id:'number-type',grp:0,topic:'Postleitzahl',title:'type="number" nur für Mengen',lesson:'forms',
+ try:'Tipp 01067 ein und drück dann die Pfeiltaste nach oben.',
+ bad:`<div class="field"><label for="{p}">PLZ (Deutschland)</label><input class="input input-short" id="{p}" type="number"></div><p class="du-out" role="status"></p>`,
+ good:`<div class="field"><label for="{p}">PLZ (Deutschland)</label><input class="input input-short" id="{p}" type="text" inputmode="numeric" autocomplete="postal-code"></div><p class="du-out" role="status"></p>`,
+ init:{bad(el){const i=$('input',el),o=$('.du-out',el);i.addEventListener('input',()=>{o.textContent=i.value?`Gespeichert wird: ${i.valueAsNumber}`:''})},
+  good(el){const i=$('input',el),o=$('.du-out',el);i.addEventListener('input',()=>{o.textContent=i.value?`Gespeichert wird: ${i.value}`:''})}},
+ why:'<code>type="number"</code> ist für Mengen gedacht, nicht für Ziffernfolgen: Pfeiltasten und Mausrad verändern den Wert, führende Nullen verschwinden. Für PLZ, Kartennummern und Codes: <code>type="text"</code> mit <code>inputmode="numeric"</code> – die Zifferntastatur am Handy gibt es trotzdem.'},
+/* Buttons & Klicks */
+{id:'primary-count',grp:1,topic:'Aktionsleiste',title:'Nur ein Primary Button pro Bereich',lesson:'buttons',
+ try:'Welche Aktion ist die wichtigste? Entscheide in einer Sekunde.',
+ bad:`<div class="btn-row"><button type="button" class="btn btn-primary">Vorschau</button><button type="button" class="btn btn-primary">Duplizieren</button><button type="button" class="btn btn-primary">Speichern</button><button type="button" class="btn btn-primary">Teilen</button></div>`,
+ good:`<div class="btn-row"><button type="button" class="btn btn-primary">Speichern</button><button type="button" class="btn btn-secondary">Vorschau</button><button type="button" class="btn btn-ghost">Duplizieren</button><button type="button" class="btn btn-ghost">Teilen</button></div>`,
+ why:'Wenn alles laut ist, ist nichts wichtig. Ein Primary Button zeigt den Hauptweg, der Rest tritt als Secondary oder Ghost zurück und bleibt trotzdem erreichbar.'},
+{id:'toggle-state',grp:1,topic:'Umschalter',title:'Ein Schalter zeigt seinen Zustand eindeutig',lesson:'buttons',
+ try:'Klick beide zweimal. Ist die Einstellung jetzt an oder aus?',
+ bad:`<button type="button" class="du-tog-bad">Benachrichtigungen</button>`,
+ good:`<button type="button" class="switch" role="switch" aria-checked="false"><span class="track" aria-hidden="true"><span class="thumb"></span></span><span>Benachrichtigungen</span><span class="du-state" aria-hidden="true">Aus</span></button>`,
+ init:{bad(el){const b=$('button',el);b.addEventListener('click',()=>b.classList.toggle('on'))},
+  good(el){const b=$('button',el);b.addEventListener('toggle',e=>{$('.du-state',el).textContent=e.detail?'An':'Aus'})}},
+ why:'Ein Button, der nur leicht die Farbe wechselt, lässt offen: Zeigt er den Zustand oder das, was beim Klick passiert? Ein Switch mit „An/Aus“ und <code>role="switch"</code> macht den Zustand für Augen und Screenreader eindeutig.'},
+{id:'context-only',grp:1,topic:'Datei-Aktionen',title:'Aktionen nicht nur im Rechtsklick verstecken',lesson:'gestures',
+ try:'Lösche „Notizen.txt“. Wie kommst du an die Aktion?',
+ bad:`<ul class="du-rows du-ctx-list">${['Notizen.txt','Budget.xlsx'].map(n=>`<li><span>${n}</span><span class="du-ctx" hidden><button type="button" class="btn btn-danger du-sm">Löschen</button></span></li>`).join('')}</ul>`,
+ good:`<ul class="du-rows du-ctx-list">${['Notizen.txt','Budget.xlsx'].map(n=>`<li><span>${n}</span><span class="du-li-act"><span class="du-ctx" hidden><button type="button" class="btn btn-danger du-sm">Löschen</button></span><button type="button" class="icon-btn du-kebab" aria-expanded="false" aria-label="Aktionen für ${n}">${ic('more')}</button></span></li>`).join('')}</ul>`,
+ init:{bad(el){el.addEventListener('contextmenu',e=>{const li=e.target.closest('li');if(!li)return;e.preventDefault();$('.du-ctx',li).hidden=false});
+   el.addEventListener('click',e=>{if(e.target.closest('.btn-danger')){e.target.closest('li').remove();toast({msg:'Gelöscht – aber nur, wer den Rechtsklick kannte.',duration:3000})}})},
+  good(el){el.addEventListener('click',e=>{const m=e.target.closest('.du-kebab');if(m){const c=$('.du-ctx',m.parentElement),open=c.hidden;c.hidden=!open;m.setAttribute('aria-expanded',String(open));if(open)$('button',c).focus();return}
+   if(e.target.closest('.btn-danger')){e.target.closest('li').remove();toast({msg:'Gelöscht.',duration:2500})}})}},
+ why:'Rechtsklick und langes Drücken sind unsichtbar: Niemand weiß, dass es dort etwas gibt, und per Tastatur oder Screenreader kommt man gar nicht hin. Ein sichtbarer „Mehr“-Button öffnet dasselbe Menü für alle – ein Kontextmenü darf zusätzlich bleiben.'},
+{id:'default-focus',grp:1,topic:'Löschdialog',title:'Im Löschdialog liegt der Fokus auf der sicheren Option',lesson:'dialog',
+ try:'Öffne den Dialog und drück sofort Enter.',
+ bad:`<div class="du-dlgwrap"><button type="button" class="btn btn-secondary du-open">Datei löschen …</button></div>`,
+ good:`<div class="du-dlgwrap"><button type="button" class="btn btn-secondary du-open">Datei löschen …</button></div>`,
+ init:{bad(el){duDlg(el,false)},good(el){duDlg(el,true)}},
+ why:'Der Fokus im Dialog bestimmt, was Enter auslöst. Wer schnell bestätigt, löscht sonst aus Versehen. Bei zerstörerischen Aktionen gehört der Fokus auf „Abbrechen“ oder auf den Dialog selbst – und die gefährliche Taste sieht auch gefährlich aus.'},
+/* Feedback */
+{id:'progress-steps',grp:2,topic:'Lange Wartezeit',title:'Lange Vorgänge zeigen Fortschritt statt Spinner',lesson:'loading',
+ try:'Starte in beiden den Export und warte.',
+ bad:`<div class="du-stack"><div><button type="button" class="btn btn-primary">Export starten</button></div><p class="du-out" role="status"></p></div>`,
+ good:`<div class="du-stack"><div class="btn-row"><button type="button" class="btn btn-primary">Export starten</button><button type="button" class="btn btn-ghost du-cancel" hidden>Abbrechen</button></div><div class="bar" role="progressbar" aria-label="Export" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" hidden><span></span></div><p class="du-out" role="status"></p></div>`,
+ init:{bad(el){const o=$('.du-out',el);$('button',el).addEventListener('click',()=>{o.innerHTML='<span class="du-spin du-spin-inline"></span> Bitte warten …';setTimeout(()=>{o.textContent='Fertig.'},6000)})},
+  good(el){duProgress(el)}},
+ why:'Ab etwa zehn Sekunden reicht ein Spinner nicht mehr: Man weiß nicht, ob es hängt. Ein Fortschrittsbalken mit benannten Schritten zeigt, dass etwas passiert und wie lange es noch dauert – und „Abbrechen“ gibt die Kontrolle zurück.'},
+{id:'error-tone',grp:2,topic:'Fehlermeldung',title:'Fehlermeldungen sagen, was jetzt zu tun ist',lesson:'errors-offline',
+ try:'Stell dir vor, das passiert dir. Weißt du, was du jetzt tun sollst?',
+ bad:`<div class="du-errbox"><b>Error 0x80070057</b><p>Invalid operation. Upload failed (code 413).</p><button type="button" class="btn btn-secondary du-sm">OK</button></div>`,
+ good:`<div class="du-errbox"><b>${ic('alert')} Die Datei ist zu groß</b><p>„Urlaub.mov“ hat 240 MB, erlaubt sind 100 MB. Kürze das Video oder teile es als Link.</p><div class="btn-row"><button type="button" class="btn btn-primary du-sm">Andere Datei wählen</button><button type="button" class="btn btn-ghost du-sm">Wie kürze ich ein Video?</button></div><p class="du-code">Code 413</p></div>`,
+ why:'Eine gute Fehlermeldung sagt, was passiert ist, warum – und was man jetzt tun kann, in der Sprache der Nutzer. Fehlercodes helfen dem Support, nicht dem Nutzer; sie dürfen klein darunter stehen.'},
+{id:'optimistic',grp:2,topic:'Merken-Button',title:'Sofort reagieren, im Hintergrund speichern',lesson:'performance',
+ try:'Klick auf „Merken“ – und gleich noch einmal, wenn nichts passiert.',
+ bad:`<button type="button" class="btn btn-secondary du-like" aria-pressed="false">${ic('heart')}<span>Merken</span></button>`,
+ good:`<button type="button" class="btn btn-secondary du-like" aria-pressed="false">${ic('heart')}<span>Merken</span></button>`,
+ init:{bad(el){const b=$('button',el);b.addEventListener('click',()=>{setTimeout(()=>{const on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',String(on));$('span',b).textContent=on?'Gemerkt':'Merken'},1500)})},
+  good(el){const b=$('button',el);b.addEventListener('click',()=>{const on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',String(on));$('span',b).textContent=on?'Gemerkt':'Merken'})}},
+ why:'Bei Aktionen, die fast immer klappen, zeigt man das Ergebnis sofort und speichert im Hintergrund – „Optimistic UI“. Schlägt es doch fehl, wird zurückgesetzt und ein Hinweis gezeigt. Wer auf den Server wartet, klickt noch einmal und macht die Aktion wieder rückgängig.'},
+{id:'empty-state',grp:2,topic:'Leere Liste',title:'Ein leerer Zustand zeigt den ersten Schritt',lesson:'empty-states',
+ try:'Du bist neu in der App. Was machst du jetzt?',
+ bad:`<p class="du-empty-bad">Keine Daten.</p>`,
+ good:`<div class="du-empty">${ic('inbox')}<p class="le-title">Noch keine Projekte</p><p class="hint">Ein Projekt sammelt Aufgaben und Dateien an einem Ort.</p><button type="button" class="btn btn-primary du-sm">Erstes Projekt anlegen</button></div>`,
+ init:{good(el){$('button',el).addEventListener('click',()=>toast({msg:'Projekt angelegt.',type:'success',duration:2500}))}},
+ why:'Ein leerer Zustand ist oft der erste Eindruck. „Keine Daten“ lässt offen, ob etwas kaputt ist. Besser: erklären, was hier erscheinen wird, und den ersten Schritt gleich anbieten.'},
+/* Text & Layout */
+{id:'contrast-low',grp:3,topic:'Grauer Text',title:'Hellgrau ist keine Textfarbe',lesson:'contrast',
+ try:'Lies beide Absätze – und stell dir vor, du sitzt in der Sonne.',
+ bad:`<div class="du-paper" style="color:#B0B0B0"><b>Lieferung</b><p>Voraussichtlich Mittwoch, 12. März. Kostenlose Rücksendung innerhalb von 30 Tagen.</p></div>`,
+ good:`<div class="du-paper" style="color:#595959"><b style="color:#1B1B1B">Lieferung</b><p>Voraussichtlich Mittwoch, 12. März. Kostenlose Rücksendung innerhalb von 30 Tagen.</p></div>`,
+ why:'Hellgrau wirkt elegant, ist aber für viele unlesbar – bei Sonnenlicht, auf billigen Displays, mit nachlassender Sehkraft. Text braucht mindestens 4,5 : 1. <code>#B0B0B0</code> auf Weiß schafft nur etwa 2,2 : 1, <code>#595959</code> rund 7 : 1.'},
+{id:'numbers-align',grp:3,topic:'Zahlenspalte',title:'Zahlen rechtsbündig und mit Tabellenziffern',lesson:'tables',
+ try:'Welcher Betrag ist der größte? Wie schnell findest du ihn?',
+ bad:`<table class="du-num du-num-bad"><caption class="sr-only">Ausgaben</caption><tbody><tr><td>Miete</td><td>1.234,50 €</td></tr><tr><td>Strom</td><td>89,00 €</td></tr><tr><td>Urlaub</td><td>12.450,00 €</td></tr><tr><td>Streaming</td><td>5,99 €</td></tr></tbody></table>`,
+ good:`<table class="du-num"><caption class="sr-only">Ausgaben</caption><tbody><tr><td>Miete</td><td>1.234,50 €</td></tr><tr><td>Strom</td><td>89,00 €</td></tr><tr><td>Urlaub</td><td>12.450,00 €</td></tr><tr><td>Streaming</td><td>5,99 €</td></tr></tbody></table>`,
+ why:'Zahlen vergleicht man Stelle für Stelle. Rechtsbündig und mit Tabellenziffern (<code>font-variant-numeric: tabular-nums</code>) stehen Einer unter Einern – der größte Betrag springt ins Auge, ohne dass man liest.'},
+{id:'hierarchy',grp:3,topic:'Produktkarte',title:'Visuelle Hierarchie: das Wichtige zuerst',lesson:'typography',
+ try:'Was kostet der Schuh? Wie lange hast du gesucht?',
+ bad:`<div class="du-prod du-prod-bad"><p>Wanderschuh Alpin</p><p>Wasserdicht, Größen 36 bis 47, Vibram-Sohle</p><p>149,00 €</p><p><button type="button" class="linkbtn">In den Warenkorb</button></p></div>`,
+ good:`<div class="du-prod"><p class="du-prod-t">Wanderschuh Alpin</p><p class="du-prod-d">Wasserdicht, Größen 36 bis 47, Vibram-Sohle</p><p class="du-prod-p">149,00 €</p><button type="button" class="btn btn-primary du-sm">In den Warenkorb</button></div>`,
+ why:'Ohne Hierarchie muss man alles lesen, um das Wichtige zu finden. Größe, Gewicht und Farbe ordnen die Karte: Was ist es, was kostet es, was kann ich tun – in einer Sekunde erfasst.'},
+{id:'proximity',grp:3,topic:'Formularabstände',title:'Was zusammengehört, steht zusammen',lesson:'spacing',
+ try:'Zu welchem Feld gehört „Telefon“ – ohne nachzudenken?',
+ bad:`<div class="du-prox-bad"><label for="{p}-1">Name</label><input class="input" id="{p}-1"><label for="{p}-2">Telefon</label><input class="input" id="{p}-2"><label for="{p}-3">E-Mail</label><input class="input" id="{p}-3"></div>`,
+ good:`<div class="du-stack du-prox-good"><div class="field"><label for="{p}-1">Name</label><input class="input" id="{p}-1"></div><div class="field"><label for="{p}-2">Telefon</label><input class="input" id="{p}-2"></div><div class="field"><label for="{p}-3">E-Mail</label><input class="input" id="{p}-3"></div></div>`,
+ why:'Was nah beieinandersteht, gehört zusammen – das Gesetz der Nähe. Steht ein Label gleich weit von zwei Feldern entfernt, muss man raten. Kleiner Abstand innerhalb der Gruppe, großer zwischen den Gruppen.'},
+/* Navigation & Inhalte */
+{id:'active-nav',grp:4,topic:'Tab-Leiste',title:'Der aktive Tab ist unübersehbar',lesson:'navigation',
+ try:'Klick auf „Rechnungen“, schau kurz weg und sag dann, welcher Tab aktiv ist.',
+ bad:`<div class="du-tabs du-tabs-bad">${['Übersicht','Rechnungen','Einstellungen'].map((t,i)=>`<button type="button"${i?'':' class="on"'}>${t}</button>`).join('')}</div><p class="du-panel">Inhalt: Übersicht</p>`,
+ good:`<div class="du-tabs du-tabs-good" role="tablist" aria-label="Bereiche">${['Übersicht','Rechnungen','Einstellungen'].map((t,i)=>`<button type="button" role="tab" id="{p}-t${i}" aria-controls="{p}-panel" aria-selected="${i?'false':'true'}" tabindex="${i?'-1':'0'}">${t}</button>`).join('')}</div><p class="du-panel" id="{p}-panel" role="tabpanel" aria-labelledby="{p}-t0">Inhalt: Übersicht</p>`,
+ init:{bad(el){el.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;$$('button',el).forEach(x=>x.classList.toggle('on',x===b));$('.du-panel',el).textContent='Inhalt: '+b.textContent})},
+  good(el){duTabs(el)}},
+ why:'Man muss jederzeit sehen, wo man ist. Der aktive Tab braucht ein deutliches Signal – Farbe, Unterstrich und Gewicht zusammen, nicht nur ein Hauch Farbe – und für Screenreader <code>aria-selected</code>. Pfeiltasten wechseln zwischen den Tabs.'},
+{id:'new-tab',grp:4,topic:'Externer Link',title:'Neue Tabs ankündigen – oder vermeiden',lesson:'navigation',
+ try:'Klick auf beide Links. Hättest du gewusst, was passiert?',
+ bad:`<p style="margin:0">Mehr dazu in unserer <a href="https://example.org" target="_blank">Hilfe</a>.</p>`,
+ good:`<p style="margin:0">Mehr dazu im <a href="https://example.org" target="_blank">Hilfe-Center <span class="du-ext">(neuer Tab)</span></a>.</p>`,
+ init:{bad(el){$('a',el).addEventListener('click',()=>toast({msg:'Unangekündigt neuer Tab – der Zurück-Button führt jetzt ins Leere.',duration:3500}))},
+  good(el){$('a',el).addEventListener('click',()=>toast({msg:'Neuer Tab – aber du wusstest es vorher.',duration:3000}))}},
+ why:'Ein unerwarteter neuer Tab bricht den Zurück-Button und verwirrt besonders am Handy und mit Screenreader. Am besten gar nicht in neuem Tab öffnen – und wenn doch, vorher im Linktext sagen.'},
+{id:'accordion-header',grp:4,topic:'Accordion',title:'Die ganze Kopfzeile klappt auf, nicht nur der Pfeil',lesson:'touch-targets',
+ try:'Klapp „Wie kündige ich?“ auf – klick dabei auf den Text.',
+ bad:`<div class="du-acc-bad">${['Wie kündige ich?','Kann ich pausieren?'].map(q=>`<div class="du-acc-i"><div class="du-acc-h"><span>${q}</span><button type="button" class="du-chev" aria-expanded="false" aria-label="${q} aufklappen">${ic('down')}</button></div><p class="du-acc-b" hidden>Unter Konto → Abo, jederzeit zum Monatsende.</p></div>`).join('')}</div>`,
+ good:`<div class="du-stack" style="gap:6px">${['Wie kündige ich?','Kann ich pausieren?'].map(q=>`<details class="acc"><summary>${q}</summary><p class="du-acc-b">Unter Konto → Abo, jederzeit zum Monatsende.</p></details>`).join('')}</div>`,
+ init:{bad(el){el.addEventListener('click',e=>{const b=e.target.closest('.du-chev');if(!b)return;const p=b.closest('.du-acc-i').querySelector('.du-acc-b'),open=p.hidden;p.hidden=!open;b.setAttribute('aria-expanded',String(open))})}},
+ why:'Die ganze Kopfzeile ist das Klickziel, nicht nur der kleine Pfeil. Natives <code>&lt;details&gt;</code> und <code>&lt;summary&gt;</code> bringt das mit – samt Tastaturbedienung und dem Zustand für Screenreader.'},
+{id:'carousel',grp:4,topic:'Karussell',title:'Karussells wechseln nicht von selbst',lesson:'motion',
+ try:'Lies den Text auf Folie 2 in Ruhe zu Ende.',
+ bad:`<div class="du-car"><p class="du-slide"></p></div>`,
+ good:`<div class="du-car"><p class="du-slide" aria-live="polite"></p><div class="btn-row du-car-ctl"><button type="button" class="icon-btn du-prev" aria-label="Vorige Folie">${ic('back')}</button><span class="du-car-n"></span><button type="button" class="icon-btn du-next" aria-label="Nächste Folie">${ic('fwd')}</button></div></div>`,
+ init:{bad(el){duCarousel(el,true)},good(el){duCarousel(el,false)}},
+ why:'Automatisch wechselnde Karussells nehmen einem den Text weg, bevor man fertig ist – ohne Pause-Knopf verletzen sie <a href="#wcag-kriterien/2.2.2">WCAG 2.2.2</a>. Und kaum jemand sieht Folie 3: Wichtiges gehört nicht dorthin.'},
+{id:'no-results',grp:4,topic:'Suche ohne Treffer',title:'Keine Sackgasse bei null Treffern',lesson:'search-filter',
+ try:'Such nach dem Tippfehler, der schon im Feld steht.',
+ bad:`<form class="du-search"><input class="input" value="Rechnug" aria-label="Suche"><button class="btn btn-secondary">Suchen</button></form><p class="du-res" role="status"></p>`,
+ good:`<form class="du-search"><input class="input" value="Rechnug" aria-label="Suche"><button class="btn btn-secondary">Suchen</button></form><div class="du-res" role="status"></div>`,
+ init:{bad(el){$('form',el).addEventListener('submit',e=>{e.preventDefault();$('.du-res',el).textContent='0 Ergebnisse.'})},
+  good(el){duSearch(el)}},
+ why:'Eine leere Trefferliste ist eine Sackgasse. Ein Tippfehler-Vorschlag, der Hinweis auf aktive Filter oder beliebte Suchen führen weiter – und die Anfrage bleibt im Feld, damit man sie korrigieren kann.'},
+{id:'modal-on-load',grp:4,topic:'Newsletter-Angebot',title:'Kein Popup, bevor man etwas gelesen hat',lesson:'dark-patterns',
+ try:'Lies den Absatz. Wie schnell findest du das Schließen-×?',
+ bad:`<div class="du-article"><p>Die Dachstein-Südwand ist über 800 Meter hoch. Der einfachste Zustieg führt über die Südwandhütte, von dort sind es zwei Stunden bis zum Einstieg.</p><div class="du-pop" hidden><button type="button" class="du-pop-x" aria-label="Schließen">×</button><b>Nichts mehr verpassen!</b><p>Jetzt Newsletter abonnieren und 10 % sparen.</p><button type="button" class="btn btn-primary du-sm">Jetzt abonnieren!</button></div></div><button type="button" class="linkbtn du-replay">Nochmal</button>`,
+ good:`<div class="du-article"><p>Die Dachstein-Südwand ist über 800 Meter hoch. Der einfachste Zustieg führt über die Südwandhütte, von dort sind es zwei Stunden bis zum Einstieg.</p><div class="du-inline-offer"><b>Mehr Touren?</b> Einmal im Monat per E-Mail. <button type="button" class="linkbtn">Newsletter abonnieren</button></div></div>`,
+ init:{bad(el){const pop=$('.du-pop',el);let t;const play=()=>{pop.hidden=true;clearTimeout(t);t=setTimeout(()=>{if(el.isConnected)pop.hidden=false},1200)};
+   el.addEventListener('click',e=>{if(e.target.closest('.du-pop-x'))pop.hidden=true;if(e.target.closest('.du-replay'))play()});play()}},
+ why:'Ein Popup beim Betreten unterbricht, bevor man weiß, worum es geht – und das Schließen-× ist oft absichtlich winzig. Ein Angebot nach dem Inhalt, als ruhiger Hinweis, wirkt besser und ärgert niemanden.'},
+{id:'link-text',grp:4,topic:'Linktexte',title:'Linktexte sagen, wohin es geht',lesson:'navigation',
+ try:'Überflieg nur die Links. Wohin führen sie?',
+ bad:`<p style="margin:0">Unsere Preise findest du <a href="#">hier</a>. Die AGB stehen <a href="#">hier</a>. Fragen? Klick <a href="#">hier</a>.</p>`,
+ good:`<p style="margin:0">Sieh dir die <a href="#">Preise für 2026</a> an oder lies die <a href="#">Geschäftsbedingungen</a>. Bei Fragen hilft der <a href="#">Kundendienst</a>.</p>`,
+ why:'Screenreader-Nutzer springen oft von Link zu Link oder lassen sich eine Linkliste geben – dreimal „hier“ sagt dann nichts. Auch beim Überfliegen landet der Blick zuerst auf Links. Der Linktext selbst soll sagen, wohin es geht (<a href="#wcag-kriterien/2.4.4">WCAG 2.4.4</a>).'},
+{id:'sticky-header',grp:4,topic:'Kopfleiste',title:'Fixierte Leisten klein halten',lesson:'focus',
+ try:'Scroll im Kasten. Wie viel vom Text siehst du gleichzeitig?',
+ bad:`<div class="du-sticky" tabindex="0" role="region" aria-label="Beispielseite zum Scrollen"><div class="du-sticky-h du-sticky-big">Logo · Suche · Menü · Konto<br><small>Kostenloser Versand ab 50 €!</small></div>${duLorem()}<div class="du-sticky-f">Wir verwenden Cookies. <button type="button" class="btn btn-primary du-sm">OK</button></div></div>`,
+ good:`<div class="du-sticky" tabindex="0" role="region" aria-label="Beispielseite zum Scrollen"><div class="du-sticky-h">Logo · Menü</div>${duLorem()}</div>`,
+ why:'Jeder Pixel, der beim Scrollen stehen bleibt, fehlt dem Inhalt – am Handy im Querformat bleibt manchmal fast nichts übrig. Fixierte Leisten verdecken außerdem fokussierte Elemente (<a href="#wcag-kriterien/2.4.11">WCAG 2.4.11</a>). Kopfleisten kompakt halten oder beim Runterscrollen einklappen.'},
+{id:'hamburger',grp:4,topic:'Hauptmenü',title:'Auf breiten Bildschirmen: Menü zeigen, nicht verstecken',lesson:'navigation',
+ try:'Wie viele Bereiche hat diese Seite? Finde „Preise“.',
+ bad:`<div class="du-nav"><b>Firma</b><button type="button" class="icon-btn du-burger" aria-expanded="false" aria-label="Menü">${ic('menu')}</button></div><ul class="du-nav-list" hidden><li>Produkte</li><li>Preise</li><li>Kunden</li><li>Kontakt</li></ul>`,
+ good:`<div class="du-nav"><b>Firma</b><ul class="du-nav-inline"><li><a href="#">Produkte</a></li><li><a href="#">Preise</a></li><li><a href="#">Kunden</a></li><li><a href="#">Kontakt</a></li></ul></div>`,
+ init:{bad(el){const b=$('.du-burger',el),l=$('.du-nav-list',el);b.addEventListener('click',()=>{const open=l.hidden;l.hidden=!open;b.setAttribute('aria-expanded',String(open))})}},
+ why:'Was man nicht sieht, nutzt man seltener – versteckte Navigation wird deutlich weniger verwendet. Auf breiten Bildschirmen ist Platz für sichtbare Menüpunkte; das Hamburger-Menü ist eine Notlösung für schmale.'}
 ];
 function duChips(el,good){
   const box=$('.du-chips',el);let cities=['Wien','Graz','Linz','Salzburg'];
@@ -3689,9 +3939,85 @@ function duShift(el){
   });
   play();
 }
+function duFieldErrors(el,msgs){
+  const is=$$('input',el);
+  $('form',el).addEventListener('submit',e=>{
+    e.preventDefault();let first=null;
+    msgs.forEach((m,k)=>{
+      const i=is[k],err=$('#'+i.getAttribute('aria-describedby'),el),bad=!i.value.trim()||(i.type==='email'&&!duValid(i.value));
+      i.setAttribute('aria-invalid',String(bad));err.hidden=!bad;err.innerHTML=bad?`${ic('alert')}<span>${m}</span>`:'';
+      if(bad&&!first)first=i;
+    });
+    if(first)first.focus();else toast({msg:'Abgeschickt.',type:'success',duration:2500});
+  });
+}
+let duDlgN=0;
+function duDlg(el,safe){
+  const n=++duDlgN,open=$('.du-open',el),out=document.createElement('p'),d=document.createElement('dialog');
+  out.className='du-out';out.setAttribute('role','status');
+  d.setAttribute('aria-labelledby','du-dlg'+n);
+  d.innerHTML=`<div class="dlg-in"><h3 id="du-dlg${n}">„Bericht.pdf“ löschen?</h3><p>Die Datei ist danach für alle weg.</p><div class="btn-row dlg-actions"><button type="button" class="btn btn-secondary" data-v="0">Abbrechen</button><button type="button" class="btn ${safe?'btn-danger':'btn-primary'}" data-v="1">Löschen</button></div></div>`;
+  el.append(d,out);
+  open.addEventListener('click',()=>{out.textContent='';d.returnValue='';d.showModal();$(`[data-v="${safe?0:1}"]`,d).focus()});
+  const done=v=>{out.textContent=v==='1'?'Gelöscht. Weg ist weg.':'Abgebrochen – nichts passiert.';open.focus()};
+  d.addEventListener('click',e=>{const b=e.target.closest('[data-v]');if(b){d.close(b.dataset.v);done(b.dataset.v)}});
+  d.addEventListener('close',()=>{if(d.returnValue==='')done('0')});
+}
+function duProgress(el){
+  const btn=$('.btn-primary',el),cancel=$('.du-cancel',el),bar=$('.bar',el),out=$('.du-out',el),steps=['Daten sammeln','Datei erzeugen','Komprimieren'];
+  let t=null,p=0,step=-1;
+  const stop=msg=>{clearInterval(t);t=null;cancel.hidden=true;btn.removeAttribute('aria-disabled');if(msg)out.textContent=msg};
+  const tick=()=>{
+    if(!el.isConnected)return stop();
+    p=Math.min(100,p+10);bar.style.setProperty('--p',p+'%');bar.setAttribute('aria-valuenow',p);
+    if(p>=100)return stop('Fertig: export.csv ist bereit.');
+    const s=Math.min(2,Math.floor(p/34));
+    if(s!==step){step=s;out.textContent=`Schritt ${s+1} von 3: ${steps[s]} …`}
+  };
+  btn.addEventListener('click',()=>{if(t)return;p=0;step=-1;bar.hidden=false;cancel.hidden=false;btn.setAttribute('aria-disabled','true');tick();t=setInterval(tick,600)});
+  cancel.addEventListener('click',()=>{stop('Abgebrochen.');bar.hidden=true;btn.focus()});
+}
+function duTabs(el){
+  const tabs=$$('[role="tab"]',el),panel=$('[role="tabpanel"]',el);
+  const sel=(t,focus)=>{tabs.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',String(on));x.tabIndex=on?0:-1});panel.setAttribute('aria-labelledby',t.id);panel.textContent='Inhalt: '+t.textContent;if(focus)t.focus()};
+  el.addEventListener('click',e=>{const t=e.target.closest('[role="tab"]');if(t)sel(t)});
+  el.addEventListener('keydown',e=>{
+    const k=tabs.indexOf(e.target);if(k<0)return;
+    const n={ArrowRight:k+1,ArrowLeft:k-1,Home:0,End:tabs.length-1}[e.key];if(n===undefined)return;
+    e.preventDefault();sel(tabs[(n+tabs.length)%tabs.length],true);
+  });
+}
+const DU_SLIDES=['Folie 1: Sommerschlussverkauf – bis zu 40 % auf Wanderschuhe.','Folie 2: Neu im Sortiment sind Regenjacken aus recyceltem Material. Sie halten 20.000 mm Wassersäule, sind atmungsaktiv und lassen sich in die eigene Brusttasche packen.','Folie 3: Kostenlose Rücksendung innerhalb von 30 Tagen.'];
+function duCarousel(el,auto){
+  const s=$('.du-slide',el),n=$('.du-car-n',el);let k=0,t;
+  const show=()=>{s.textContent=DU_SLIDES[k];if(n)n.textContent=`${k+1} / ${DU_SLIDES.length}`};
+  show();
+  if(auto){t=setInterval(()=>{if(!el.isConnected)return clearInterval(t);k=(k+1)%DU_SLIDES.length;show()},2500);return}
+  el.addEventListener('click',e=>{
+    if(e.target.closest('.du-prev'))k=(k+DU_SLIDES.length-1)%DU_SLIDES.length;
+    else if(e.target.closest('.du-next'))k=(k+1)%DU_SLIDES.length;
+    else return;
+    show();
+  });
+}
+function duSearch(el){
+  const i=$('input',el),r=$('.du-res',el);
+  const run=()=>{
+    const q=i.value.trim();
+    r.innerHTML=/^rechnung/i.test(q)
+      ?`<p class="du-lead">3 Treffer für „${esc(q)}“</p><ul><li>Rechnung März 2026</li><li>Rechnung Februar 2026</li><li>Rechnungsadresse ändern</li></ul>`
+      :`<p class="du-lead">Keine Treffer für „${esc(q)}“.</p><p>Meintest du <button type="button" class="linkbtn du-fix">Rechnung</button>?</p><p class="hint">Beliebt: Kündigung, Adresse ändern, Zahlungsarten.</p>`;
+  };
+  $('form',el).addEventListener('submit',e=>{e.preventDefault();run()});
+  r.addEventListener('click',e=>{if(e.target.closest('.du-fix')){i.value='Rechnung';run();i.focus()}});
+}
 const D_BY=Object.fromEntries(DUELS.map(d=>[d.id,d]));
 const duPane=(d,good,label,prefix)=>`<figure class="du-pane ${label?'':good?'du-good':'du-bad'}"><figcaption class="du-cap">${label??`${ic(good?'ok':'xc')}${good?'Gut':'Schlecht'}`}</figcaption><div class="du-show" data-side="${good?'good':'bad'}">${(good?d.good:d.bad).replaceAll('{p}',prefix)}</div></figure>`;
-const duInit=(d,root)=>$$('.du-show',root).forEach(el=>d.init?.[el.dataset.side]?.(el));
+const duInit=(d,root)=>$$('.du-show',root).forEach(el=>{el.addEventListener('click',e=>{if(e.target.closest('a'))e.preventDefault()});d.init?.[el.dataset.side]?.(el)});
+/* Lernstand pro Paar: [richtig, falsch, zuletzt richtig 0/1] */
+const duStats=()=>{const s=store.get('duell-stats',{});return s&&typeof s==='object'?s:{}};
+const duKnown=id=>duStats()[id]?.[2]===1;
+function duRecord(id,right){const s=duStats(),r=s[id]||[0,0,0];r[right?0:1]++;r[2]=right?1:0;s[id]=r;store.set('duell-stats',s)}
 
 function duGalleryHTML(){
   return `<article class="lesson" aria-labelledby="lesson-title">
@@ -3699,9 +4025,10 @@ function duGalleryHTML(){
   <h1 id="lesson-title" tabindex="-1">${DUELS.length} UI-Details im direkten Vergleich</h1>
   <p class="rule">Kleinigkeiten, die niemand bemerkt, wenn sie stimmen – und alle, wenn nicht. Jedes Paar ist live: links die schlechte, rechts die gute Variante. Probier beide aus, dann merkst du den Unterschied in der Hand statt im Kopf.</p>
   <p style="margin-top:16px"><a class="btn btn-primary" href="#details-quiz">${ic('star')} Lieber raten? Zum Quiz</a></p>
+  <p class="hint">Im Quiz zuletzt richtig erkannt: ${DUELS.filter(d=>duKnown(d.id)).length} von ${DUELS.length} Paaren.</p>
   <form class="sf-filters du-filter" id="du-filter" aria-label="Details filtern" data-anno="Filter (form)">${kSeg('du','Bereich',[['','Alle'],...D_GROUPS.map((g,i)=>[String(i),g])])}</form>
   ${D_GROUPS.map((g,gi)=>`<section class="du-sec" data-grp="${gi}" aria-labelledby="du-g${gi}"><h2 id="du-g${gi}">${g}</h2>${DUELS.filter(d=>d.grp===gi).map((d,i)=>`<article class="du-item${d.wide?' du-wide':''}" id="du-${d.id}" data-id="${d.id}" aria-labelledby="du-${d.id}-h"${gi+i?'':' data-anno="Vergleich (zwei figures)"'}>
-    <h3 id="du-${d.id}-h" tabindex="-1">${d.title}</h3>
+    <h3 id="du-${d.id}-h" tabindex="-1">${d.title}${duKnown(d.id)?`<span class="du-known">${ic('check')}erkannt</span>`:''}</h3>
     <p class="du-try"${gi+i?'':' data-anno="Hinweis (Aufgabe)"'}>${ic('keyboard')}<span><b>Probier:</b> ${d.try}</span></p>
     <div class="du-pair">${duPane(d,false,null,`du-${d.id}-b`)}${duPane(d,true,null,`du-${d.id}-g`)}</div>
     <p class="du-why">${d.why}</p>${d.note?`<p class="du-note" data-anno="Callout (Streitfall)">${d.note}</p>`:''}
@@ -3725,57 +4052,98 @@ function duQuizHTML(){
   return `<article class="lesson" aria-labelledby="lesson-title">
   <p class="eyebrow">Gut &amp; Schlecht</p>
   <h1 id="lesson-title" tabindex="-1">Quiz: Was ist besser?</h1>
-  <p class="rule">Zehn zufällige Paare, ohne Etikett und in zufälliger Reihenfolge. Probier beide Varianten aus und entscheide dann. Nach jeder Antwort kommt die Begründung.</p>
+  <p class="rule">Paare ohne Etikett, in zufälliger Reihenfolge. Probier beide Varianten aus und entscheide dann. Nach jeder Antwort kommt die Begründung – und das Quiz merkt sich, welche Paare du schon sicher erkennst.</p>
   <div id="du-quiz" class="du-quiz" data-anno="Quiz"></div>
   <p class="sr-only" id="du-live" role="status"></p>
 </article>`;
 }
 function duQuizInit(root){
   const box=$('#du-quiz',root),live=$('#du-live',root);
-  let round,i,score,missed;
+  let round,i,done,score,streak,bestStreak,missed;
+  let cfg=Object.assign({n:'10',g:'',m:'rand'},store.get('duell-setup',{}));
   const shuffle=a=>{a=[...a];for(let k=a.length-1;k>0;k--){const j=Math.floor(Math.random()*(k+1));[a[k],a[j]]=[a[j],a[k]]}return a};
-  function start(){round=shuffle(DUELS).slice(0,10).map(d=>({d,goodFirst:Math.random()<.5}));i=0;score=0;missed=[];ask(false)}
-  function ask(focus){
+  const pool=c=>DUELS.filter(d=>(c.g===''||String(d.grp)===c.g)&&(c.m!=='open'||!duKnown(d.id)));
+  const size=c=>{const p=pool(c).length;return c.n==='all'?p:Math.min(+c.n,p)};
+  const knownCount=()=>DUELS.filter(d=>duKnown(d.id)).length;
+
+  function setup(focus){
+    const known=knownCount();
+    box.innerHTML=`<form class="du-setup" id="du-setup" aria-labelledby="du-q" data-anno="Formular (Einstellungen)">
+      <h2 id="du-q" tabindex="-1">Neue Runde</h2>
+      ${kSeg('dq-n','Wie viele Paare?',[['10','10'],['20','20'],['all',`Alle ${DUELS.length}`]])}
+      ${kSeg('dq-g','Bereich',[['','Alle'],...D_GROUPS.map((g,k)=>[String(k),g])])}
+      ${kSeg('dq-m','Welche Paare?',[['rand','Zufällig'],['open','Noch nicht erkannt']])}
+      <div class="du-know" data-anno="Progress Bar"><p id="du-know-l">Zuletzt richtig erkannt: ${known} von ${DUELS.length} Paaren</p><div class="bar" role="progressbar" aria-labelledby="du-know-l" aria-valuemin="0" aria-valuemax="${DUELS.length}" aria-valuenow="${known}" style="--p:${known/DUELS.length*100}%"><span></span></div></div>
+      <p class="du-pool" id="du-pool" role="status" tabindex="-1"></p>
+      <div class="btn-row"><button class="btn btn-primary">Quiz starten ${ic('fwd')}</button>${known?'<button type="button" class="btn btn-ghost" id="du-reset">Lernstand zurücksetzen</button>':''}</div>
+    </form>`;
+    const f=$('#du-setup',box);
+    [['n','dq-n'],['g','dq-g'],['m','dq-m']].forEach(([k,n])=>{const r=$(`input[name="k-${n}"][value="${CSS.escape(cfg[k])}"]`,f);if(r)r.checked=true});
+    const upd=()=>{
+      cfg={n:$('input[name="k-dq-n"]:checked',f).value,g:$('input[name="k-dq-g"]:checked',f).value,m:$('input[name="k-dq-m"]:checked',f).value};
+      store.set('duell-setup',cfg);
+      const n=size(cfg);
+      $('#du-pool',f).textContent=n?`Diese Runde: ${n} ${n===1?'Paar':'Paare'}.`:'In dieser Auswahl hast du schon alles erkannt. Wähle „Zufällig“ oder einen anderen Bereich.';
+    };
+    f.addEventListener('change',upd);upd();
+    f.addEventListener('submit',e=>{e.preventDefault();const n=size(cfg);if(!n){$('#du-pool',f).focus();return}start(shuffle(pool(cfg)).slice(0,n))});
+    if(focus)$('#du-q',box).focus();
+  }
+  function start(list){round=list.map(d=>({d,goodFirst:Math.random()<.5}));i=0;done=0;score=0;streak=0;bestStreak=0;missed=[];ask()}
+  function ask(){
     const {d,goodFirst}=round[i];
     const panes=goodFirst?[true,false]:[false,true];
-    box.innerHTML=`<div class="du-qhead"><h2 id="du-q" tabindex="-1">Frage ${i+1} von ${round.length}: ${d.topic}</h2><span class="du-score">${score} richtig</span></div>
+    box.innerHTML=`<div class="du-qhead"><h2 id="du-q" tabindex="-1">Frage ${i+1} von ${round.length}: ${d.topic}</h2><span class="du-score">${score} richtig${streak>1?` · ${streak} in Folge`:''}</span></div>
     <div class="bar du-qbar" data-anno="Progress Bar" role="progressbar" aria-label="Fortschritt im Quiz" aria-valuemin="0" aria-valuemax="${round.length}" aria-valuenow="${i}" style="--p:${i/round.length*100}%"><span></span></div>
     <p class="du-try">${ic('keyboard')}<span><b>Probier:</b> ${d.try}</span></p>
     <div class="du-pair${d.wide?' du-wide':''}">${panes.map((g,k)=>duPane(d,g,`Variante ${'AB'[k]}`,`du-q${i}-${k}`)).join('')}</div>
-    <div class="btn-row du-answer" data-anno="Buttons (Antwort)"><button type="button" class="btn btn-secondary" data-pick="0">A ist besser</button><button type="button" class="btn btn-secondary" data-pick="1">B ist besser</button></div>
+    <div class="btn-row du-answer" data-anno="Buttons (Antwort)"><button type="button" class="btn btn-secondary" data-pick="0">A ist besser</button><button type="button" class="btn btn-secondary" data-pick="1">B ist besser</button>${round.length>1?'<button type="button" class="btn btn-ghost du-quit" id="du-quit">Runde beenden</button>':''}</div>
     <div id="du-result"></div>`;
     duInit(d,box);
-    if(focus)$('#du-q',box).focus();
+    $('#du-q',box).focus();
   }
   function answer(k){
     const {d,goodFirst}=round[i],right=(k===0)===goodFirst;
-    if(right)score++;else missed.push(d);
+    done++;duRecord(d.id,right);
+    if(right){score++;streak++;bestStreak=Math.max(bestStreak,streak)}else{streak=0;missed.push(d)}
     $$('[data-pick]',box).forEach(b=>b.disabled=true);
+    $('.du-score',box).textContent=`${score} richtig${streak>1?` · ${streak} in Folge`:''}`;
     $$('.du-pane',box).forEach((p,n)=>{const g=(n===0)===goodFirst;p.classList.add(g?'du-good':'du-bad');$('.du-cap',p).innerHTML=`${ic(g?'ok':'xc')}Variante ${'AB'[n]} · ${g?'Gut':'Schlecht'}`});
     const last=i===round.length-1;
-    $('#du-result',box).innerHTML=`<div class="du-result ${right?'du-right':'du-wrong'}" data-anno="Feedback-Box"><h3 id="du-r" tabindex="-1">${ic(right?'ok':'xc')}${right?'Richtig!':`Leider nein – Variante ${goodFirst?'A':'B'} ist besser.`}</h3><p><b>${d.title}.</b> ${d.why}</p><div class="btn-row"><button type="button" class="btn btn-primary" id="du-next">${last?'Auswertung':'Nächstes Paar'} ${ic('fwd')}</button><a href="#details/${d.id}">In der Galerie ansehen</a></div></div>`;
+    $('#du-result',box).innerHTML=`<div class="du-result ${right?'du-right':'du-wrong'}" data-anno="Feedback-Box"><h3 id="du-r" tabindex="-1">${ic(right?'ok':'xc')}${right?(streak>2?`Richtig – ${streak} in Folge!`:'Richtig!'):`Leider nein – Variante ${goodFirst?'A':'B'} ist besser.`}</h3><p><b>${d.title}.</b> ${d.why}</p><div class="btn-row"><button type="button" class="btn btn-primary" id="du-next">${last?'Auswertung':'Nächstes Paar'} ${ic('fwd')}</button><a href="#details/${d.id}">In der Galerie ansehen</a></div></div>`;
     live.textContent=right?'Richtig.':'Leider falsch.';
     $('#du-r',box).focus();
   }
   function finish(){
-    const best=Math.max(score,store.get('duell-best',0));store.set('duell-best',best);
-    box.innerHTML=`<div class="du-end-card" data-anno="Card (Auswertung)"><h2 id="du-q" tabindex="-1">${score} von ${round.length} richtig</h2><p>${score===round.length?'Alles richtig – dir entgeht kein Detail.':score>=7?'Stark. Die paar Ausreißer unten lohnen einen zweiten Blick.':'Die Paare unten lohnen einen zweiten Blick – in der Galerie siehst du beide Varianten mit Etikett.'} Dein Bestwert: ${best} von ${round.length}.</p>
+    if(!done){setup(true);return}
+    const played=round.slice(0,done),by=new Map();
+    played.forEach(({d})=>{const g=by.get(d.grp)||[0,0];g[1]++;if(!missed.includes(d))g[0]++;by.set(d.grp,g)});
+    const r=score/done,known=knownCount();
+    box.innerHTML=`<div class="du-end-card" data-anno="Card (Auswertung)"><h2 id="du-q" tabindex="-1">${score} von ${done} richtig</h2>
+    <p>${r===1?'Alles richtig – dir entgeht kein Detail.':r>=.7?'Stark. Die paar Ausreißer unten lohnen einen zweiten Blick.':'Die Paare unten lohnen einen zweiten Blick – in der Galerie siehst du beide Varianten mit Etikett.'}${bestStreak>2?` Längste Serie: ${bestStreak} in Folge.`:''} Insgesamt erkennst du jetzt ${known} von ${DUELS.length} Paaren.</p>
+    ${by.size>1?`<h3>Nach Bereich</h3><ul class="du-areas">${[...by].sort((a,b)=>a[0]-b[0]).map(([g,[ok,n]])=>`<li><span>${D_GROUPS[g]}</span><span class="du-frac">${ok} von ${n}</span></li>`).join('')}</ul>`:''}
     ${missed.length?`<h3>Nochmal ansehen</h3><ul>${missed.map(d=>`<li><a href="#details/${d.id}">${d.title}</a></li>`).join('')}</ul>`:''}
-    <div class="btn-row"><button type="button" class="btn btn-primary" id="du-again">Neue Runde</button><a class="btn btn-secondary" href="#details">Zur Galerie</a></div></div>`;
+    <div class="btn-row">${missed.length?`<button type="button" class="btn btn-primary" id="du-retry">Fehler üben (${missed.length})</button>`:''}<button type="button" class="btn ${missed.length?'btn-secondary':'btn-primary'}" id="du-again">Neue Runde</button><a class="btn btn-ghost" href="#details">Zur Galerie</a></div></div>`;
     $('#du-q',box).focus();
   }
   box.addEventListener('click',e=>{
     const p=e.target.closest('[data-pick]');if(p){answer(+p.dataset.pick);return}
-    if(e.target.closest('#du-next')){i++;if(i<round.length)ask(true);else finish();return}
-    if(e.target.closest('#du-again'))start(),$('#du-q',box).focus();
+    if(e.target.closest('#du-next')){i++;if(i<round.length)ask();else finish();return}
+    if(e.target.closest('#du-quit')){finish();return}
+    if(e.target.closest('#du-retry')){start(shuffle(missed));return}
+    if(e.target.closest('#du-again')){setup(true);return}
+    if(e.target.closest('#du-reset')){
+      const old=duStats();store.set('duell-stats',{});setup(true);
+      toast({msg:'Lernstand zurückgesetzt.',action:{label:'Rückgängig',fn:()=>{store.set('duell-stats',old);if($('#du-setup',box))setup(true)}}});
+    }
   });
-  start();
+  setup(false);
 }
 
 const DUELL_PAGES=[
- {id:'details',title:'Detail-Galerie',icon:'star',short:`${DUELS.length} UI-Details als Paar: schlecht und gut, beide zum Ausprobieren.`,keys:'gut schlecht vergleich details mikro radio label cursor pointer hover klickfläche',render:duGalleryHTML,init:duGalleryInit,
+ {id:'details',title:'Detail-Galerie',icon:'star',short:`${DUELS.length} UI-Details als Paar: schlecht und gut, beide zum Ausprobieren.`,keys:'gut schlecht vergleich details mikro radio label cursor pointer hover klickfläche passwort pflichtfeld iban tabs karussell accordion hamburger kontrast leerer zustand fehlermeldung linktext',render:duGalleryHTML,init:duGalleryInit,
   docTitle:sub=>D_BY[sub]?`${D_BY[sub].title} · Gut & Schlecht`:'Gut & Schlecht: UI-Details',focus:(root,sub)=>D_BY[sub]&&$('#du-'+sub+'-h',root)},
- {id:'details-quiz',title:'Quiz: Was ist besser?',icon:'check',short:'Zehn zufällige Paare ohne Etikett – erkennst du die gute Variante?',keys:'quiz raten spiel test gut schlecht',render:duQuizHTML,init:duQuizInit}
+ {id:'details-quiz',title:'Quiz: Was ist besser?',icon:'check',short:'Paare ohne Etikett – erkennst du die gute Variante? Mit Lernstand und „Fehler üben“.',keys:'quiz raten spiel test gut schlecht lernstand fehler üben serie',render:duQuizHTML,init:duQuizInit}
 ];
 const VIEWS={...K_BY_ID,...Object.fromEntries(DUELL_PAGES.map(p=>[p.id,p]))};
 

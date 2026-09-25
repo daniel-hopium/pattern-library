@@ -48,12 +48,16 @@ Die WCAG-Chips in den Lektionen verlinken direkt auf das jeweilige Kriterium.
 
 ## Gut & Schlecht
 
-24 UI-Details als Paar – links die schlechte, rechts die gute Variante, beide live zum
-Ausprobieren (`index.html#details`). Vier Bereiche: Formulare, Buttons & Klicks,
-Feedback, Text & Layout. Jedes Paar hat eine eigene Adresse (`#details/radio-label`).
+50 UI-Details als Paar – links die schlechte, rechts die gute Variante, beide live zum
+Ausprobieren (`index.html#details`). Fünf Bereiche: Formulare, Buttons & Klicks,
+Feedback, Text & Layout, Navigation & Inhalte. Jedes Paar hat eine eigene Adresse
+(`#details/radio-label`).
 
-Das Quiz (`#details-quiz`) zeigt zehn zufällige Paare ohne Etikett als Variante A und B;
-nach jeder Antwort folgt die Begründung, am Ende eine Liste zum Nachlesen.
+Das Quiz (`#details-quiz`) zeigt die Paare ohne Etikett als Variante A und B. Vor jeder
+Runde wählst du Länge (10, 20 oder alle), Bereich und ob nur Paare kommen, die du noch
+nicht erkannt hast. Nach jeder Antwort folgt die Begründung; die Auswertung zeigt das
+Ergebnis pro Bereich und bietet „Fehler üben“ an. Der Lernstand pro Paar liegt im
+`localStorage` und lässt sich zurücksetzen.
 
 ## CSS-Atlas
 

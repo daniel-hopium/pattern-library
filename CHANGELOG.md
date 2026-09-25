@@ -12,12 +12,19 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
 ## Unveröffentlicht
 
 ### Neu
+- Gut & Schlecht wächst auf 50 Paare, mit dem neuen Bereich „Navigation & Inhalte“:
+  unter anderem Passwort anzeigen, IBAN-Kästchen, `type="number"` bei der PLZ,
+  Fokus im Löschdialog, Fortschritt statt Spinner, Hellgrau als Textfarbe,
+  selbstlaufende Karussells, „hier“-Links und Popups beim Laden.
+- Quiz mit Einstellungen: 10, 20 oder alle Paare, ein Bereich oder alle, wahlweise nur
+  Paare, die man noch nicht erkannt hat. Dazu Serien-Anzeige, Auswertung pro Bereich,
+  „Fehler üben“ und ein Lernstand, den auch die Galerie zeigt.
 - Die Startseite verweist auf den CSS-Atlas, der als eigene App weiterlebt
   (daniel-hopium.github.io/css-atlas); alte Adressen wie `#css-flex/gap` leiten dorthin
   weiter. Daumenregel bleibt damit bei UI-Regeln.
-- Gut & Schlecht: 24 UI-Details als Paar zum Ausprobieren – vom klickbaren Radio-Text
-  über Doppelklick-Bestellungen bis zu springendem Inhalt –, dazu ein Quiz, das zehn
-  zufällige Paare ohne Etikett zeigt.
+- Gut & Schlecht: UI-Details als Paar zum Ausprobieren – vom klickbaren Radio-Text
+  über Doppelklick-Bestellungen bis zu springendem Inhalt –, dazu ein Quiz, das die
+  Paare ohne Etikett zeigt.
 - WCAG-Kompass: WCAG 2.2 auf Stufe A und AA, übersetzt für Frontend-Devs – Überblick
   mit Rechtslage, zehn Bauteile mit Angular-Hinweisen und Code „so nicht / so“, alle 55
   Kriterien filterbar, Test-Routine mit CI-Setup und eine Checkliste für den Pull Request.

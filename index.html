@@ -808,6 +808,75 @@ dialog.sheet{margin:auto auto 0;width:min(560px,100%);max-width:100%;border-radi
   .skel{animation:none}
   .spinner{animation-duration:2.4s}
 }
+/* WCAG-Kompass */
+.refs a{color:inherit;text-decoration:none;display:block;margin:-5px -9px;padding:5px 9px;border-radius:inherit}
+.refs li:has(a){border-color:var(--brand);color:var(--brand)}
+.refs a:hover{background:var(--brand-soft)}
+.k-picknav{margin-top:24px;display:grid;gap:8px}
+.k-picker{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.k-picker a{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 12px;border:1.5px solid var(--line-strong);border-radius:var(--radius-ctl);background:var(--surface);color:var(--ink);text-decoration:none;font-weight:700;font-size:.9375rem}
+.k-picker a:hover{background:var(--surface-2)}
+.k-picker a[aria-current="page"]{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+.k-picker .ic{width:18px;height:18px}
+.k-comp{margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
+.lesson .k-comp>h2{display:flex;align-items:center;gap:10px;margin:0 0 8px;font-size:1.5rem}
+.k-comp>h2 .ic{width:26px;height:26px;color:var(--brand)}
+.k-lead{font-size:1.0625rem;margin:0;max-width:62ch}
+.k-crits{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.k-crits a{display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:3px 10px;border:1px solid var(--line-strong);border-radius:var(--radius-sm);background:var(--surface);color:var(--ink);text-decoration:none;font-size:.875rem}
+.k-crits a:hover{border-color:var(--brand);background:var(--brand-soft)}
+.k-lv{font:600 .6875rem/1 var(--font-mono);padding:3px 5px;border-radius:4px;background:var(--surface-2);color:var(--muted)}
+.k-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:16px}
+.k-box{padding:14px 16px 16px;border:1.5px solid var(--line);border-radius:var(--radius-lg);background:var(--surface);min-width:0}
+.lesson .k-box h3,.lesson .k-ng h3{display:flex;align-items:center;gap:6px;margin:0 0 8px;font:700 .8125rem/1.3 var(--font-body);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.k-box p{margin:0;font-size:.9375rem}
+.k-box ul,.k-ng ul{margin:0;padding-left:1.1em;display:grid;gap:6px;font-size:.9375rem}
+.k-ng{margin-top:12px;padding:14px 16px 16px;border-radius:var(--radius-lg);background:var(--brand-soft)}
+.lesson .k-ng h3{color:var(--brand)}
+.lesson .k-h3{margin:28px 0 0;font:700 1.0625rem/1.3 var(--font-display)}
+.k-code{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px;margin-top:12px}
+.k-code-1{grid-template-columns:minmax(0,1fr)}
+.k-code figure{margin:0;border:1.5px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;background:var(--surface);min-width:0}
+.k-code figcaption{display:flex;align-items:center;gap:6px;padding:8px 12px;font-weight:700;font-size:.875rem;border-bottom:1px solid var(--line)}
+.k-code figcaption .ic{width:18px;height:18px}
+.k-bad figcaption{color:var(--danger);background:var(--danger-bg)}
+.k-good figcaption{color:var(--success);background:var(--success-bg)}
+.k-pre{margin:0;padding:12px 14px;font:400 .8125rem/1.55 var(--font-mono);overflow-x:auto;white-space:pre;tab-size:2}
+.k-pre code{background:none;padding:0;font-size:inherit;overflow-wrap:normal}
+.k-more{margin:20px 0 0;font-size:.9375rem}
+.k-filters{margin-top:24px}
+.k-segs{display:flex;flex-wrap:wrap;gap:12px 20px}
+.k-count{margin:16px 0 0;font-weight:700;color:var(--muted);min-height:1.5em}
+.lesson .k-sec h2{display:grid;gap:2px;margin:32px 0 12px}
+.k-sub{font:400 .9375rem/1.4 var(--font-body);color:var(--muted)}
+.k-list{display:grid;gap:10px}
+.k-crit{padding:14px 16px;border:1.5px solid var(--line);border-radius:var(--radius-lg);background:var(--surface);scroll-margin-top:16px}
+.k-crit.k-hit{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+.lesson .k-crit h3{margin:0;font:700 1.0625rem/1.35 var(--font-body);display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px}
+.k-nr{font-family:var(--font-mono);font-weight:600;color:var(--brand);font-variant-numeric:tabular-nums}
+.k-en{font-weight:400;font-size:.8125rem;color:var(--muted)}
+.k-crit p{margin:6px 0 0;max-width:68ch}
+.k-meta{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.k-pill{display:inline-flex;align-items:center;min-height:24px;padding:1px 8px;border:1px solid var(--line-strong);border-radius:var(--radius-sm);color:var(--muted);font-size:.8125rem;font-weight:700;line-height:1.3}
+.k-pill.k-new{border-color:var(--warn);color:var(--warn);background:var(--warn-bg)}
+.k-links{display:flex;flex-wrap:wrap;gap:4px 16px;margin:10px 0 0;font-size:.875rem}
+.k-classics{margin:0;padding-left:1.4em;display:grid;gap:6px}
+.k-steps{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:12px;counter-reset:none}
+.k-step{padding:14px 16px 16px;border:1.5px solid var(--line);border-radius:var(--radius-lg);background:var(--surface)}
+.lesson .k-step h2{display:flex;align-items:center;gap:10px;margin:0 0 6px;font-size:1.125rem}
+.k-min{margin-left:auto;font:600 .8125rem/1 var(--font-mono);color:var(--muted);white-space:nowrap}
+.k-step p{margin:0 0 8px;max-width:68ch}
+.k-step ul{margin:0;padding-left:1.1em;display:grid;gap:4px;font-size:.9375rem}
+.k-step .k-links{margin-bottom:0}
+.btn[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.k-prog{margin-top:24px}
+.lesson .k-check h2{margin:28px 0 6px}
+.k-check-list{list-style:none;margin:0;padding:0;display:grid}
+.k-check-list li{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 12px;border-bottom:1px solid var(--line);padding:2px 0}
+.k-check-list .check-row{flex:1 1 320px}
+.k-check-list label{cursor:pointer;padding:8px 0}
+.k-check-list li:has(input:checked) label{color:var(--muted)}
+.k-cnums{display:flex;gap:10px;font:600 .8125rem/1 var(--font-mono);padding-left:32px}
 </style>
 </head>
 <body>
@@ -909,6 +978,16 @@ const P={
   down:'<path d="M6 9l6 6 6-6"/>',
   filter:'<path d="M4 5h16l-6 7.5V19l-4-2v-4.5z"/>',
   refresh:'<path d="M19.5 12a7.5 7.5 0 11-2.2-5.3M19.5 4.5v4h-4"/>',
+  button:'<rect x="3.5" y="7.5" width="17" height="9" rx="4.5"/><path d="M9 12h6"/>',
+  link:'<path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/>',
+  form:'<rect x="4" y="5" width="16" height="5" rx="1.5"/><rect x="4" y="14" width="16" height="5" rx="1.5"/>',
+  image:'<rect x="3.5" y="5" width="17" height="14" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-5 4 4 2.5-2.5L20 17"/>',
+  modal:'<rect x="3.5" y="4.5" width="17" height="15" rx="2"/><rect x="7" y="8.5" width="10" height="7" rx="1.2"/>',
+  table:'<rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M3.5 10h17M3.5 14.5h17M10 5v14"/>',
+  menu:'<path d="M4 7h16M4 12h16M4 17h16"/>',
+  play:'<rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M10.5 9.5v5l4-2.5z"/>',
+  code:'<path d="M8.5 7L3.5 12l5 5M15.5 7l5 5-5 5"/>',
+  compass:'<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',
   wifioff:'<path d="M3 3l18 18M8.5 16.3a5 5 0 016.2-.6M5 12.6a10 10 0 014.6-2.6M19 12.6a10 10 0 00-2.4-1.8M2 8.8a15 15 0 014-2.5M22 8.8A15 15 0 0011.5 5M12 20h.01"/>'
 };
 const ic=(n,cls='')=>`<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="ic ${cls}">${P[n]}</svg>`;
@@ -2696,6 +2775,586 @@ function applyTheme(m){
   window.dispatchEvent(new Event('themechange'));
 }
 
+/* ---------- WCAG-Kompass ---------- */
+const ROLE={d:'Dev',g:'Design',c:'Content'};
+const PRINC=['Wahrnehmbar','Bedienbar','Verständlich','Robust'];
+const PRINC_Q=['Kann man es sehen, hören, erfassen?','Geht es mit Tastatur, Touch, Sprache?','Versteht man, was passiert und was falsch ist?','Verstehen Browser und Hilfstechnik den Code?'];
+/* [Nr, Stufe, deutsch, englisch (daraus entsteht der W3C-Link), Rollen, Tool hilft, Kernaussage, neu in 2.2] */
+const WCAG=[
+['1.1.1','A','Nicht-Text-Inhalt','Non-text Content','dc',1,'Bilder, Icons und Grafiken haben eine Textalternative mit derselben Information. Rein dekorative bekommen <code>alt=""</code>.'],
+['1.2.1','A','Reine Audio- und Videoinhalte (aufgezeichnet)','Audio-only and Video-only (Prerecorded)','c',0,'Podcast ohne Bild: Transkript. Video ohne Ton: Textbeschreibung oder Audiospur.'],
+['1.2.2','A','Untertitel (aufgezeichnet)','Captions (Prerecorded)','c',0,'Aufgezeichnete Videos mit Ton haben Untertitel – inklusive Geräuschen, die für das Verständnis zählen.'],
+['1.2.3','A','Audiodeskription oder Medienalternative (aufgezeichnet)','Audio Description or Media Alternative (Prerecorded)','c',0,'Was nur im Bild passiert, gibt es als Audiodeskription oder als vollständige Textfassung.'],
+['1.2.4','AA','Untertitel (live)','Captions (Live)','c',0,'Live-Streams und Webinare haben Live-Untertitel.'],
+['1.2.5','AA','Audiodeskription (aufgezeichnet)','Audio Description (Prerecorded)','c',0,'Zeigt ein Video Wichtiges nur im Bild, braucht es eine Audiodeskription – eine Textfassung reicht auf AA nicht mehr.'],
+['1.3.1','A','Info und Beziehungen','Info and Relationships','d',1,'Struktur steckt im Code, nicht nur im Aussehen: Überschriften, Listen, Tabellen, Labels, Landmarks, Gruppen mit <code>&lt;fieldset&gt;</code>.'],
+['1.3.2','A','Bedeutungstragende Reihenfolge','Meaningful Sequence','d',0,'Die DOM-Reihenfolge ergibt Sinn. <code>order</code>, <code>grid-area</code> und <code>flex-direction: row-reverse</code> ändern nur die Optik, nicht die Lesereihenfolge.'],
+['1.3.3','A','Sensorische Eigenschaften','Sensory Characteristics','cg',0,'Anleitungen hängen nie nur an Form, Farbe, Position oder Ton: „der runde Button rechts“ reicht nicht.'],
+['1.3.4','AA','Ausrichtung','Orientation','d',0,'Kein erzwungenes Hoch- oder Querformat, außer es ist wirklich nötig (Klavier-App, Scheck-Scan).'],
+['1.3.5','AA','Bestimmung des Eingabezwecks','Identify Input Purpose','d',1,'Felder für persönliche Daten haben das passende <code>autocomplete</code>: <code>email</code>, <code>given-name</code>, <code>postal-code</code>, <code>tel</code> …'],
+['1.4.1','A','Benutzung von Farbe','Use of Color','g',0,'Farbe ist nie das einzige Signal. Fehler rot <em>plus</em> Icon und Text; Links im Fließtext unterstrichen.'],
+['1.4.2','A','Audio-Steuerelement','Audio Control','d',0,'Ton, der automatisch länger als 3 Sekunden spielt, lässt sich stoppen oder unabhängig leiser stellen.'],
+['1.4.3','AA','Kontrast (Minimum)','Contrast (Minimum)','g',1,'Text hat mindestens 4,5 : 1 Kontrast zum Hintergrund, großer Text (ab 24 px oder 18,7 px fett) 3 : 1.'],
+['1.4.4','AA','Textgröße ändern','Resize Text','d',0,'Bei 200 % Textgröße wird nichts abgeschnitten und nichts überlappt. Feste Höhen und <code>px</code>-Schriftgrößen sind die üblichen Täter.'],
+['1.4.5','AA','Bilder eines Textes','Images of Text','g',0,'Echter Text statt Text im Bild. Ausnahme: Logos.'],
+['1.4.10','AA','Umbruch (Reflow)','Reflow','d',0,'Bei 320 CSS-Pixeln Breite – das sind 1280 px bei 400 % Zoom – gibt es kein horizontales Scrollen. Ausgenommen: Tabellen, Karten, Code, Diagramme.'],
+['1.4.11','AA','Nicht-Text-Kontrast','Non-text Contrast','g',0,'Ränder von Eingabefeldern, Fokusring, Checkbox-Haken und Diagrammlinien haben mindestens 3 : 1 zur Umgebung.'],
+['1.4.12','AA','Textabstand','Text Spacing','d',0,'Das Layout hält aus, wenn jemand Zeilenhöhe 1,5, Absatzabstand 2 em, Buchstabenabstand 0,12 em und Wortabstand 0,16 em erzwingt.'],
+['1.4.13','AA','Eingeblendeter Inhalt bei Hover oder Fokus','Content on Hover or Focus','d',0,'Tooltips und Popover lassen sich mit Esc schließen, mit der Maus überfahren und bleiben stehen, bis man sie verlässt.'],
+['2.1.1','A','Tastatur','Keyboard','d',0,'Alles, was mit der Maus geht, geht auch mit der Tastatur – ohne bestimmtes Timing.'],
+['2.1.2','A','Keine Tastaturfalle','No Keyboard Trap','d',0,'Wohin der Fokus kommt, von dort kommt er auch wieder weg. Ein Modal hält den Fokus absichtlich fest, lässt sich aber mit Esc schließen.'],
+['2.1.4','A','Tastaturkurzbefehle','Character Key Shortcuts','d',0,'Kürzel aus einer einzelnen Taste (etwa „/“ für die Suche) lassen sich abschalten oder umbelegen, oder sie wirken nur, solange das Element den Fokus hat. Diese App hält das mit „/“ selbst nicht ein – ein Schalter dafür fehlt noch.'],
+['2.2.1','A','Zeiteinteilung anpassbar','Timing Adjustable','d',0,'Zeitlimits lassen sich abschalten, anpassen oder verlängern – mit mindestens 20 Sekunden Vorwarnung. Gilt auch für Toasts mit Aktion.'],
+['2.2.2','A','Pausieren, beenden, ausblenden','Pause, Stop, Hide','d',0,'Was sich automatisch länger als 5 Sekunden bewegt, blinkt, scrollt oder aktualisiert, lässt sich anhalten.'],
+['2.3.1','A','Grenzwert von dreimaligem Blitzen','Three Flashes or Below Threshold','g',0,'Nichts blitzt öfter als dreimal pro Sekunde. Das kann epileptische Anfälle auslösen.'],
+['2.4.1','A','Blöcke umgehen','Bypass Blocks','d',1,'Ein Skip-Link oder Landmarks erlauben, wiederkehrende Blöcke wie die Navigation zu überspringen.'],
+['2.4.2','A','Seite mit Titel','Page Titled','d',1,'Jede Seite und jede Route hat einen eigenen, beschreibenden <code>&lt;title&gt;</code>.'],
+['2.4.3','A','Fokus-Reihenfolge','Focus Order','d',0,'Der Fokus wandert in sinnvoller Reihenfolge. Kein positiver <code>tabindex</code>; nach Dialog oder Löschen landet der Fokus an einer sinnvollen Stelle.'],
+['2.4.4','A','Linkzweck (im Kontext)','Link Purpose (In Context)','c',1,'Der Linktext – notfalls zusammen mit seinem Satz – sagt, wohin es geht. „Hier klicken“ sagt es nicht.'],
+['2.4.5','AA','Verschiedene Methoden','Multiple Ways','g',0,'Zu jeder Seite führen mindestens zwei Wege: Navigation, Suche, Sitemap, Verlinkung.'],
+['2.4.6','AA','Überschriften und Beschriftungen','Headings and Labels','c',0,'Überschriften und Labels beschreiben Thema oder Zweck. Ob es sie überhaupt gibt, regelt 1.3.1.'],
+['2.4.7','AA','Fokus sichtbar','Focus Visible','d',0,'Der Tastaturfokus ist immer sichtbar. <code>outline: none</code> ohne Ersatz ist der Klassiker.'],
+['2.4.11','AA','Fokus nicht verdeckt (Minimum)','Focus Not Obscured (Minimum)','d',0,'Das fokussierte Element wird nicht vollständig von Sticky Header, Cookie-Banner oder Chat-Widget verdeckt.',1],
+['2.5.1','A','Zeigergesten','Pointer Gestures','d',0,'Mehrfinger- und Pfadgesten (Pinch, Wischen) haben eine Ein-Finger-Alternative, etwa Plus/Minus-Buttons.'],
+['2.5.2','A','Zeigerabbruch','Pointer Cancellation','d',0,'Aktionen lösen beim Loslassen aus (<code>click</code>), nicht beim Drücken (<code>mousedown</code>). Wer daneben drückt, kann noch wegziehen.'],
+['2.5.3','A','Beschriftung im Namen','Label in Name','d',0,'Der sichtbare Text steckt auch im zugänglichen Namen, am besten am Anfang. Sonst scheitert Sprachsteuerung: „Klick Senden“.'],
+['2.5.4','A','Betätigung durch Bewegung','Motion Actuation','d',0,'Schütteln oder Neigen ist nie die einzige Bedienung und lässt sich abschalten.'],
+['2.5.7','AA','Ziehbewegungen','Dragging Movements','d',0,'Alles, was man ziehen kann, geht auch mit einzelnen Klicks – etwa Pfeil-Buttons zum Umsortieren.',1],
+['2.5.8','AA','Zielgröße (Minimum)','Target Size (Minimum)','g',1,'Klickziele sind mindestens 24 × 24 CSS-Pixel groß oder haben so viel Abstand, dass ein 24-px-Kreis nichts anderes trifft.',1],
+['3.1.1','A','Sprache der Seite','Language of Page','d',1,'<code>&lt;html lang="de"&gt;</code> ist gesetzt. Sonst liest der Screenreader deutschen Text mit englischer Aussprache.'],
+['3.1.2','AA','Sprache von Teilen','Language of Parts','c',0,'Fremdsprachige Passagen haben ein eigenes <code>lang</code>-Attribut – wie die englischen Namen auf dieser Seite.'],
+['3.2.1','A','Bei Fokus','On Focus','d',0,'Fokus allein löst keinen Kontextwechsel aus: kein Absenden, kein Seitenwechsel, kein Popup beim Hineintabben.'],
+['3.2.2','A','Bei Eingabe','On Input','d',0,'Eine Auswahl oder Eingabe wechselt nicht unerwartet den Kontext. Ein Select, das sofort die Seite lädt, braucht vorher einen Hinweis.'],
+['3.2.3','AA','Konsistente Navigation','Consistent Navigation','g',0,'Wiederkehrende Navigation steht auf jeder Seite an derselben Stelle, in derselben Reihenfolge.'],
+['3.2.4','AA','Konsistente Erkennung','Consistent Identification','g',0,'Gleiche Funktion heißt überall gleich und sieht gleich aus: nicht hier „Suchen“, dort „Finden“.'],
+['3.2.6','A','Konsistente Hilfe','Consistent Help','g',0,'Gibt es Hilfe (Kontakt, Chat, FAQ), steht sie auf jeder Seite an derselben Stelle.',1],
+['3.3.1','A','Fehlererkennung','Error Identification','d',0,'Erkannte Eingabefehler werden als Text beschrieben und dem Feld zugeordnet – nicht nur roter Rahmen.'],
+['3.3.2','A','Beschriftungen oder Anweisungen','Labels or Instructions','d',1,'Eingabefelder haben ein Label und, wo nötig, eine Anleitung: Format, Pflichtfeld, erlaubte Werte.'],
+['3.3.3','AA','Fehlerempfehlung','Error Suggestion','c',0,'Die Fehlermeldung sagt, wie es richtig geht: „Datum im Format TT.MM.JJJJ“ statt „Ungültige Eingabe“.'],
+['3.3.4','AA','Fehlervermeidung (rechtlich, finanziell, Daten)','Error Prevention (Legal, Financial, Data)','d',0,'Bei Käufen, Verträgen und Löschungen: rückgängig machen, vorher prüfen oder ausdrücklich bestätigen.'],
+['3.3.7','A','Redundante Eingabe','Redundant Entry','d',0,'Was jemand in diesem Ablauf schon eingegeben hat, wird vorausgefüllt oder ist auswählbar – nicht erneut abgefragt.',1],
+['3.3.8','AA','Barrierefreie Authentifizierung (Minimum)','Accessible Authentication (Minimum)','d',0,'Login ohne Gedächtnis- oder Rätseltest: Einfügen und Passwortmanager erlaubt, keine Zeichen abtippen, keine Rechenaufgabe.',1],
+['4.1.2','A','Name, Rolle, Wert','Name, Role, Value','d',1,'Jedes Bedienelement hat einen Namen, eine Rolle und seinen Zustand im Code. Native Elemente bringen das mit; eigene brauchen ARIA.'],
+['4.1.3','AA','Statusmeldungen','Status Messages','d',0,'Meldungen ohne Seitenwechsel – „Gespeichert“, „12 Treffer“, „Fehler beim Laden“ – werden über eine Live-Region angesagt, ohne den Fokus zu verschieben.']
+].map(([nr,lvl,de,en,roles,auto,text,neu])=>({nr,lvl,de,en,roles:[...roles],auto:!!auto,text,neu:!!neu,p:+nr[0]-1,
+  url:'https://www.w3.org/WAI/WCAG22/Understanding/'+en.toLowerCase().replace(/[(),]/g,'').replace(/\s+/g,'-')}));
+const W_BY=Object.fromEntries(WCAG.map(w=>[w.nr,w]));
+const wSlug=nr=>'k-'+nr.replace(/\./g,'-');
+
+/* Kriterium → Lektionen: aus den refs der Lektionen abgeleitet, plus ein paar Ergänzungen */
+const W_LESSONS={};
+const wAddLesson=(nr,id)=>{const a=W_LESSONS[nr]??=[];if(BY_ID[id]&&!a.includes(id))a.push(id)};
+LESSONS.forEach(l=>l.refs.forEach(r=>{const m=/^WCAG (\d\.\d\.\d+)/.exec(r);if(m&&W_BY[m[1]])wAddLesson(m[1],l.id)}));
+Object.entries({'2.4.1':['navigation'],'4.1.2':['buttons','dialog'],'3.3.8':['forms'],'2.5.3':['buttons'],'1.3.2':['semantics'],'2.4.4':['navigation']}).forEach(([nr,ids])=>ids.forEach(id=>wAddLesson(nr,id)));
+
+const COMPS=[
+{id:'button',name:'Button',icon:'button',
+ crit:['4.1.2','2.1.1','2.5.3','2.5.8','2.4.7','1.4.11'],
+ rule:'Alles, was eine Aktion auslöst, ist ein echtes <code>&lt;button&gt;</code>. Dann gibt es Fokus, Enter, Leertaste und die Rolle „Schaltfläche“ gratis.',
+ dos:['<code>&lt;button type="button"&gt;</code> für Aktionen, <code>&lt;a href&gt;</code> für Navigation – nie <code>&lt;div (click)&gt;</code>.','Icon-Buttons brauchen einen zugänglichen Namen, meist <code>aria-label</code>.','Der sichtbare Text steht auch im Namen, am besten vorne (2.5.3).','Mindestens 24 × 24 px Klickfläche, besser 44 (2.5.8).','Fokusring sichtbar und mit 3 : 1 Kontrast (2.4.7, 1.4.11).','Lieber aktiv lassen und beim Klick erklären, was fehlt, als stumm <code>disabled</code>.'],
+ test:['Mit Tab hinkommen, mit Enter <em>und</em> Leertaste auslösen.','Screenreader sagt „Entwurf speichern, Schaltfläche“ – nicht nur „Schaltfläche“.','DevTools → Elements → Accessibility: Name und Rolle ablesen.'],
+ ng:['Die ESLint-Regeln <code>click-events-have-key-events</code> und <code>interactive-supports-focus</code> aus <code>@angular-eslint/template</code> schlagen bei <code>&lt;div (click)&gt;</code> an – einschalten, siehe Test-Routine.','ARIA dynamisch über <code>[attr.aria-label]</code>, <code>[attr.aria-expanded]</code>, <code>[attr.aria-pressed]</code> binden. Das <code>attr.</code>-Präfix funktioniert in jeder Angular-Version.','<code>mat-icon-button</code> hat keinen Text: <code>aria-label</code> ist Pflicht. <code>matTooltip</code> ersetzt es nicht – auf Touch gibt es kein Hover.','<code>&lt;mat-icon&gt;</code> ist standardmäßig <code>aria-hidden="true"</code> – richtig für Icons neben Text.','In Formularen <code>type="button"</code> setzen, sonst sendet jeder Button das Formular ab. Die Regel <code>button-has-type</code> erinnert daran.'],
+ bad:`<div class="btn" (click)="save()">
+  <mat-icon>save</mat-icon>
+</div>`,
+ good:`<button type="button" mat-icon-button
+        aria-label="Entwurf speichern"
+        (click)="save()">
+  <mat-icon>save</mat-icon>
+</button>`,
+ lessons:['buttons','touch-targets','focus']},
+{id:'link',name:'Link',icon:'link',
+ crit:['2.4.4','1.4.1','2.1.1','4.1.2'],
+ rule:'Ein Link führt woanders hin und sagt vorher, wohin. Er ist auch ohne Farbe als Link zu erkennen.',
+ dos:['Linktext beschreibt das Ziel: „Preisliste 2026 (PDF, 2 MB)“ statt „hier klicken“.','Links im Fließtext unterstreichen; Farbe allein reicht nicht (1.4.1).','Öffnet der Link ein neues Fenster, steht das im Text, nicht nur im Icon.','Kein <code>href="#"</code> für Aktionen – das ist ein Button.'],
+ test:['NVDA-Elementliste (<kbd>NVDA</kbd> + <kbd>F7</kbd>): Ergibt jeder Link allein gelesen Sinn?','Graustufen einschalten: Sind Links im Text noch erkennbar?','Mittelklick und „In neuem Tab öffnen“ funktionieren.'],
+ ng:['<code>routerLink</code> rendert ein echtes <code>&lt;a href&gt;</code>: Mittelklick, Kopieren und Screenreader funktionieren. <code>(click)="router.navigate(…)"</code> auf einem <code>&lt;span&gt;</code> kann nichts davon.','<code>routerLinkActive</code> mit <code>ariaCurrentWhenActive="page"</code> setzt <code>aria-current</code> automatisch.','<code>&lt;a (click)&gt;</code> ohne <code>href</code> ist nicht fokussierbar – dafür ist <code>&lt;button&gt;</code> da.'],
+ bad:`<span class="link"
+      (click)="router.navigate(['/preise'])">
+  Hier klicken
+</span>`,
+ good:`<a routerLink="/preise"
+   routerLinkActive="active"
+   ariaCurrentWhenActive="page">
+  Preisliste 2026
+</a>`,
+ lessons:['navigation','color-alone','deep-linking']},
+{id:'formular',name:'Formular',icon:'form',
+ crit:['1.3.1','1.3.5','3.3.1','3.3.2','3.3.3','3.3.4','3.3.7','3.3.8','3.2.2'],
+ rule:'Jedes Feld hat ein sichtbares Label. Fehler stehen als Text am Feld und sagen, wie es richtig geht.',
+ dos:['<code>&lt;label for&gt;</code> für jedes Feld – der Platzhalter ist kein Label.','<code>autocomplete</code> setzen (<code>email</code>, <code>given-name</code>, <code>current-password</code>): erfüllt 1.3.5, und Passwortmanager funktionieren (3.3.8).','Fehler als Text, mit <code>aria-describedby</code> verknüpft, dazu <code>aria-invalid="true"</code> am Feld.','Die Meldung nennt die Lösung, nicht nur das Problem (3.3.3).','Beim Absenden den Fokus aufs erste fehlerhafte Feld oder auf eine Fehlerübersicht.','Einfügen in Passwort- und Code-Felder nie blockieren (3.3.8).','Schon Eingegebenes nicht erneut abfragen – „Rechnungsadresse wie Lieferadresse“ (3.3.7).'],
+ test:['Klick aufs Label setzt den Fokus ins Feld.','Leer absenden: Wird der Fehler vorgelesen? Wo steht der Fokus?','Browser-Autofill ausprobieren.'],
+ ng:['<code>aria-invalid</code> an den Control-Zustand binden: <code>[attr.aria-invalid]="email.invalid &amp;&amp; email.touched"</code>.','Beim Submit <code>form.markAllAsTouched()</code>, dann das erste <code>.ng-invalid</code>-Feld fokussieren.','<code>mat-form-field</code> verknüpft <code>mat-label</code>, <code>mat-hint</code> und <code>mat-error</code> selbst per <code>aria-describedby</code>. <code>mat-label</code> trotzdem immer setzen.','Den Container der Fehlermeldung dauerhaft rendern und nur den Inhalt per <code>@if</code> wechseln – dann stimmt <code>aria-describedby</code> immer.','Die ESLint-Regel <code>label-has-associated-control</code> findet Felder ohne Label.'],
+ bad:`<input placeholder="E-Mail"
+       formControlName="email">
+@if (email.invalid) {
+  <span class="red">Ungültig</span>
+}`,
+ good:`<label for="email">E-Mail</label>
+<input id="email" type="email"
+       formControlName="email"
+       autocomplete="email"
+       [attr.aria-invalid]="email.invalid && email.touched"
+       aria-describedby="email-err">
+<p id="email-err" class="err">
+  @if (email.invalid && email.touched) {
+    Es fehlt die Domain, etwa firma.at.
+  }
+</p>`,
+ lessons:['forms','onboarding']},
+{id:'bild',name:'Bild & Icon',icon:'image',
+ crit:['1.1.1','1.4.5','1.4.11','1.3.3'],
+ rule:'Informative Bilder bekommen einen Alternativtext mit derselben Information. Dekorative bekommen <code>alt=""</code> und verschwinden für Screenreader.',
+ dos:['Alt-Text beschreibt den Zweck, nicht das Aussehen: „Umsatz 2025: plus 12 %“ statt „Balkendiagramm“.','Dekorativ heißt <code>alt=""</code> – nicht weglassen, sonst liest der Screenreader den Dateinamen vor.','Inline-SVG neben Text: <code>aria-hidden="true"</code>. Steht das Icon allein, gehört der Name an den Button.','Kein Text im Bild (1.4.5).','Icons und Diagrammlinien mit 3 : 1 Kontrast (1.4.11).'],
+ test:['axe findet fehlende <code>alt</code>-Attribute zuverlässig. Ob der Text <em>stimmt</em>, prüfst nur du.','Bilder ausblenden (etwa mit der Web Developer Extension): Fehlt jetzt Information?'],
+ ng:['<code>NgOptimizedImage</code> (<code>ngSrc</code>) erzwingt Breite und Höhe – gut gegen Layout-Sprünge. Den <code>alt</code> setzt du selbst; die ESLint-Regel <code>alt-text</code> meldet ihn, wenn er fehlt.','Kommt der Text aus Daten, <code>[alt]="produkt.name"</code> binden und einen leeren Namen abfangen.','<code>&lt;mat-icon&gt;</code> ist standardmäßig versteckt. Trägt das Icon allein Bedeutung, Text danebenstellen oder <code>aria-hidden="false"</code> plus <code>aria-label</code>.'],
+ bad:`<img [src]="chartUrl">
+
+<mat-icon class="warn">error</mat-icon>`,
+ good:`<img [ngSrc]="chartUrl" width="640" height="360"
+     alt="Umsatz 2025: plus 12 % zum Vorjahr">
+
+<mat-icon aria-hidden="true">error</mat-icon>
+<span>Zahlung fehlgeschlagen</span>`,
+ lessons:['semantics','color-alone']},
+{id:'modal',name:'Modal & Overlay',icon:'modal',
+ crit:['2.1.2','2.4.3','4.1.2','1.4.13','2.4.11'],
+ rule:'Ein Modal holt den Fokus, hält ihn fest, schließt mit Esc und gibt den Fokus beim Schließen dem Element zurück, das es geöffnet hat.',
+ dos:['Beim Öffnen: Fokus aufs erste sinnvolle Element oder auf den Dialog selbst.','Tab bleibt im Dialog, Esc schließt ihn – so wird die gewollte Fokusfalle keine echte (2.1.2).','Beim Schließen: Fokus zurück auf den Auslöser (2.4.3).','<code>role="dialog"</code>, <code>aria-modal="true"</code> und <code>aria-labelledby</code> auf den Titel – oder gleich natives <code>&lt;dialog&gt;</code> mit <code>showModal()</code>.','Tooltips und Popover: per Esc schließbar, mit der Maus überfahrbar, bleiben stehen (1.4.13).','Sticky Header und Banner verdecken das fokussierte Element nicht (2.4.11); <code>scroll-padding-top</code> hilft.'],
+ test:['Nur mit der Tastatur öffnen, durchtabben, mit Esc schließen. Wo steht der Fokus danach?','Screenreader: Wird der Titel beim Öffnen vorgelesen?'],
+ ng:['<code>MatDialog</code> bzw. <code>Dialog</code> aus <code>@angular/cdk/dialog</code> erledigt Fokusfalle, Esc und Fokus-Rückgabe. <code>mat-dialog-title</code> verknüpft den Titel automatisch.','<code>autoFocus</code> steuert, wohin der Fokus beim Öffnen geht (<code>\'first-tabbable\'</code>, <code>\'dialog\'</code> oder ein CSS-Selektor); <code>restoreFocus</code> ist standardmäßig an.','Eigenes Overlay? <code>cdkTrapFocus</code> mit <code>cdkTrapFocusAutoCapture</code>: fängt den Fokus beim Erscheinen und gibt ihn beim Zerstören zurück.','<code>matTooltip</code> nur für Zusatzinfo, nie für Pflichtinformation.'],
+ bad:`@if (open) {
+  <div class="overlay">
+    <div class="box">
+      <span class="x" (click)="open = false">×</span>
+      Wirklich löschen?
+    </div>
+  </div>
+}`,
+ good:`// component.ts
+this.dialog.open(ConfirmDeleteComponent, {
+  autoFocus: 'first-tabbable',
+  restoreFocus: true,
+});
+
+<!-- confirm-delete.component.html -->
+<h2 mat-dialog-title>Projekt löschen?</h2>
+<mat-dialog-content>…</mat-dialog-content>`,
+ lessons:['dialog','overlays','focus']},
+{id:'tabelle',name:'Tabelle & Liste',icon:'table',
+ crit:['1.3.1','4.1.2','4.1.3','1.4.10','2.1.1'],
+ rule:'Daten in Zeilen und Spalten gehören in eine echte <code>&lt;table&gt;</code> mit Kopfzellen. Sortieren und Filtern wird angesagt.',
+ dos:['<code>&lt;th scope="col"&gt;</code> für Spaltenköpfe, <code>&lt;caption&gt;</code> als Titel.','Sortierbare Spalte: Button im <code>&lt;th&gt;</code>, <code>aria-sort</code> am <code>&lt;th&gt;</code>.','Ergebnis ansagen: „24 Einträge, nach Datum absteigend“ (4.1.3).','Breite Tabelle: im eigenen Container horizontal scrollen, der Rest der Seite bricht um (1.4.10). Den Container mit <code>tabindex="0"</code> und Namen per Tastatur scrollbar machen.','Listen sind <code>&lt;ul&gt;</code> oder <code>&lt;ol&gt;</code> – dann sagt der Screenreader „Liste, 12 Einträge“.'],
+ test:['Screenreader-Tabellennavigation (<kbd>Strg</kbd> + <kbd>Alt</kbd> + Pfeile): Wird beim Spaltenwechsel der Kopf vorgelesen?','Bei 320 px Breite: Scrollt nur die Tabelle, nicht die ganze Seite?'],
+ ng:['<code>mat-table</code> rendert echte Tabellenrollen, <code>matSort</code> setzt <code>aria-sort</code> selbst. Für die Ansage im <code>(matSortChange)</code> den <code>LiveAnnouncer</code> aufrufen – so zeigt es auch die Material-Doku.','<code>sortActionDescription</code> am <code>mat-sort-header</code> gibt dem Sortier-Button einen Namen.','<code>@for (row of rows; track row.id)</code>: Mit einem stabilen <code>track</code> verwendet Angular DOM-Knoten wieder, der Fokus bleibt bei Updates in der richtigen Zeile. <code>track $index</code> verliert ihn beim Sortieren.','Virtuelles Scrollen (<code>cdk-virtual-scroll-viewport</code>) nimmt Zeilen aus dem DOM – Screenreader kennen die Gesamtzahl nicht. <code>aria-rowcount</code> setzen oder Pagination nehmen.'],
+ bad:`<div class="row head">
+  <div (click)="sort('date')">Datum ▼</div>
+</div>
+@for (r of rows; track $index) {
+  <div class="row"><div>{{ r.date }}</div></div>
+}`,
+ good:`<table mat-table [dataSource]="rows" matSort
+       (matSortChange)="announceSort($event)">
+  <caption>Rechnungen 2026</caption>
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef
+        mat-sort-header
+        sortActionDescription="Nach Datum sortieren">
+      Datum
+    </th>
+    <td mat-cell *matCellDef="let r">{{ r.date | date }}</td>
+  </ng-container>
+  …
+</table>`,
+ lessons:['tables','search-filter']},
+{id:'navigation',name:'Navigation',icon:'menu',
+ crit:['2.4.1','2.4.5','3.2.3','3.2.4','3.2.6','1.3.1'],
+ rule:'Navigation steht überall an derselben Stelle, heißt überall gleich, und man kann sie überspringen.',
+ dos:['Skip-Link „Zum Inhalt springen“ als erstes fokussierbares Element (2.4.1).','Landmarks: <code>&lt;header&gt;</code>, <code>&lt;nav aria-label&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code> – Screenreader springen damit direkt.','Aktuelle Seite mit <code>aria-current="page"</code> markieren.','Mindestens zwei Wege zu jeder Seite: Menü plus Suche oder Sitemap (2.4.5).','Gleiche Funktion, gleicher Name, gleiches Icon (3.2.4); Hilfe immer an derselben Stelle (3.2.6).'],
+ test:['Seite laden, einmal Tab: Erscheint der Skip-Link, und springt er wirklich?','NVDA-Elementliste → Orientierungspunkte: Sind header, nav und main da?'],
+ ng:['Achtung <code>&lt;base href="/"&gt;</code>: Ein Skip-Link mit <code>href="#main"</code> löst sich gegen die Base-URL auf und springt zur Startseite statt zum Anker. Lösung: <code>(click)</code> mit <code>preventDefault()</code> und <code>main.focus()</code>, dazu <code>&lt;main tabindex="-1"&gt;</code>.','Header, Navigation und Footer ins App-Shell-Template (<code>app.component.html</code>) statt in jede Seite – dann ist 3.2.3 automatisch erfüllt.','Menüs mit Pfeiltasten: <code>CdkMenu</code> aus <code>@angular/cdk/menu</code> oder <code>ListKeyManager</code> aus <code>@angular/cdk/a11y</code>. Seit Angular 21 gibt es zusätzlich <code>@angular/aria</code> (Developer Preview) mit fertigen headless Patterns.'],
+ bad:`<a href="#main">Zum Inhalt</a>
+<div class="nav">
+  <div (click)="go('/')">Start</div>
+</div>
+<div class="content">
+  <router-outlet />
+</div>`,
+ good:`<a class="skip" href="#main"
+   (click)="$event.preventDefault(); main.focus()">
+  Zum Inhalt springen
+</a>
+<nav aria-label="Hauptmenü">
+  <a routerLink="/" routerLinkActive="active"
+     ariaCurrentWhenActive="page"
+     [routerLinkActiveOptions]="{ exact: true }">Start</a>
+</nav>
+<main #main id="main" tabindex="-1">
+  <router-outlet />
+</main>`,
+ lessons:['navigation','focus']},
+{id:'seite',name:'Seite & Routing',icon:'file',
+ crit:['2.4.2','3.1.1','3.1.2','2.4.3','2.4.6','1.3.4','1.4.4','1.4.10'],
+ rule:'Jede Route hat einen eigenen Titel und eine <code>h1</code>. Nach dem Wechsel wird der Fokus neu gesetzt – sonst merkt ein Screenreader-Nutzer nichts davon.',
+ dos:['<code>&lt;title&gt;</code> pro Route: „Rechnungen · Firmenname“ (2.4.2).','<code>&lt;html lang="de"&gt;</code>; fremdsprachige Stellen mit <code>lang="en"</code> (3.1.1, 3.1.2).','Nach der Navigation: Fokus auf die <code>h1</code> mit <code>tabindex="-1"</code> und nach oben scrollen.','Eine <code>h1</code> pro Seite, Überschriften ohne Sprünge.','Kein festes Format (1.3.4), 200 % Textzoom (1.4.4) und 320 px Breite (1.4.10) ohne Verluste.'],
+ test:['Route wechseln mit Screenreader: Wird die neue Seite angesagt?','Nach dem Wechsel Tab drücken: Startet der Fokus im neuen Inhalt – oder irgendwo im alten Menü?','Zoom auf 200 % und 400 %.'],
+ ng:['<code>title</code> direkt an der Route: <code>{ path: \'rechnungen\', title: \'Rechnungen\', … }</code>. Eine eigene <code>TitleStrategy</code> hängt den App-Namen an.','Fokus nach der Navigation macht Angular <em>nicht</em> von selbst – anders als ein echter Seitenwechsel. Auf <code>NavigationEnd</code> hören und die <code>h1</code> fokussieren.','<code>withInMemoryScrolling({ scrollPositionRestoration: \'enabled\' })</code> in <code>provideRouter</code>: nach oben beim Wechsel, alte Position bei „Zurück“.','<code>lang</code> steht in <code>src/index.html</code>. Wer zur Laufzeit die Sprache wechselt (Transloco, ngx-translate), setzt <code>document.documentElement.lang</code> mit.'],
+ bad:`// app.routes.ts
+{ path: 'rechnungen', component: InvoicesComponent }
+// Titel bleibt überall „MyApp“,
+// der Fokus bleibt im Menü hängen`,
+ good:`// app.routes.ts
+{ path: 'rechnungen', title: 'Rechnungen',
+  component: InvoicesComponent }
+
+// app.component.ts
+constructor() {
+  inject(Router).events.pipe(
+    filter(e => e instanceof NavigationEnd),
+    takeUntilDestroyed(),
+  ).subscribe(() => setTimeout(() =>
+    document.querySelector<HTMLElement>('main h1')?.focus()
+  ));
+}`,
+ lessons:['deep-linking','i18n','responsive','typography']},
+{id:'status',name:'Statusmeldung & Laden',icon:'bell',
+ crit:['4.1.3','2.2.1','3.3.1','2.2.2'],
+ rule:'Was sich ohne Seitenwechsel ändert – Toast, Ladezustand, Trefferzahl – wird über eine Live-Region angesagt, ohne den Fokus zu stehlen.',
+ dos:['Die Live-Region ist schon beim Laden im DOM; danach ändert sich nur ihr Text.','<code>role="status"</code> (höflich) für Erfolg und Info, <code>role="alert"</code> nur für Fehler.','Toasts mit Aktion: mindestens rund 8 Sekunden, Pause bei Hover und Fokus – oder sie bleiben, bis man sie schließt (2.2.1).','Ladebereich mit <code>aria-busy="true"</code>, danach ansagen: „12 Ergebnisse geladen“.','Vor einem Session-Timeout warnen und verlängern lassen (2.2.1).'],
+ test:['Screenreader an, Aktion auslösen: Hörst du die Meldung, ohne dass der Fokus springt?','Kommst du per Tastatur zur Toast-Aktion, bevor der Toast verschwindet?'],
+ ng:['<code>LiveAnnouncer</code> aus <code>@angular/cdk/a11y</code>: <code>announce(\'Gespeichert\', \'polite\')</code>. Der Service hält seine Live-Region selbst im DOM.','Eine Meldung, die per <code>@if</code> neu erscheint, wird oft <em>nicht</em> vorgelesen: Das Element fehlte vorher, also hat der Screenreader keine Region beobachtet. Region dauerhaft rendern oder <code>cdkAriaLive="polite"</code> nutzen.','<code>MatSnackBar</code> sagt über den <code>LiveAnnouncer</code> an; <code>politeness</code> und <code>duration</code> sind pro Aufruf einstellbar. Mit Aktion <code>duration</code> weglassen – dann bleibt sie bis zum Klick.','<code>[attr.aria-busy]="loading()"</code> – mit Signals direkt im Template.'],
+ bad:`@if (saved) {
+  <div class="toast">Gespeichert!</div>
+}`,
+ good:`private announcer = inject(LiveAnnouncer);
+private snackBar = inject(MatSnackBar);
+
+onResults(n: number): void {
+  this.announcer.announce(n + ' Ergebnisse gefunden', 'polite');
+}
+
+onDeleted(): void {
+  this.snackBar.open('Projekt gelöscht', 'Rückgängig');
+}`,
+ lessons:['toast','loading','errors-offline']},
+{id:'medien',name:'Medien & Animation',icon:'play',
+ crit:['1.2.1','1.2.2','1.2.3','1.2.4','1.2.5','1.4.2','2.2.2','2.3.1','2.5.4'],
+ rule:'Videos haben Untertitel, nichts spielt ungefragt Ton, und was sich länger als 5 Sekunden bewegt, lässt sich anhalten.',
+ dos:['Untertitel per <code>&lt;track kind="captions"&gt;</code> für jedes Video mit Ton, Transkript für reines Audio.','Zeigt das Bild Wichtiges, das niemand sagt: Audiodeskription oder Textfassung (1.2.3, 1.2.5).','Kein Autoplay mit Ton. Wenn doch: Stopp-Button gleich zu Beginn (1.4.2).','Karussell, Ticker, Hintergrundvideo über 5 Sekunden: Pause-Button (2.2.2).','Nichts blitzt öfter als dreimal pro Sekunde (2.3.1).','<code>prefers-reduced-motion</code> respektieren. Formal ist das AAA (2.3.3), aber schnell gebaut und für Menschen mit Gleichgewichtsstörungen entscheidend.'],
+ test:['Video ohne Ton anschauen: Verstehst du alles?','Im Betriebssystem „Animationen reduzieren“ einschalten und die App durchklicken.'],
+ ng:['Reduced Motion zuerst in CSS: <code>@media (prefers-reduced-motion: reduce)</code>. Das wirkt auch auf <code>animate.enter</code> und <code>animate.leave</code>, weil die mit CSS-Klassen arbeiten.','Mit dem älteren Paket <code>@angular/animations</code>: <code>[@.disabled]="reduceMotion"</code> am Container. Den Wert liefert <code>BreakpointObserver.observe(\'(prefers-reduced-motion: reduce)\')</code> aus <code>@angular/cdk/layout</code>.'],
+ bad:`<video src="promo.mp4" autoplay loop></video>`,
+ good:`<video src="promo.mp4" controls preload="metadata">
+  <track kind="captions" src="promo.de.vtt"
+         srclang="de" label="Deutsch" default>
+</video>`,
+ lessons:['motion']}
+];
+const C_BY=Object.fromEntries(COMPS.map(c=>[c.id,c]));
+const W_COMPS={};
+COMPS.forEach(c=>c.crit.forEach(nr=>(W_COMPS[nr]??=[]).push(c.id)));
+
+const CHECK=[
+['Grundgerüst',[
+ ['lang','<code>&lt;html lang="de"&gt;</code> gesetzt, Sprachwechsel zur Laufzeit zieht es mit','3.1.1'],
+ ['title','Jede Route hat einen eigenen Titel (<code>title</code> in den Routes)','2.4.2'],
+ ['skip','Skip-Link funktioniert – trotz <code>&lt;base href&gt;</code>','2.4.1'],
+ ['landmarks','Landmarks: <code>header</code>, <code>nav</code> mit Label, <code>main</code>, <code>footer</code>','1.3.1'],
+ ['routefocus','Nach der Navigation steht der Fokus auf der neuen <code>h1</code>','2.4.3'],
+ ['headings','Eine <code>h1</code> pro Seite, Überschriften ohne Sprünge','1.3.1 2.4.6']]],
+['Tastatur & Fokus',[
+ ['keyboard','Alles per Tastatur erreichbar und auslösbar','2.1.1'],
+ ['noclick','Kein <code>(click)</code> auf <code>div</code> oder <code>span</code>','2.1.1 4.1.2'],
+ ['ring','Fokusring überall sichtbar, 3 : 1 Kontrast, kein <code>outline: none</code> ohne Ersatz','2.4.7 1.4.11'],
+ ['tabindex','Kein positiver <code>tabindex</code>','2.4.3'],
+ ['dialogs','Dialoge: Fokusfalle, Esc, Fokus zurück zum Auslöser','2.1.2 2.4.3'],
+ ['obscured','Sticky Header verdeckt den Fokus nicht (<code>scroll-padding-top</code>)','2.4.11'],
+ ['shortcuts','Einzeltasten-Kürzel abschaltbar oder nur bei Fokus aktiv','2.1.4']]],
+['Formulare',[
+ ['labels','Jedes Feld hat ein sichtbares Label','3.3.2'],
+ ['autocomplete','<code>autocomplete</code> an allen persönlichen Feldern','1.3.5'],
+ ['errors','Fehler als Text am Feld, mit <code>aria-invalid</code> und <code>aria-describedby</code>','3.3.1'],
+ ['suggest','Fehlermeldungen nennen die Lösung','3.3.3'],
+ ['submitfocus','Beim Absenden landet der Fokus beim ersten Fehler','3.3.1'],
+ ['paste','Einfügen in Passwort- und Code-Felder erlaubt','3.3.8'],
+ ['redundant','Nichts doppelt abfragen','3.3.7'],
+ ['confirm','Folgenreiche Aktionen: bestätigen oder rückgängig machen','3.3.4']]],
+['Farbe & Layout',[
+ ['contrast','Textkontrast 4,5 : 1 – in allen Themes und Marken','1.4.3'],
+ ['coloralone','Farbe ist nie das einzige Signal','1.4.1'],
+ ['reflow','320 px Breite ohne horizontales Scrollen','1.4.10'],
+ ['zoom','200 % Textzoom ohne Abschneiden','1.4.4'],
+ ['spacing','Textabstand-Test ohne Überlappungen','1.4.12'],
+ ['targets','Klickziele mindestens 24 × 24 px','2.5.8'],
+ ['orientation','Hoch- und Querformat funktionieren','1.3.4']]],
+['Inhalte & Medien',[
+ ['alt','Alt-Texte sinnvoll, dekorative Bilder mit <code>alt=""</code>','1.1.1'],
+ ['iconbtn','Icon-Buttons haben einen Namen','4.1.2'],
+ ['linktext','Linktexte ergeben allein gelesen Sinn','2.4.4'],
+ ['captions','Videos haben Untertitel','1.2.2'],
+ ['motion','Bewegung über 5 s pausierbar, <code>prefers-reduced-motion</code> beachtet','2.2.2']]],
+['Dynamik',[
+ ['status','Statusmeldungen über <code>LiveAnnouncer</code> oder <code>role="status"</code>','4.1.3'],
+ ['toasttime','Toasts mit Aktion bleiben lange genug oder bis zum Schließen','2.2.1'],
+ ['hover','Tooltips per Esc schließbar und mit der Maus überfahrbar','1.4.13'],
+ ['drag','Drag & Drop hat eine Klick-Alternative','2.5.7']]],
+['Absicherung',[
+ ['lint','ESLint mit <code>templateAccessibility</code> läuft in der CI',''],
+ ['axe','axe prüft die wichtigsten Seiten im E2E-Test',''],
+ ['manual','Pro Feature: einmal Tastatur, einmal Screenreader','']]]
+];
+const CHECK_IDS=CHECK.flatMap(([,items])=>items.map(i=>i[0]));
+
+const STEPS=[
+{t:'Tastatur',min:3,crit:['2.1.1','2.1.2','2.4.3','2.4.7','2.4.11'],
+ how:'Maus zur Seite legen. <kbd>Tab</kbd>, <kbd>Shift</kbd> + <kbd>Tab</kbd>, <kbd>Enter</kbd>, <kbd>Leertaste</kbd>, <kbd>Esc</kbd> und die Pfeiltasten reichen.',
+ look:['Siehst du jederzeit, wo der Fokus ist?','Folgt die Reihenfolge dem Lesefluss?','Kommst du überall hin – und überall wieder heraus?','Wo landet der Fokus nach dem Schließen eines Dialogs?']},
+{t:'Zoom & Reflow',min:2,crit:['1.4.4','1.4.10','1.3.4'],
+ how:'<kbd>Strg</kbd> + <kbd>+</kbd> bis 200 %, dann bis 400 %. Alternativ in den DevTools die Gerätesymbolleiste auf 320 px Breite stellen.',
+ look:['Wird Text abgeschnitten oder überlappt?','Muss die ganze Seite seitlich scrollen?','Sind Menü und Aktionen noch erreichbar?']},
+{t:'Textabstand',min:1,crit:['1.4.12'],
+ how:'Den Knopf „Textabstand“ unten auf dieser Seite drücken – oder das CSS darunter in den DevTools einfügen.',
+ look:['Wird Text in Buttons, Chips oder Karten abgeschnitten?','Überlappen sich Zeilen?']},
+{t:'Kontrast & Farbe',min:2,crit:['1.4.3','1.4.11','1.4.1'],
+ how:'In den DevTools die Textfarbe anklicken: Der Farbwähler zeigt das Kontrastverhältnis. Unter Rendering → „Emulate vision deficiencies“ Achromatopsie wählen – oder den Knopf „Graustufen“ unten.',
+ look:['Text mindestens 4,5 : 1, Feldränder und Fokus 3 : 1?','Ist ohne Farbe noch klar, was Fehler, was Erfolg, was ein Link ist?']},
+{t:'Automatisch prüfen',min:1,crit:['1.1.1','1.3.1','3.3.2','4.1.2','3.1.1'],
+ how:'axe DevTools (Browser-Erweiterung) oder Lighthouse → Accessibility laufen lassen.',
+ look:['Fehlende Namen, Labels, Alt-Texte, <code>lang</code>, Kontraste.','Wichtig: Ein grünes Ergebnis heißt nicht barrierefrei. Tools finden je nach Studie 30 bis 57 % der Probleme.']},
+{t:'Screenreader',min:5,crit:['4.1.2','4.1.3','1.3.1','2.4.6'],
+ how:'Unter Windows NVDA (kostenlos) mit Chrome oder Firefox, am Mac VoiceOver (<kbd>Cmd</kbd> + <kbd>F5</kbd>). Die wichtigsten Tasten stehen in der Tabelle unten.',
+ look:['Hat jedes Element einen verständlichen Namen und die richtige Rolle?','Werden Zustände gesagt: ausgeklappt, ausgewählt, ungültig?','Hörst du Statusmeldungen, ohne dass der Fokus springt?']},
+{t:'Bewegung',min:1,crit:['2.2.2','2.3.1'],
+ how:'Windows: Einstellungen → Barrierefreiheit → Visuelle Effekte → Animationseffekte aus. Oder DevTools → Rendering → <code>prefers-reduced-motion: reduce</code>.',
+ look:['Hören große Bewegungen auf?','Lässt sich alles, was sich länger als 5 Sekunden bewegt, anhalten?']}
+];
+const SR_KEYS=[['Starten','<kbd>Strg</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd>','Sprache stoppen','<kbd>Strg</kbd>'],['Nächste Überschrift','<kbd>H</kbd>','Nächste Landmark','<kbd>D</kbd>'],['Nächstes Formularfeld','<kbd>F</kbd>','Elementliste','<kbd>NVDA</kbd> + <kbd>F7</kbd>'],['Alles vorlesen','<kbd>NVDA</kbd> + <kbd>↓</kbd>','Lese-/Fokusmodus','<kbd>NVDA</kbd> + <kbd>Leertaste</kbd>'],['Tabellenzelle','<kbd>Strg</kbd> + <kbd>Alt</kbd> + Pfeile','Beenden','<kbd>NVDA</kbd> + <kbd>Q</kbd>']];
+
+const TS_CSS=`*{line-height:1.5!important;letter-spacing:.12em!important;word-spacing:.16em!important}
+p{margin-bottom:2em!important}`;
+const CI_LINT=`// eslint.config.js – nach "ng add angular-eslint"
+{
+  files: ['**/*.html'],
+  extends: [
+    ...angular.configs.templateRecommended,
+    ...angular.configs.templateAccessibility,
+  ],
+}`;
+const CI_AXE=`// e2e/a11y.spec.ts – Playwright mit @axe-core/playwright
+import { test, expect } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
+
+for (const path of ['/', '/rechnungen', '/einstellungen']) {
+  test('keine axe-Verstöße auf ' + path, async ({ page }) => {
+    await page.goto(path);
+    const result = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'])
+      .analyze();
+    expect(result.violations).toEqual([]);
+  });
+}`;
+
+/* Bausteine */
+const critLink=nr=>{const w=W_BY[nr];return w?`<a href="#wcag-kriterien/${nr}">${nr}<span class="sr-only"> ${w.de}</span></a>`:nr};
+const critChip=nr=>{const w=W_BY[nr];return `<li><a href="#wcag-kriterien/${nr}"><span class="k-nr">${nr}</span> ${w.de}<span class="k-lv">${w.lvl}</span></a></li>`};
+const kCode=(good,label,src)=>`<figure class="${good?'k-good':'k-bad'}"><figcaption>${ic(good?'ok':'xc')}${label}</figcaption><pre class="k-pre" tabindex="0" role="region" aria-label="Code-Beispiel: ${label}"><code>${esc(src.trim())}</code></pre></figure>`;
+const kSeg=(n,legend,opts)=>`<fieldset class="seg"><legend>${legend}</legend><div class="seg-opts">${opts.map(([v,t],i)=>`<label><input type="radio" name="k-${n}" value="${v}"${i?'':' checked'}>${t}</label>`).join('')}</div></fieldset>`;
+const kHead=(title,rule)=>`<p class="eyebrow">WCAG-Kompass</p><h1 id="lesson-title" tabindex="-1">${title}</h1><p class="rule">${rule}</p>`;
+function kPager(id){
+  const i=KOMPASS.findIndex(k=>k.id===id),prev=KOMPASS[i-1],next=KOMPASS[i+1];
+  return `<nav class="pager" aria-label="Weitere Seiten im Kompass">${prev?`<a class="prev" href="#${prev.id}"><small>← Vorherige</small>${prev.title}</a>`:`<a class="prev" href="#start"><small>← Zurück zum</small>Start</a>`}${next?`<a class="next" href="#${next.id}"><small>Nächste →</small>${next.title}</a>`:`<a class="next" href="#${LESSONS[0].id}"><small>Weiter zu den</small>Lektionen</a>`}</nav>`;
+}
+
+function kStartHTML(){
+  const n=lvl=>WCAG.filter(w=>w.lvl===lvl).length;
+  const classics=[['Zu wenig Textkontrast','1.4.3','#contrast'],['Bilder ohne Alt-Text','1.1.1','#wcag-bauteile/bild'],['Formularfelder ohne Label','3.3.2','#wcag-bauteile/formular'],['Leere Links, etwa Icon-Links ohne Namen','2.4.4','#wcag-bauteile/link'],['Leere Buttons, etwa Icon-Buttons ohne Namen','4.1.2','#wcag-bauteile/button'],['Fehlende Seitensprache','3.1.1','#wcag-bauteile/seite']];
+  return `<article class="lesson" aria-labelledby="lesson-title">
+  ${kHead('WCAG für Frontend-Devs','WCAG 2.2 hat 86 Prüfkriterien. Für dich zählen 55: alle auf Stufe A und AA. Die meisten davon entscheidest du im Template – nicht im Design und nicht erst im Test.')}
+  <ul class="refs" aria-label="Normen und Quellen" style="margin-top:16px"><li>WCAG 2.2</li><li>EN 301 549</li><li>EAA · BaFG</li><li>Angular CDK a11y</li></ul>
+  <h2>Die Zahlen</h2>
+  <dl class="numbers"><div class="num"><dt>55</dt><dd>Kriterien auf A und AA (${n('A')} + ${n('AA')}) – diese Stufe verlangen die Gesetze</dd></div><div class="num"><dt>4,5 : 1</dt><dd>Mindestkontrast für Text – der häufigste Fehler im Web</dd></div><div class="num"><dt>28.06.2025</dt><dd>seitdem gilt der European Accessibility Act, in Österreich als BaFG</dd></div><div class="num"><dt>30–57 %</dt><dd>der Probleme finden automatische Tools, je nach Studie. Den Rest findest nur du</dd></div></dl>
+  <h2>Vier Prinzipien: POUR</h2>
+  <p class="prose" style="margin:0 0 12px">Jedes Kriterium hängt an einem von vier Prinzipien. Die Nummer verrät es: 2.4.7 gehört zu Prinzip 2, Bedienbar.</p>
+  <ul class="tiers">${PRINC.map((p,i)=>`<li><b>${i+1} · ${p}</b>${PRINC_Q[i]}<br><span class="hint">${WCAG.filter(w=>w.p===i).length} Kriterien</span></li>`).join('')}</ul>
+  <h2>A, AA, AAA – was davon?</h2>
+  <div class="k-cols">
+    <div class="k-box"><h3>Stufe A</h3><p>Das Minimum. Fehlt es, ist die Seite für manche Menschen <em>gar nicht</em> benutzbar: keine Tastatur, kein Alt-Text, keine Labels.</p></div>
+    <div class="k-box"><h3>Stufe AA</h3><p>Das Ziel. Gesetze und Ausschreibungen verlangen A plus AA. Kontrast, Zoom, sichtbarer Fokus und Statusmeldungen kommen hier dazu.</p></div>
+    <div class="k-box"><h3>Stufe AAA</h3><p>Die Kür. Selbst das W3C empfiehlt AAA nicht für ganze Websites. Einzelnes lohnt sich trotzdem, etwa reduzierte Bewegung (2.3.3).</p></div>
+  </div>
+  <h2>Was das Gesetz sagt</h2>
+  <div class="prose"><p>Der <strong>European Accessibility Act</strong> gilt seit dem 28. Juni 2025 auch für private Anbieter: Onlineshops, Banking, Buchungen im Personenverkehr, E-Books, Telekommunikation. In Österreich setzt ihn das <strong>Barrierefreiheitsgesetz (BaFG)</strong> um, in Deutschland das BFSG. Kleinstunternehmen mit weniger als zehn Beschäftigten und höchstens 2 Mio. € Umsatz sind bei Dienstleistungen ausgenommen. Öffentliche Stellen in Österreich sind schon seit 2019 über das Web-Zugänglichkeits-Gesetz verpflichtet.</p><p>Technisch verweisen alle auf die Norm <strong>EN 301 549</strong>, und die verlangt WCAG 2.1 auf Stufe AA. Die sechs Kriterien, die erst mit 2.2 dazukamen, sind im Kompass als <span class="k-pill k-new">neu in 2.2</span> markiert. Setz sie trotzdem um: Die nächste Fassung der Norm zieht nach, und sie sind gute UX.</p><p class="hint">Das ist eine Orientierung, keine Rechtsberatung.</p></div>
+  <h2>Die sechs Klassiker</h2>
+  <p class="prose" style="margin:0 0 12px">Die WebAIM Million prüft jedes Jahr die eine Million meistbesuchten Startseiten. Rund 95 % haben automatisch erkennbare Fehler – und seit Jahren sind es dieselben sechs:</p>
+  <ol class="k-classics">${classics.map(([t,nr,href])=>`<li><a href="${href}">${t}</a> <span class="hint">· ${critLink(nr)}</span></li>`).join('')}</ol>
+  <h2>Was Angular dir abnimmt – und was nicht</h2>
+  <div class="k-cols">
+    <div class="k-box"><h3>${ic('ok')} Nimmt dir ab</h3><ul><li><code>MatDialog</code> / CDK <code>Dialog</code>: Fokusfalle, Esc, Fokus zurück</li><li><code>MatSnackBar</code>: Ansage per Live-Region</li><li><code>mat-form-field</code>: Label, Hinweis und Fehler verknüpft</li><li><code>matSort</code>: <code>aria-sort</code></li><li><code>routerLink</code>: echte Links mit <code>href</code></li><li><code>title</code> in den Routes: Seitentitel</li></ul></div>
+    <div class="k-box"><h3>${ic('alert')} Bleibt bei dir</h3><ul><li>Fokus nach dem Routenwechsel</li><li>Skip-Link trotz <code>&lt;base href&gt;</code></li><li>Live-Regionen, die per <code>@if</code> erst auftauchen</li><li>Alt-Texte und Linktexte</li><li>Kontraste deiner Marke</li><li><code>(click)</code> auf <code>div</code> – das verhindert nur ESLint</li></ul></div>
+  </div>
+  <h2>So nutzt du den Kompass</h2>
+  <div class="start-grid">${KOMPASS.slice(1).map(k=>`<div class="tile"><h3>${ic(k.icon)} ${k.title}</h3><p>${k.short}</p><a class="btn btn-secondary" href="#${k.id}">Öffnen<span class="sr-only">: ${k.title}</span></a></div>`).join('')}</div>
+  ${kPager('wcag')}
+</article>`;
+}
+
+function kCompHTML(sub){
+  const c=C_BY[sub]||COMPS[0],i=COMPS.indexOf(c),prev=COMPS[i-1],next=COMPS[i+1];
+  return `<article class="lesson" aria-labelledby="lesson-title">
+  ${kHead('WCAG nach Bauteil','Du baust keine Erfolgskriterien, du baust Buttons und Formulare. Hier steht pro Bauteil, welche Kriterien greifen, worauf du achtest, wie du es in zwei Minuten prüfst – und was Angular dir abnimmt.')}
+  <nav aria-label="Bauteile" class="k-picknav" data-anno="Links mit aria-current (keine Tabs)"><ul class="k-picker">${COMPS.map(x=>`<li><a href="#wcag-bauteile/${x.id}"${x===c?' aria-current="page"':''}>${ic(x.icon)}${x.name}</a></li>`).join('')}</ul>
+  <p class="hint">Das sind Links, keine Tabs: Jedes Bauteil hat eine eigene Adresse, die du teilen kannst. Darum <code>aria-current</code> statt <code>role="tab"</code>.</p></nav>
+  <section class="k-comp" aria-labelledby="k-comp-h">
+    <h2 id="k-comp-h" tabindex="-1">${ic(c.icon)}${c.name}</h2>
+    <p class="k-lead">${c.rule}</p>
+    <ul class="k-crits" aria-label="Betroffene Kriterien" data-anno="Chips (Links)">${c.crit.map(critChip).join('')}</ul>
+    <div class="k-cols">
+      <div class="k-box"><h3>Darauf achten</h3><ul>${c.dos.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+      <div class="k-box"><h3>So prüfst du es</h3><ul>${c.test.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+    </div>
+    <div class="k-ng" data-anno="Callout"><h3>${ic('code')} In Angular</h3><ul>${c.ng.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+    <h3 class="k-h3">Im Code: so nicht – so</h3>
+    <div class="k-code">${kCode(false,'So nicht',c.bad)}${kCode(true,'So',c.good)}</div>
+    <p class="k-more">Mehr dazu in den Lektionen: ${c.lessons.map(id=>`<a href="#${id}">${BY_ID[id].title}</a>`).join(' · ')}</p>
+  </section>
+  <nav class="pager" aria-label="Weitere Bauteile">${prev?`<a class="prev" href="#wcag-bauteile/${prev.id}"><small>← Voriges Bauteil</small>${prev.name}</a>`:`<a class="prev" href="#wcag"><small>← Zurück zum</small>Überblick</a>`}${next?`<a class="next" href="#wcag-bauteile/${next.id}"><small>Nächstes Bauteil →</small>${next.name}</a>`:`<a class="next" href="#wcag-kriterien"><small>Weiter →</small>Alle 55 Kriterien</a>`}</nav>
+</article>`;
+}
+
+const critCard=w=>{const s=wSlug(w.nr),ls=W_LESSONS[w.nr]||[],cs=W_COMPS[w.nr]||[];
+  return `<article class="k-crit" id="${s}" data-nr="${w.nr}" aria-labelledby="${s}-h">
+  <h3 id="${s}-h" tabindex="-1"><span class="k-nr">${w.nr}</span> ${w.de} <span class="k-en" lang="en">${w.en}</span></h3>
+  <p>${w.text}</p>
+  <ul class="k-meta" aria-label="Einordnung"><li class="k-pill">Stufe ${w.lvl}</li>${w.roles.map(r=>`<li class="k-pill">${ROLE[r]}</li>`).join('')}<li class="k-pill">${w.auto?'Tool hilft':'Nur manuell'}</li>${w.neu?'<li class="k-pill k-new">neu in 2.2</li>':''}</ul>
+  <p class="k-links">${cs.map(id=>`<a href="#wcag-bauteile/${id}">Bauteil: ${C_BY[id].name}</a>`).join('')}${ls.map(id=>`<a href="#${id}">Lektion: ${BY_ID[id].title}</a>`).join('')}<a href="${w.url}">W3C-Erklärung (englisch)</a></p>
+</article>`};
+
+function kCritHTML(){
+  return `<article class="lesson" aria-labelledby="lesson-title">
+  ${kHead('Alle 55 Kriterien auf A und AA','Jedes Kriterium in einem Satz, übersetzt in das, was du im Frontend tust. Filtere nach deiner Rolle – oder nach dem, was kein Tool für dich findet.')}
+  <form class="sf-filters k-filters" id="k-filter" role="search" aria-label="Kriterien filtern" data-anno="Filter (form role=search)">
+    <div class="field"><label for="k-q">Suchen <span class="opt">Nummer, Stichwort oder englischer Name</span></label><input class="input" id="k-q" type="search" autocomplete="off" spellcheck="false"></div>
+    <div class="k-segs">${kSeg('stufe','Stufe',[['','Alle'],['A','A'],['AA','AA']])}${kSeg('rolle','Rolle',[['','Alle'],['d','Dev'],['g','Design'],['c','Content']])}${kSeg('test','Prüfung',[['','Alle'],['tool','Tool hilft'],['manuell','Nur manuell']])}</div>
+    <label class="check-row"><input type="checkbox" id="k-neu">Nur neu in WCAG 2.2</label>
+  </form>
+  <p class="k-count" id="k-count" role="status"></p>
+  <div id="k-list">${PRINC.map((p,i)=>`<section class="k-sec" aria-labelledby="k-p${i}"><h2 id="k-p${i}">${i+1} · ${p}<span class="k-sub">${PRINC_Q[i]}</span></h2><div class="k-list">${WCAG.filter(w=>w.p===i).map(critCard).join('')}</div></section>`).join('')}</div>
+  <div class="list-empty" id="k-empty" hidden>${ic('search')}<p class="le-title">Kein Kriterium passt zu diesen Filtern</p><button type="button" class="btn btn-secondary" id="k-reset">Filter zurücksetzen</button></div>
+  <p class="hint" style="margin-top:20px">„Tool hilft“ heißt: axe oder Lighthouse finden zumindest einen Teil der Verstöße. Ob etwas <em>gut</em> gelöst ist, zeigt dir bei keinem Kriterium ein Tool.</p>
+  ${kPager('wcag-kriterien')}
+</article>`;
+}
+function kCritInit(root,sub,params){
+  const q=$('#k-q',root),neu=$('#k-neu',root),count=$('#k-count',root),empty=$('#k-empty',root),cards=$$('.k-crit',root),secs=$$('.k-sec',root);
+  const val=n=>$(`input[name="k-${n}"]:checked`,root).value;
+  const setVal=(n,v)=>{($(`input[name="k-${n}"][value="${CSS.escape(v)}"]`,root)||$(`input[name="k-${n}"]`,root)).checked=true};
+  q.value=params.get('q')||'';['stufe','rolle','test'].forEach(n=>setVal(n,params.get(n)||''));neu.checked=params.get('neu')==='1';
+  let t;
+  function apply(user,typed){
+    const s=norm(q.value.trim()),st=val('stufe'),ro=val('rolle'),te=val('test'),nu=neu.checked;
+    let n=0;
+    cards.forEach(el=>{const w=W_BY[el.dataset.nr];
+      const ok=(!st||w.lvl===st)&&(!ro||w.roles.includes(ro))&&(!te||(te==='tool')===w.auto)&&(!nu||w.neu)&&(!s||norm(`${w.nr} ${w.de} ${w.en} ${w.text.replace(/<[^>]+>/g,'')}`).includes(s));
+      el.hidden=!ok;if(ok)n++});
+    secs.forEach(sec=>{sec.hidden=!$('.k-crit:not([hidden])',sec)});
+    empty.hidden=n>0;
+    clearTimeout(t);t=setTimeout(()=>{count.textContent=n===WCAG.length?`Alle ${n} Kriterien`:`${n} von ${WCAG.length} Kriterien`},typed?400:0);
+    if(!user)return;
+    const p=new URLSearchParams();
+    if(q.value.trim())p.set('q',q.value.trim());if(st)p.set('stufe',st);if(ro)p.set('rolle',ro);if(te)p.set('test',te);if(nu)p.set('neu','1');
+    const qs=p.toString();
+    history.replaceState(null,'','#wcag-kriterien'+(qs?'?'+qs:''));
+  }
+  const form=$('#k-filter',root);
+  form.addEventListener('input',e=>apply(true,e.target===q));
+  form.addEventListener('submit',e=>e.preventDefault());
+  $('#k-reset',root).addEventListener('click',()=>{q.value='';['stufe','rolle','test'].forEach(n=>setVal(n,''));neu.checked=false;apply(true);q.focus()});
+  apply(false);
+  const hit=sub&&$('#'+wSlug(sub),root);
+  if(hit){hit.classList.add('k-hit');requestAnimationFrame(()=>hit.scrollIntoView({block:'start'}))}
+  return ()=>clearTimeout(t);
+}
+
+function kTestHTML(){
+  const total=STEPS.reduce((a,s)=>a+s.min,0);
+  return `<article class="lesson" aria-labelledby="lesson-title">
+  ${kHead(`Test-Routine in ${total} Minuten`,'Sieben Schritte, jedes Mal in derselben Reihenfolge. Die ersten vier brauchen keine Tools außer dem Browser, und sie finden mehr als jeder automatische Scan.')}
+  <ol class="k-steps">${STEPS.map((s,i)=>`<li class="k-step"><h2><span class="step-n" aria-hidden="true">${i+1}</span>${s.t}<span class="k-min">${s.min} Min.</span></h2><p>${s.how}</p><ul>${s.look.map(x=>`<li>${x}</li>`).join('')}</ul><p class="k-links">${s.crit.map(critLink).join('')}</p></li>`).join('')}</ol>
+  <h2>Direkt hier ausprobieren</h2>
+  <p class="prose" style="margin:0 0 12px">Beide Schalter wirken auf diese ganze App. Klick danach durch ein paar Lektionen – und schalte sie wieder aus, spätestens beim Verlassen dieser Seite passiert das automatisch.</p>
+  <div class="btn-row"><button type="button" class="btn btn-secondary" id="k-ts" aria-pressed="false">Textabstand (1.4.12)</button><button type="button" class="btn btn-secondary" id="k-gray" aria-pressed="false">Graustufen (1.4.1)</button></div>
+  <div class="k-code" style="margin-top:12px">${kCode(true,'Textabstand-CSS für die DevTools',TS_CSS)}</div>
+  <h2>Screenreader-Spickzettel (NVDA)</h2>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="NVDA-Tastenkürzel"><table class="kb-table"><caption class="sr-only">NVDA-Tastenkürzel</caption><thead><tr><th scope="col">Aktion</th><th scope="col">Taste</th><th scope="col">Aktion</th><th scope="col">Taste</th></tr></thead><tbody>${SR_KEYS.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join('')}</tbody></table></div>
+  <p class="hint" style="margin-top:8px">Die NVDA-Taste ist <kbd>Einfg</kbd>. Buchstaben wie <kbd>H</kbd> funktionieren nur im Lesemodus.</p>
+  <h2>Angular: in die Pipeline damit</h2>
+  <div class="prose"><p>Manuelle Tests finden das meiste, aber sie laufen nicht bei jedem Commit. Zwei Dinge fangen die Klassiker automatisch ab, bevor sie in einen Pull Request kommen:</p></div>
+  <div class="k-code k-code-1">${kCode(true,'1 · ESLint: Template-Regeln',CI_LINT)}${kCode(true,'2 · axe im E2E-Test',CI_AXE)}</div>
+  <div class="k-ng"><h3>${ic('code')} Außerdem</h3><ul><li>Mit Cypress statt Playwright: <code>cypress-axe</code>, dann <code>cy.injectAxe()</code> und <code>cy.checkA11y()</code>.</li><li>Eigene Komponentenbibliothek in Storybook? <code>@storybook/addon-a11y</code> zeigt Verstöße pro Story.</li><li>Die Tags <code>wcag2a</code> bis <code>wcag22aa</code> begrenzen axe auf A und AA – genau den Umfang dieses Kompasses.</li></ul></div>
+  ${kPager('wcag-test')}
+</article>`;
+}
+function kTestInit(root){
+  const toggles=[['#k-ts','k-ts-style',TS_CSS],['#k-gray','k-gray-style','html{filter:grayscale(1)}']];
+  toggles.forEach(([sel,id,css])=>{
+    const b=$(sel,root);
+    b.setAttribute('aria-pressed',String(!!document.getElementById(id)));
+    b.addEventListener('click',()=>{
+      const on=b.getAttribute('aria-pressed')!=='true';
+      if(on){const s=document.createElement('style');s.id=id;s.textContent=css;document.head.append(s)}else document.getElementById(id)?.remove();
+      b.setAttribute('aria-pressed',String(on));
+    });
+  });
+  return ()=>toggles.forEach(([,id])=>document.getElementById(id)?.remove());
+}
+
+const kChecked=()=>new Set(store.get('wcag-check',[]).filter(id=>CHECK_IDS.includes(id)));
+function kCheckHTML(){
+  const done=kChecked();
+  return `<article class="lesson" aria-labelledby="lesson-title">
+  ${kHead('Projekt-Checkliste','Die Punkte, die in echten Projekten am häufigsten fehlen – sortiert nach Bereich, nicht nach Kriterium. Abhaken, als Markdown in den Pull Request kopieren, beim nächsten Feature von vorn.')}
+  <div class="progress k-prog" data-anno="Progress Bar"><div class="progress-row"><span id="kc-label"></span></div><div class="bar" id="kc-bar" role="progressbar" aria-labelledby="kc-label" aria-valuemin="0" aria-valuemax="${CHECK_IDS.length}"><span></span></div></div>
+  <div class="btn-row" style="margin-top:14px"><button type="button" class="btn btn-primary" id="kc-copy">${ic('copy')} Als Markdown kopieren</button><button type="button" class="btn btn-secondary" id="kc-reset">Alle Haken entfernen</button></div>
+  ${CHECK.map(([sec,items],si)=>`<section class="k-check" aria-labelledby="kc-h${si}"><h2 id="kc-h${si}">${sec}</h2><ul class="k-check-list">${items.map(([id,t,crit])=>`<li><div class="check-row"><input type="checkbox" id="kc-${id}" data-id="${id}"${done.has(id)?' checked':''}><label for="kc-${id}">${t}</label></div>${crit?`<span class="k-cnums">${crit.split(' ').map(critLink).join('')}</span>`:''}</li>`).join('')}</ul></section>`).join('')}
+  <p class="hint" style="margin-top:20px">Die Haken liegen nur in diesem Browser. Für ein Team: Markdown kopieren und in den Pull Request oder ins Ticket einfügen.</p>
+  ${kPager('wcag-checkliste')}
+</article>`;
+}
+function kCheckInit(root){
+  let done=kChecked();
+  const upd=()=>{
+    const n=done.size,N=CHECK_IDS.length;
+    $('#kc-label',root).textContent=`${n} von ${N} Punkten erledigt`;
+    const bar=$('#kc-bar',root);bar.setAttribute('aria-valuenow',n);bar.style.setProperty('--p',(n/N*100)+'%');
+  };
+  const save=()=>{store.set('wcag-check',[...done]);upd()};
+  root.addEventListener('change',e=>{const id=e.target.dataset?.id;if(!id)return;if(e.target.checked)done.add(id);else done.delete(id);save()});
+  $('#kc-copy',root).addEventListener('click',async()=>{
+    const strip=s=>s.replace(/<code>(.*?)<\/code>/g,'`$1`').replace(/<[^>]+>/g,'').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&amp;/g,'&');
+    const md='## Barrierefreiheit (WCAG 2.2 AA)\n'+CHECK.map(([sec,items])=>`\n### ${sec}\n`+items.map(([id,t,crit])=>`- [${done.has(id)?'x':' '}] ${strip(t)}${crit?` (${crit.split(' ').join(', ')})`:''}`).join('\n')).join('\n')+'\n';
+    try{await navigator.clipboard.writeText(md);toast({msg:`Checkliste kopiert – ${done.size} von ${CHECK_IDS.length} abgehakt.`,type:'success',duration:3500})}
+    catch(err){toast({msg:'Kopieren ging nicht – der Browser hat die Zwischenablage blockiert.',type:'error'})}
+  });
+  $('#kc-reset',root).addEventListener('click',()=>{
+    if(!done.size){toast({msg:'Es ist noch nichts abgehakt.',duration:2500});return}
+    const before=[...done];done=new Set();save();
+    $$('input[data-id]',root).forEach(cb=>cb.checked=false);
+    toast({msg:`${before.length} Haken entfernt.`,action:{label:'Rückgängig',fn:()=>{done=new Set(before);save();$$('input[data-id]',root).forEach(cb=>cb.checked=done.has(cb.dataset.id))}}});
+  });
+  upd();
+}
+
+const KOMPASS=[
+ {id:'wcag',title:'WCAG-Kompass: Überblick',icon:'compass',short:'Was WCAG von dir als Frontend-Dev will, was das Gesetz verlangt, was Angular dir abnimmt.',keys:'wcag barrierefreiheit a11y eaa bafg gesetz en 301 549 pour angular überblick',render:kStartHTML},
+ {id:'wcag-bauteile',title:'WCAG nach Bauteil',icon:'button',short:'Button, Formular, Modal, Tabelle … – Kriterien, Tests und Angular-Code pro Bauteil.',keys:'bauteil komponente angular button formular modal tabelle navigation routing cdk material',render:kCompHTML,
+  docTitle:sub=>`${(C_BY[sub]||COMPS[0]).name} · WCAG nach Bauteil`,focus:(root,sub)=>sub&&$('#k-comp-h',root)},
+ {id:'wcag-kriterien',title:'Alle 55 Kriterien',icon:'filter',short:'Jedes A- und AA-Kriterium in einem Satz, filterbar nach Stufe, Rolle und Prüfbarkeit.',keys:'kriterien erfolgskriterien success criteria liste filter stufe',render:kCritHTML,init:kCritInit,
+  docTitle:sub=>W_BY[sub]?`${sub} ${W_BY[sub].de} · WCAG-Kriterien`:'Alle 55 WCAG-Kriterien',focus:(root,sub)=>W_BY[sub]&&$('#'+wSlug(sub)+'-h',root)},
+ {id:'wcag-test',title:'Test-Routine',icon:'keyboard',short:'Tastatur, Zoom, Kontrast, axe, Screenreader – und wie Angular-Projekte das in die CI bringen.',keys:'test testen prüfen axe lighthouse nvda screenreader eslint playwright cypress ci',render:kTestHTML,init:kTestInit},
+ {id:'wcag-checkliste',title:'Projekt-Checkliste',icon:'check',short:'Zum Abhaken und als Markdown für den Pull Request.',keys:'checkliste abhaken projekt pull request markdown',render:kCheckHTML,init:kCheckInit}
+];
+const K_BY_ID=Object.fromEntries(KOMPASS.map(k=>[k.id,k]));
+
 /* ---------- Learned progress ---------- */
 const learned=new Set(store.get('learned',[]).filter(id=>BY_ID[id]));
 function updateProgress(){
@@ -2713,6 +3372,8 @@ function renderList(){
   const match=l=>!q||norm(`${l.title} ${l.short} ${l.cat} ${l.keys}`).includes(q);
   let html='',count=0;
   if(!q)html+=`<ul class="items"><li>${itemHTML(START)}</li></ul>`;
+  const ks=KOMPASS.filter(k=>!q||norm(`${k.title} ${k.short} ${k.keys}`).includes(q));
+  if(ks.length){count+=ks.length;html+=`<p class="grp" id="grp-k">WCAG-Kompass</p><ul class="items" aria-labelledby="grp-k">${ks.map(k=>`<li>${itemHTML(k)}</li>`).join('')}</ul>`}
   CATS.forEach((cat,ci)=>{
     const ls=LESSONS.filter(l=>l.cat===cat&&match(l));if(!ls.length)return;count+=ls.length;
     html+=`<p class="grp" id="grp-${ci}">${cat}</p><ul class="items" aria-labelledby="grp-${ci}">${ls.map(l=>`<li>${itemHTML(l)}</li>`).join('')}</ul>`;
@@ -2721,7 +3382,7 @@ function renderList(){
   listEl.innerHTML=html;
   markActive(currentId);
   clearTimeout(statusTimer);
-  statusTimer=setTimeout(()=>{qStatus.textContent=q?(count===1?'1 Lektion gefunden':`${count} Lektionen gefunden`):`${LESSONS.length} Lektionen in ${CATS.length} Kapiteln`},q?450:0);
+  statusTimer=setTimeout(()=>{qStatus.textContent=q?(count===1?'1 Treffer':`${count} Treffer`):`${LESSONS.length} Lektionen in ${CATS.length} Kapiteln, dazu der WCAG-Kompass`},q?450:0);
 }
 function markActive(id){
   $$('.item',listEl).forEach(a=>{
@@ -2742,7 +3403,7 @@ function lessonHTML(l){
   return `<article class="lesson" aria-labelledby="lesson-title">
   <p class="eyebrow">${l.cat} · Lektion ${i+1} von ${LESSONS.length}</p>
   <h1 id="lesson-title" tabindex="-1">${l.title}</h1>
-  <ul class="refs" aria-label="Normen und Quellen" data-anno="Chips">${l.refs.map(r=>`<li>${r}</li>`).join('')}</ul>
+  <ul class="refs" aria-label="Normen und Quellen" data-anno="Chips">${l.refs.map(r=>{const m=/^WCAG (\d\.\d\.\d+)/.exec(r);return m&&W_BY[m[1]]?`<li><a href="#wcag-kriterien/${m[1]}">${r}</a></li>`:`<li>${r}</li>`}).join('')}</ul>
   <p class="rule">${l.rule}</p>
   <h2>Die Zahlen</h2>
   <dl class="numbers" data-anno="Description List (dl)">${l.numbers.map(([v,t])=>`<div class="num"><dt>${v}</dt><dd>${t}</dd></div>`).join('')}</dl>
@@ -2776,6 +3437,7 @@ function startHTML(){
     <div class="tile"><h3>${ic('palette')} Marke wechseln</h3><p>Die App ist White-Label. Oben rechts wählst du eine von drei Marken – gleicher Code, andere Design Tokens.</p></div>
     <div class="tile"><h3>${ic('keyboard')} Tastatur</h3><p><kbd>Tab</kbd> zum Weiterspringen, <kbd>/</kbd> für die Suche, <kbd>Esc</kbd> schließt Dialoge.</p></div>
     <div class="tile"><h3>${ic('ok')} Fortschritt</h3><p>Am Ende jeder Lektion kannst du sie als gelernt markieren. Das bleibt in diesem Browser gespeichert.</p></div>
+    <div class="tile"><h3>${ic('compass')} WCAG-Kompass</h3><p>Was die Barrierefreiheits-Norm von dir als Frontend-Dev will – nach Bauteil sortiert, mit Angular-Hinweisen und Checkliste.</p><a class="btn btn-secondary" href="#wcag">Kompass öffnen</a></div>
   </div>
   <h2>Aufbau jeder Lektion</h2>
   <ol class="anatomy"><li><b>Die Regel</b> in ein, zwei Sätzen</li><li><b>Die Zahlen</b> – Maße, Zeiten, Verhältnisse zum Merken</li><li><b>Live-Beispiel</b> zum Anfassen</li><li><b>Richtig</b> als Liste, <b>Falsch</b> mit einem Negativbeispiel pro Punkt – zum Anschauen und teils zum Ausprobieren</li><li><b>Warum?</b> – der Grund hinter der Regel</li><li><b>In dieser App</b> – wo du sie hier wiederfindest</li></ol>
@@ -2795,23 +3457,32 @@ function notFoundHTML(id){
 
 function updateTitle(){
   const b=BRANDS[document.documentElement.dataset.brand||'fjord'];
+  const k=K_BY_ID[currentId];
+  if(k){document.title=`${k.docTitle?.(kSub)||k.title} · ${b.app}`;return}
   const l=BY_ID[currentId]||(currentId==='start'?START:null);
   document.title=l?`${l.title} · ${b.app}`:`Nicht gefunden · ${b.app}`;
 }
 
-let lastLessonId=null,masterScroll=0;
+let lastLessonId=null,masterScroll=0,kSub='';
 function route(fromUser){
   if(cleanup){try{cleanup()}catch(e){}cleanup=null}
   if(shell.dataset.view==='master')masterScroll=master.scrollTop;
   const id=decodeURIComponent(location.hash.slice(1));
   const overview=id===''||id==='uebersicht';
+  // Kompass-Adressen: #wcag-bauteile/modal, #wcag-kriterien/2.4.7, #wcag-kriterien?stufe=AA
+  const [path,qs='']=id.split('?'),[base,sub='']=path.split(/\/(.*)/);
   shell.dataset.view=overview?'master':'detail';
-  let entry;
+  let entry,focusEl=null;
   if(overview||id==='start'){currentId='start';view.innerHTML=startHTML();entry=START}
   else if(BY_ID[id]){
     currentId=id;entry=BY_ID[id];view.innerHTML=lessonHTML(entry);
     const c=entry.init?.(view);if(typeof c==='function')cleanup=c;
     $$('.bad-show',view).forEach(el=>BAD[id]?.[+el.dataset.bad]?.init?.(el));
+  }
+  else if(K_BY_ID[base]){
+    currentId=base;kSub=sub;entry=K_BY_ID[base];view.innerHTML=entry.render(sub);
+    const c=entry.init?.(view,sub,new URLSearchParams(qs));if(typeof c==='function')cleanup=c;
+    focusEl=entry.focus?.(view,sub)||null;
   }
   else{currentId=null;view.innerHTML=notFoundHTML(id)}
   markActive(currentId);updateTitle();
@@ -2823,7 +3494,7 @@ function route(fromUser){
     (a||search).focus({preventScroll:!!a});
   }else{
     detail.scrollTop=0;
-    $('#lesson-title').focus({preventScroll:true});
+    if(focusEl)focusEl.focus();else $('#lesson-title').focus({preventScroll:true});
   }
   if(!overview&&currentId)lastLessonId=currentId;
 }

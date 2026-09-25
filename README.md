@@ -25,6 +25,24 @@ Systemschrift ein.
 | Layout & Marke | Typografie, Responsive & Reflow, White-Label & Design Tokens |
 | Qualität | Performance (Core Web Vitals), Internationalisierung, Dark Patterns |
 
+## WCAG-Kompass
+
+Ein eigener Bereich (`index.html#wcag`) übersetzt WCAG 2.2 in Frontend-Arbeit, Umfang
+A + AA (55 Kriterien):
+
+- **Überblick**: POUR, die Stufen, was EAA / BaFG / EN 301 549 verlangen, die sechs
+  häufigsten Fehler, was Angular abnimmt und was nicht.
+- **Nach Bauteil**: zehn Bauteile (Button, Link, Formular, Bild & Icon, Modal, Tabelle,
+  Navigation, Seite & Routing, Statusmeldung, Medien) mit Kriterien, Prüfschritten,
+  Angular-Hinweisen (CDK a11y, Material, Router) und Code „so nicht / so“.
+- **Alle 55 Kriterien**: je ein Satz, filterbar nach Stufe, Rolle und Prüfbarkeit; die
+  Filter stehen in der URL.
+- **Test-Routine**: sieben Schritte in 15 Minuten, NVDA-Spickzettel, ESLint- und
+  axe-Setup für die CI.
+- **Projekt-Checkliste**: zum Abhaken, als Markdown kopierbar für den Pull Request.
+
+Die WCAG-Chips in den Lektionen verlinken direkt auf das jeweilige Kriterium.
+
 Jede Lektion hat denselben Aufbau: **Regel → Die Zahlen → Live-Beispiel → Richtig →
 Falsch (mit Negativbeispiel pro Punkt) → Warum → In dieser App**.
 

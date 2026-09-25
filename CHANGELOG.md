@@ -12,6 +12,10 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
 ## Unveröffentlicht
 
 ### Neu
+- WCAG-Kompass: WCAG 2.2 auf Stufe A und AA, übersetzt für Frontend-Devs – Überblick
+  mit Rechtslage, zehn Bauteile mit Angular-Hinweisen und Code „so nicht / so“, alle 55
+  Kriterien filterbar, Test-Routine mit CI-Setup und eine Checkliste für den Pull Request.
+- WCAG-Chips in den Lektionen führen direkt zum passenden Kriterium im Kompass.
 - Eigenes Favicon: ein Daumenabdruck im Linienstil und in den Farben der mind app, als
   SVG für moderne Browser, ICO als Rückfall und PNG für den iOS-Homescreen.
 - Selbsterklärende UI-Pattern-Library als einzelne Web-App: 29 Lektionen in 8 Kapiteln,

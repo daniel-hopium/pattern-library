@@ -45,6 +45,10 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
 - „Bauteile zeigen“ beschriftet alle Oberflächenelemente mit ihrem Fachbegriff.
 - Lernfortschritt pro Lektion, Suche über alle Lektionen, eigene Adresse je Lektion.
 
+### Verbessert
+- Die Kacheln zu CSS-Atlas und ARIA-Kompass stehen jetzt in einem eigenen Abschnitt „Die
+  Schwester-Apps“ unter den Kapiteln – an derselben Stelle wie in den beiden anderen Apps.
+
 ### Behoben
 - „Bauteile zeigen“ beschriftet jetzt auch die Seiten des WCAG-Kompass; die Etiketten
   verdecken keine Chips und Links mehr.

@@ -50,6 +50,9 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
   Schwester-Apps“ unter den Kapiteln – an derselben Stelle wie in den beiden anderen Apps.
 
 ### Behoben
+- Live-Beispiele laufen auf schmalen Bildschirmen nicht mehr seitlich aus dem Bild (etwa bei
+  Overlays, UX-Gesetzen und Dark Patterns); breite Tabellen scrollen weiter in ihrem eigenen
+  Bereich.
 - Fachliche Durchsicht aller Lektionen, des WCAG-Kompass und der 50 Paare: rund 40 Aussagen
   korrigiert – etwa dass Links nur auf Enter reagieren, dass `aria-invalid` eine Fehlermeldung
   nicht verknüpft, Details zu Angular Material, die Stufen „Tool hilft“ bei 1.4.1, 1.4.4 und

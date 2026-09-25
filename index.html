@@ -876,6 +876,11 @@ dialog.sheet{margin:auto auto 0;width:min(560px,100%);max-width:100%;border-radi
 .k-check-list .check-row{flex:1 1 320px}
 .k-check-list label{cursor:pointer;padding:8px 0}
 .k-check-list li:has(input:checked) label{color:var(--muted)}
+.k-filters,.k-picknav,.k-crits,.k-cols,.k-ng,.k-code,.k-count,.k-crit,.k-meta,.k-links,.k-steps,.tiers,.k-classics,.k-segs,.k-cnums{position:relative}
+.anno :is(.start-grid,.field,.check-row,.table-wrap,.btn-row,.list-empty)[data-anno]{position:relative}
+.anno :is(.k-picknav,.k-crits,.k-meta,.k-links)[data-anno]::after{top:auto;bottom:100%;border-radius:4px 4px 0 0}
+.anno :is(.k-crits,.k-meta,.k-links)[data-anno]{margin-top:26px}
+.anno .k-picknav[data-anno]{margin-top:40px}
 .k-cnums{display:flex;gap:10px;font:600 .8125rem/1 var(--font-mono);padding-left:32px}
 </style>
 </head>
@@ -3162,7 +3167,7 @@ const kSeg=(n,legend,opts)=>`<fieldset class="seg"><legend>${legend}</legend><di
 const kHead=(title,rule)=>`<p class="eyebrow">WCAG-Kompass</p><h1 id="lesson-title" tabindex="-1">${title}</h1><p class="rule">${rule}</p>`;
 function kPager(id){
   const i=KOMPASS.findIndex(k=>k.id===id),prev=KOMPASS[i-1],next=KOMPASS[i+1];
-  return `<nav class="pager" aria-label="Weitere Seiten im Kompass">${prev?`<a class="prev" href="#${prev.id}"><small>← Vorherige</small>${prev.title}</a>`:`<a class="prev" href="#start"><small>← Zurück zum</small>Start</a>`}${next?`<a class="next" href="#${next.id}"><small>Nächste →</small>${next.title}</a>`:`<a class="next" href="#${LESSONS[0].id}"><small>Weiter zu den</small>Lektionen</a>`}</nav>`;
+  return `<nav class="pager" aria-label="Weitere Seiten im Kompass" data-anno="Pager">${prev?`<a class="prev" href="#${prev.id}"><small>← Vorherige</small>${prev.title}</a>`:`<a class="prev" href="#start"><small>← Zurück zum</small>Start</a>`}${next?`<a class="next" href="#${next.id}"><small>Nächste →</small>${next.title}</a>`:`<a class="next" href="#${LESSONS[0].id}"><small>Weiter zu den</small>Lektionen</a>`}</nav>`;
 }
 
 function kStartHTML(){
@@ -3170,14 +3175,14 @@ function kStartHTML(){
   const classics=[['Zu wenig Textkontrast','1.4.3','#contrast'],['Bilder ohne Alt-Text','1.1.1','#wcag-bauteile/bild'],['Formularfelder ohne Label','3.3.2','#wcag-bauteile/formular'],['Leere Links, etwa Icon-Links ohne Namen','2.4.4','#wcag-bauteile/link'],['Leere Buttons, etwa Icon-Buttons ohne Namen','4.1.2','#wcag-bauteile/button'],['Fehlende Seitensprache','3.1.1','#wcag-bauteile/seite']];
   return `<article class="lesson" aria-labelledby="lesson-title">
   ${kHead('WCAG für Frontend-Devs','WCAG 2.2 hat 86 Prüfkriterien. Für dich zählen 55: alle auf Stufe A und AA. Die meisten davon entscheidest du im Template – nicht im Design und nicht erst im Test.')}
-  <ul class="refs" aria-label="Normen und Quellen" style="margin-top:16px"><li>WCAG 2.2</li><li>EN 301 549</li><li>EAA · BaFG</li><li>Angular CDK a11y</li></ul>
+  <ul class="refs" aria-label="Normen und Quellen" style="margin-top:16px" data-anno="Chips"><li>WCAG 2.2</li><li>EN 301 549</li><li>EAA · BaFG</li><li>Angular CDK a11y</li></ul>
   <h2>Die Zahlen</h2>
-  <dl class="numbers"><div class="num"><dt>55</dt><dd>Kriterien auf A und AA (${n('A')} + ${n('AA')}) – diese Stufe verlangen die Gesetze</dd></div><div class="num"><dt>4,5 : 1</dt><dd>Mindestkontrast für Text – der häufigste Fehler im Web</dd></div><div class="num"><dt>28.06.2025</dt><dd>seitdem gilt der European Accessibility Act, in Österreich als BaFG</dd></div><div class="num"><dt>30–57 %</dt><dd>der Probleme finden automatische Tools, je nach Studie. Den Rest findest nur du</dd></div></dl>
+  <dl class="numbers" data-anno="Description List (dl)"><div class="num"><dt>55</dt><dd>Kriterien auf A und AA (${n('A')} + ${n('AA')}) – diese Stufe verlangen die Gesetze</dd></div><div class="num"><dt>4,5 : 1</dt><dd>Mindestkontrast für Text – der häufigste Fehler im Web</dd></div><div class="num"><dt>28.06.2025</dt><dd>seitdem gilt der European Accessibility Act, in Österreich als BaFG</dd></div><div class="num"><dt>30–57 %</dt><dd>der Probleme finden automatische Tools, je nach Studie. Den Rest findest nur du</dd></div></dl>
   <h2>Vier Prinzipien: POUR</h2>
   <p class="prose" style="margin:0 0 12px">Jedes Kriterium hängt an einem von vier Prinzipien. Die Nummer verrät es: 2.4.7 gehört zu Prinzip 2, Bedienbar.</p>
-  <ul class="tiers">${PRINC.map((p,i)=>`<li><b>${i+1} · ${p}</b>${PRINC_Q[i]}<br><span class="hint">${WCAG.filter(w=>w.p===i).length} Kriterien</span></li>`).join('')}</ul>
+  <ul class="tiers" data-anno="Cards (Grid)">${PRINC.map((p,i)=>`<li><b>${i+1} · ${p}</b>${PRINC_Q[i]}<br><span class="hint">${WCAG.filter(w=>w.p===i).length} Kriterien</span></li>`).join('')}</ul>
   <h2>A, AA, AAA – was davon?</h2>
-  <div class="k-cols">
+  <div class="k-cols" data-anno="Cards (Grid)">
     <div class="k-box"><h3>Stufe A</h3><p>Das Minimum. Fehlt es, ist die Seite für manche Menschen <em>gar nicht</em> benutzbar: keine Tastatur, kein Alt-Text, keine Labels.</p></div>
     <div class="k-box"><h3>Stufe AA</h3><p>Das Ziel. Gesetze und Ausschreibungen verlangen A plus AA. Kontrast, Zoom, sichtbarer Fokus und Statusmeldungen kommen hier dazu.</p></div>
     <div class="k-box"><h3>Stufe AAA</h3><p>Die Kür. Selbst das W3C empfiehlt AAA nicht für ganze Websites. Einzelnes lohnt sich trotzdem, etwa reduzierte Bewegung (2.3.3).</p></div>
@@ -3186,14 +3191,14 @@ function kStartHTML(){
   <div class="prose"><p>Der <strong>European Accessibility Act</strong> gilt seit dem 28. Juni 2025 auch für private Anbieter: Onlineshops, Banking, Buchungen im Personenverkehr, E-Books, Telekommunikation. In Österreich setzt ihn das <strong>Barrierefreiheitsgesetz (BaFG)</strong> um, in Deutschland das BFSG. Kleinstunternehmen mit weniger als zehn Beschäftigten und höchstens 2 Mio. € Umsatz sind bei Dienstleistungen ausgenommen. Öffentliche Stellen in Österreich sind schon seit 2019 über das Web-Zugänglichkeits-Gesetz verpflichtet.</p><p>Technisch verweisen alle auf die Norm <strong>EN 301 549</strong>, und die verlangt WCAG 2.1 auf Stufe AA. Die sechs Kriterien, die erst mit 2.2 dazukamen, sind im Kompass als <span class="k-pill k-new">neu in 2.2</span> markiert. Setz sie trotzdem um: Die nächste Fassung der Norm zieht nach, und sie sind gute UX.</p><p class="hint">Das ist eine Orientierung, keine Rechtsberatung.</p></div>
   <h2>Die sechs Klassiker</h2>
   <p class="prose" style="margin:0 0 12px">Die WebAIM Million prüft jedes Jahr die eine Million meistbesuchten Startseiten. Rund 95 % haben automatisch erkennbare Fehler – und seit Jahren sind es dieselben sechs:</p>
-  <ol class="k-classics">${classics.map(([t,nr,href])=>`<li><a href="${href}">${t}</a> <span class="hint">· ${critLink(nr)}</span></li>`).join('')}</ol>
+  <ol class="k-classics" data-anno="Ordered List (ol)">${classics.map(([t,nr,href])=>`<li><a href="${href}">${t}</a> <span class="hint">· ${critLink(nr)}</span></li>`).join('')}</ol>
   <h2>Was Angular dir abnimmt – und was nicht</h2>
-  <div class="k-cols">
+  <div class="k-cols" data-anno="Cards (Grid)">
     <div class="k-box"><h3>${ic('ok')} Nimmt dir ab</h3><ul><li><code>MatDialog</code> / CDK <code>Dialog</code>: Fokusfalle, Esc, Fokus zurück</li><li><code>MatSnackBar</code>: Ansage per Live-Region</li><li><code>mat-form-field</code>: Label, Hinweis und Fehler verknüpft</li><li><code>matSort</code>: <code>aria-sort</code></li><li><code>routerLink</code>: echte Links mit <code>href</code></li><li><code>title</code> in den Routes: Seitentitel</li></ul></div>
     <div class="k-box"><h3>${ic('alert')} Bleibt bei dir</h3><ul><li>Fokus nach dem Routenwechsel</li><li>Skip-Link trotz <code>&lt;base href&gt;</code></li><li>Live-Regionen, die per <code>@if</code> erst auftauchen</li><li>Alt-Texte und Linktexte</li><li>Kontraste deiner Marke</li><li><code>(click)</code> auf <code>div</code> – das verhindert nur ESLint</li></ul></div>
   </div>
   <h2>So nutzt du den Kompass</h2>
-  <div class="start-grid">${KOMPASS.slice(1).map(k=>`<div class="tile"><h3>${ic(k.icon)} ${k.title}</h3><p>${k.short}</p><a class="btn btn-secondary" href="#${k.id}">Öffnen<span class="sr-only">: ${k.title}</span></a></div>`).join('')}</div>
+  <div class="start-grid" data-anno="Cards mit Link">${KOMPASS.slice(1).map(k=>`<div class="tile"><h3>${ic(k.icon)} ${k.title}</h3><p>${k.short}</p><a class="btn btn-secondary" href="#${k.id}">Öffnen<span class="sr-only">: ${k.title}</span></a></div>`).join('')}</div>
   ${kPager('wcag')}
 </article>`;
 }
@@ -3208,16 +3213,16 @@ function kCompHTML(sub){
     <h2 id="k-comp-h" tabindex="-1">${ic(c.icon)}${c.name}</h2>
     <p class="k-lead">${c.rule}</p>
     <ul class="k-crits" aria-label="Betroffene Kriterien" data-anno="Chips (Links)">${c.crit.map(critChip).join('')}</ul>
-    <div class="k-cols">
+    <div class="k-cols" data-anno="Cards (Grid)">
       <div class="k-box"><h3>Darauf achten</h3><ul>${c.dos.map(x=>`<li>${x}</li>`).join('')}</ul></div>
       <div class="k-box"><h3>So prüfst du es</h3><ul>${c.test.map(x=>`<li>${x}</li>`).join('')}</ul></div>
     </div>
     <div class="k-ng" data-anno="Callout"><h3>${ic('code')} In Angular</h3><ul>${c.ng.map(x=>`<li>${x}</li>`).join('')}</ul></div>
     <h3 class="k-h3">Im Code: so nicht – so</h3>
-    <div class="k-code">${kCode(false,'So nicht',c.bad)}${kCode(true,'So',c.good)}</div>
+    <div class="k-code" data-anno="Code-Vergleich (figure + pre)">${kCode(false,'So nicht',c.bad)}${kCode(true,'So',c.good)}</div>
     <p class="k-more">Mehr dazu in den Lektionen: ${c.lessons.map(id=>`<a href="#${id}">${BY_ID[id].title}</a>`).join(' · ')}</p>
   </section>
-  <nav class="pager" aria-label="Weitere Bauteile">${prev?`<a class="prev" href="#wcag-bauteile/${prev.id}"><small>← Voriges Bauteil</small>${prev.name}</a>`:`<a class="prev" href="#wcag"><small>← Zurück zum</small>Überblick</a>`}${next?`<a class="next" href="#wcag-bauteile/${next.id}"><small>Nächstes Bauteil →</small>${next.name}</a>`:`<a class="next" href="#wcag-kriterien"><small>Weiter →</small>Alle 55 Kriterien</a>`}</nav>
+  <nav class="pager" aria-label="Weitere Bauteile" data-anno="Pager">${prev?`<a class="prev" href="#wcag-bauteile/${prev.id}"><small>← Voriges Bauteil</small>${prev.name}</a>`:`<a class="prev" href="#wcag"><small>← Zurück zum</small>Überblick</a>`}${next?`<a class="next" href="#wcag-bauteile/${next.id}"><small>Nächstes Bauteil →</small>${next.name}</a>`:`<a class="next" href="#wcag-kriterien"><small>Weiter →</small>Alle 55 Kriterien</a>`}</nav>
 </article>`;
 }
 
@@ -3233,13 +3238,13 @@ function kCritHTML(){
   return `<article class="lesson" aria-labelledby="lesson-title">
   ${kHead('Alle 55 Kriterien auf A und AA','Jedes Kriterium in einem Satz, übersetzt in das, was du im Frontend tust. Filtere nach deiner Rolle – oder nach dem, was kein Tool für dich findet.')}
   <form class="sf-filters k-filters" id="k-filter" role="search" aria-label="Kriterien filtern" data-anno="Filter (form role=search)">
-    <div class="field"><label for="k-q">Suchen <span class="opt">Nummer, Stichwort oder englischer Name</span></label><input class="input" id="k-q" type="search" autocomplete="off" spellcheck="false"></div>
-    <div class="k-segs">${kSeg('stufe','Stufe',[['','Alle'],['A','A'],['AA','AA']])}${kSeg('rolle','Rolle',[['','Alle'],['d','Dev'],['g','Design'],['c','Content']])}${kSeg('test','Prüfung',[['','Alle'],['tool','Tool hilft'],['manuell','Nur manuell']])}</div>
-    <label class="check-row"><input type="checkbox" id="k-neu">Nur neu in WCAG 2.2</label>
+    <div class="field" data-anno="Suchfeld"><label for="k-q">Suchen <span class="opt">Nummer, Stichwort oder englischer Name</span></label><input class="input" id="k-q" type="search" autocomplete="off" spellcheck="false"></div>
+    <div class="k-segs" data-anno="Segmented Controls (Radio)">${kSeg('stufe','Stufe',[['','Alle'],['A','A'],['AA','AA']])}${kSeg('rolle','Rolle',[['','Alle'],['d','Dev'],['g','Design'],['c','Content']])}${kSeg('test','Prüfung',[['','Alle'],['tool','Tool hilft'],['manuell','Nur manuell']])}</div>
+    <label class="check-row" data-anno="Checkbox"><input type="checkbox" id="k-neu">Nur neu in WCAG 2.2</label>
   </form>
-  <p class="k-count" id="k-count" role="status"></p>
+  <p class="k-count" id="k-count" role="status" data-anno="Live-Region (role=status)"></p>
   <div id="k-list">${PRINC.map((p,i)=>`<section class="k-sec" aria-labelledby="k-p${i}"><h2 id="k-p${i}">${i+1} · ${p}<span class="k-sub">${PRINC_Q[i]}</span></h2><div class="k-list">${WCAG.filter(w=>w.p===i).map(critCard).join('')}</div></section>`).join('')}</div>
-  <div class="list-empty" id="k-empty" hidden>${ic('search')}<p class="le-title">Kein Kriterium passt zu diesen Filtern</p><button type="button" class="btn btn-secondary" id="k-reset">Filter zurücksetzen</button></div>
+  <div class="list-empty" id="k-empty" hidden data-anno="Empty State">${ic('search')}<p class="le-title">Kein Kriterium passt zu diesen Filtern</p><button type="button" class="btn btn-secondary" id="k-reset">Filter zurücksetzen</button></div>
   <p class="hint" style="margin-top:20px">„Tool hilft“ heißt: axe oder Lighthouse finden zumindest einen Teil der Verstöße. Ob etwas <em>gut</em> gelöst ist, zeigt dir bei keinem Kriterium ein Tool.</p>
   ${kPager('wcag-kriterien')}
 </article>`;
@@ -3257,6 +3262,10 @@ function kCritInit(root,sub,params){
       const ok=(!st||w.lvl===st)&&(!ro||w.roles.includes(ro))&&(!te||(te==='tool')===w.auto)&&(!nu||w.neu)&&(!s||norm(`${w.nr} ${w.de} ${w.en} ${w.text.replace(/<[^>]+>/g,'')}`).includes(s));
       el.hidden=!ok;if(ok)n++});
     secs.forEach(sec=>{sec.hidden=!$('.k-crit:not([hidden])',sec)});
+    // „Bauteile zeigen“ beschriftet nur die erste sichtbare Karte, nicht alle 55
+    $$('.k-crit [data-anno], .k-crit[data-anno]',root).forEach(el=>el.removeAttribute('data-anno'));
+    const first=cards.find(el=>!el.hidden);
+    if(first){first.dataset.anno='Card (article)';$('.k-meta',first).dataset.anno='Badges';$('.k-links',first).dataset.anno='Links'}
     empty.hidden=n>0;
     clearTimeout(t);t=setTimeout(()=>{count.textContent=n===WCAG.length?`Alle ${n} Kriterien`:`${n} von ${WCAG.length} Kriterien`},typed?400:0);
     if(!user)return;
@@ -3279,18 +3288,18 @@ function kTestHTML(){
   const total=STEPS.reduce((a,s)=>a+s.min,0);
   return `<article class="lesson" aria-labelledby="lesson-title">
   ${kHead(`Test-Routine in ${total} Minuten`,'Sieben Schritte, jedes Mal in derselben Reihenfolge. Die ersten vier brauchen keine Tools außer dem Browser, und sie finden mehr als jeder automatische Scan.')}
-  <ol class="k-steps">${STEPS.map((s,i)=>`<li class="k-step"><h2><span class="step-n" aria-hidden="true">${i+1}</span>${s.t}<span class="k-min">${s.min} Min.</span></h2><p>${s.how}</p><ul>${s.look.map(x=>`<li>${x}</li>`).join('')}</ul><p class="k-links">${s.crit.map(critLink).join('')}</p></li>`).join('')}</ol>
+  <ol class="k-steps" data-anno="Ordered List (ol)">${STEPS.map((s,i)=>`<li class="k-step"><h2><span class="step-n" aria-hidden="true">${i+1}</span>${s.t}<span class="k-min">${s.min} Min.</span></h2><p>${s.how}</p><ul>${s.look.map(x=>`<li>${x}</li>`).join('')}</ul><p class="k-links">${s.crit.map(critLink).join('')}</p></li>`).join('')}</ol>
   <h2>Direkt hier ausprobieren</h2>
   <p class="prose" style="margin:0 0 12px">Beide Schalter wirken auf diese ganze App. Klick danach durch ein paar Lektionen – und schalte sie wieder aus, spätestens beim Verlassen dieser Seite passiert das automatisch.</p>
-  <div class="btn-row"><button type="button" class="btn btn-secondary" id="k-ts" aria-pressed="false">Textabstand (1.4.12)</button><button type="button" class="btn btn-secondary" id="k-gray" aria-pressed="false">Graustufen (1.4.1)</button></div>
-  <div class="k-code" style="margin-top:12px">${kCode(true,'Textabstand-CSS für die DevTools',TS_CSS)}</div>
+  <div class="btn-row" data-anno="Toggle Buttons (aria-pressed)"><button type="button" class="btn btn-secondary" id="k-ts" aria-pressed="false">Textabstand (1.4.12)</button><button type="button" class="btn btn-secondary" id="k-gray" aria-pressed="false">Graustufen (1.4.1)</button></div>
+  <div class="k-code" style="margin-top:12px" data-anno="Code-Block (figure + pre)">${kCode(true,'Textabstand-CSS für die DevTools',TS_CSS)}</div>
   <h2>Screenreader-Spickzettel (NVDA)</h2>
-  <div class="table-wrap" tabindex="0" role="region" aria-label="NVDA-Tastenkürzel"><table class="kb-table"><caption class="sr-only">NVDA-Tastenkürzel</caption><thead><tr><th scope="col">Aktion</th><th scope="col">Taste</th><th scope="col">Aktion</th><th scope="col">Taste</th></tr></thead><tbody>${SR_KEYS.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join('')}</tbody></table></div>
+  <div class="table-wrap" tabindex="0" role="region" data-anno="Tabelle (scrollbare Region)" aria-label="NVDA-Tastenkürzel"><table class="kb-table"><caption class="sr-only">NVDA-Tastenkürzel</caption><thead><tr><th scope="col">Aktion</th><th scope="col">Taste</th><th scope="col">Aktion</th><th scope="col">Taste</th></tr></thead><tbody>${SR_KEYS.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join('')}</tbody></table></div>
   <p class="hint" style="margin-top:8px">Die NVDA-Taste ist <kbd>Einfg</kbd>. Buchstaben wie <kbd>H</kbd> funktionieren nur im Lesemodus.</p>
   <h2>Angular: in die Pipeline damit</h2>
   <div class="prose"><p>Manuelle Tests finden das meiste, aber sie laufen nicht bei jedem Commit. Zwei Dinge fangen die Klassiker automatisch ab, bevor sie in einen Pull Request kommen:</p></div>
-  <div class="k-code k-code-1">${kCode(true,'1 · ESLint: Template-Regeln',CI_LINT)}${kCode(true,'2 · axe im E2E-Test',CI_AXE)}</div>
-  <div class="k-ng"><h3>${ic('code')} Außerdem</h3><ul><li>Mit Cypress statt Playwright: <code>cypress-axe</code>, dann <code>cy.injectAxe()</code> und <code>cy.checkA11y()</code>.</li><li>Eigene Komponentenbibliothek in Storybook? <code>@storybook/addon-a11y</code> zeigt Verstöße pro Story.</li><li>Die Tags <code>wcag2a</code> bis <code>wcag22aa</code> begrenzen axe auf A und AA – genau den Umfang dieses Kompasses.</li></ul></div>
+  <div class="k-code k-code-1" data-anno="Code-Blöcke (figure + pre)">${kCode(true,'1 · ESLint: Template-Regeln',CI_LINT)}${kCode(true,'2 · axe im E2E-Test',CI_AXE)}</div>
+  <div class="k-ng" data-anno="Callout"><h3>${ic('code')} Außerdem</h3><ul><li>Mit Cypress statt Playwright: <code>cypress-axe</code>, dann <code>cy.injectAxe()</code> und <code>cy.checkA11y()</code>.</li><li>Eigene Komponentenbibliothek in Storybook? <code>@storybook/addon-a11y</code> zeigt Verstöße pro Story.</li><li>Die Tags <code>wcag2a</code> bis <code>wcag22aa</code> begrenzen axe auf A und AA – genau den Umfang dieses Kompasses.</li></ul></div>
   ${kPager('wcag-test')}
 </article>`;
 }
@@ -3314,8 +3323,8 @@ function kCheckHTML(){
   return `<article class="lesson" aria-labelledby="lesson-title">
   ${kHead('Projekt-Checkliste','Die Punkte, die in echten Projekten am häufigsten fehlen – sortiert nach Bereich, nicht nach Kriterium. Abhaken, als Markdown in den Pull Request kopieren, beim nächsten Feature von vorn.')}
   <div class="progress k-prog" data-anno="Progress Bar"><div class="progress-row"><span id="kc-label"></span></div><div class="bar" id="kc-bar" role="progressbar" aria-labelledby="kc-label" aria-valuemin="0" aria-valuemax="${CHECK_IDS.length}"><span></span></div></div>
-  <div class="btn-row" style="margin-top:14px"><button type="button" class="btn btn-primary" id="kc-copy">${ic('copy')} Als Markdown kopieren</button><button type="button" class="btn btn-secondary" id="kc-reset">Alle Haken entfernen</button></div>
-  ${CHECK.map(([sec,items],si)=>`<section class="k-check" aria-labelledby="kc-h${si}"><h2 id="kc-h${si}">${sec}</h2><ul class="k-check-list">${items.map(([id,t,crit])=>`<li><div class="check-row"><input type="checkbox" id="kc-${id}" data-id="${id}"${done.has(id)?' checked':''}><label for="kc-${id}">${t}</label></div>${crit?`<span class="k-cnums">${crit.split(' ').map(critLink).join('')}</span>`:''}</li>`).join('')}</ul></section>`).join('')}
+  <div class="btn-row" style="margin-top:14px" data-anno="Primary + Secondary Button"><button type="button" class="btn btn-primary" id="kc-copy">${ic('copy')} Als Markdown kopieren</button><button type="button" class="btn btn-secondary" id="kc-reset">Alle Haken entfernen</button></div>
+  ${CHECK.map(([sec,items],si)=>`<section class="k-check" aria-labelledby="kc-h${si}"><h2 id="kc-h${si}">${sec}</h2><ul class="k-check-list">${items.map(([id,t,crit],ii)=>`<li><div class="check-row"${si+ii?'':' data-anno="Checkbox"'}><input type="checkbox" id="kc-${id}" data-id="${id}"${done.has(id)?' checked':''}><label for="kc-${id}">${t}</label></div>${crit?`<span class="k-cnums">${crit.split(' ').map(critLink).join('')}</span>`:''}</li>`).join('')}</ul></section>`).join('')}
   <p class="hint" style="margin-top:20px">Die Haken liegen nur in diesem Browser. Für ein Team: Markdown kopieren und in den Pull Request oder ins Ticket einfügen.</p>
   ${kPager('wcag-checkliste')}
 </article>`;
@@ -3432,7 +3441,7 @@ function startHTML(){
   <p class="eyebrow">Willkommen</p>
   <h1 id="lesson-title" tabindex="-1">Diese App erklärt sich selbst</h1>
   <p class="rule">Statt Beispieltext steht hier überall, <em>warum</em> etwas so gebaut ist. Jede Lektion zeigt eine UI-Regel, die Zahlen dazu, ein Live-Beispiel zum Ausprobieren – und wo die Regel in genau dieser App steckt.</p>
-  <div class="start-grid">
+  <div class="start-grid" data-anno="Cards (Grid)">
     <div class="tile"><h3>${ic('tag')} Bauteile zeigen</h3><p>Beschriftet alle Bausteine der Oberfläche mit ihrem Fachbegriff: App Bar, Master, Detail, Chip, Toast …</p><button type="button" class="btn btn-secondary" id="st-anno">Jetzt einschalten</button></div>
     <div class="tile"><h3>${ic('palette')} Marke wechseln</h3><p>Die App ist White-Label. Oben rechts wählst du eine von drei Marken – gleicher Code, andere Design Tokens.</p></div>
     <div class="tile"><h3>${ic('keyboard')} Tastatur</h3><p><kbd>Tab</kbd> zum Weiterspringen, <kbd>/</kbd> für die Suche, <kbd>Esc</kbd> schließt Dialoge.</p></div>

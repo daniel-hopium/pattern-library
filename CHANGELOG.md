@@ -25,3 +25,7 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
   automatischer Kontrastprüfung der Markenfarbe.
 - „Bauteile zeigen“ beschriftet alle Oberflächenelemente mit ihrem Fachbegriff.
 - Lernfortschritt pro Lektion, Suche über alle Lektionen, eigene Adresse je Lektion.
+
+### Behoben
+- „Bauteile zeigen“ beschriftet jetzt auch die Seiten des WCAG-Kompass; die Etiketten
+  verdecken keine Chips und Links mehr.

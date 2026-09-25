@@ -882,7 +882,126 @@ dialog.sheet{margin:auto auto 0;width:min(560px,100%);max-width:100%;border-radi
 .anno :is(.k-crits,.k-meta,.k-links)[data-anno]{margin-top:26px}
 .anno .k-picknav[data-anno]{margin-top:40px}
 .k-cnums{display:flex;gap:10px;font:600 .8125rem/1 var(--font-mono);padding-left:32px}
-</style>
+/* Gut & Schlecht */
+.du-filter{margin-top:24px;position:relative}
+.du-try,.du-note,.du-more,.du-qbar,.du-result,.du-end-card{position:relative}
+.lesson .du-sec>h2{margin:40px 0 4px}
+.du-item{padding:20px 0 24px;border-bottom:1px solid var(--line);scroll-margin-top:16px;position:relative}
+.du-item.du-hit{border:2px solid var(--brand);border-radius:var(--radius-lg);padding:18px 16px 22px;margin:8px -16px 0;box-shadow:0 0 0 4px var(--brand-soft)}
+.lesson .du-item h3{margin:0 0 6px;font:700 1.125rem/1.35 var(--font-display)}
+.du-try{display:flex;gap:8px;align-items:flex-start;margin:0 0 12px;font-size:.9375rem;color:var(--muted)}
+.du-try .ic{margin-top:2px;color:var(--brand)}
+.du-try b{color:var(--ink)}
+.du-pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px;position:relative}
+.du-wide .du-pair,.du-pair.du-wide{grid-template-columns:minmax(0,1fr)}
+.du-pane{margin:0;border:1.5px solid var(--line);border-radius:var(--radius-lg);background:var(--surface);min-width:0;display:flex;flex-direction:column}
+.du-cap{display:flex;align-items:center;gap:6px;padding:7px 12px;font-weight:700;font-size:.875rem;border-bottom:1px solid var(--line);border-radius:var(--radius-lg) var(--radius-lg) 0 0;background:var(--surface-2)}
+.du-cap .ic{width:18px;height:18px}
+.du-bad{border-color:color-mix(in srgb,var(--danger) 45%,var(--line))}
+.du-bad .du-cap{color:var(--danger);background:var(--danger-bg)}
+.du-good{border-color:color-mix(in srgb,var(--success) 45%,var(--line))}
+.du-good .du-cap{color:var(--success);background:var(--success-bg)}
+.du-show{padding:16px;flex:1;min-width:0}
+.du-why{margin:12px 0 0;max-width:68ch}
+.du-note{margin:10px 0 0;padding:10px 14px;border-left:4px solid var(--warn);background:var(--warn-bg);border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:.9375rem;max-width:68ch}
+.du-more{margin:10px 0 0;font-size:.875rem;color:var(--muted)}
+/* Demo-Bausteine */
+.du-stack{display:grid;gap:12px}
+.du-fs{border:0;margin:0;padding:0;min-width:0}
+.du-fs legend{font-weight:700;padding:0;margin-bottom:6px}
+.du-plain{display:flex;gap:6px;align-items:center;font-size:.9375rem;margin:6px 0}
+.du-plain input{margin:0;width:14px;height:14px}
+.du-choice{display:flex;gap:10px;align-items:center;min-height:44px;padding:0 10px;margin:0 -10px;border-radius:var(--radius-sm);cursor:pointer}
+.du-choice:hover{background:var(--surface-2)}
+.du-choice input{width:20px;height:20px;margin:0;accent-color:var(--brand);flex:none}
+.du-choice:has(:focus-visible){outline:3px solid var(--focus);outline-offset:1px}
+.du-ph::placeholder{color:#B4BAC3}
+.du-red{color:#E0321F;font-size:.8125rem;margin:0}
+.du-row2{display:flex;gap:10px;flex-wrap:wrap}
+.du-grow{flex:1 1 8em;min-width:0}
+.du-w5{flex:0 0 5em}
+.du-w6{flex:0 0 6.5em}
+.du-cbx{display:inline-flex;gap:10px;align-items:center;min-height:44px;cursor:pointer;position:relative}
+.du-box{width:22px;height:22px;border:2px solid var(--line-strong);border-radius:5px;display:grid;place-items:center;flex:none;background:var(--surface)}
+.du-box::after{content:"";width:6px;height:11px;border:solid var(--brand-ink);border-width:0 2.5px 2.5px 0;transform:rotate(45deg);margin-top:-3px;display:none}
+.du-cbx:has(input:checked) .du-box{background:var(--brand);border-color:var(--brand)}
+.du-cbx:has(input:checked) .du-box::after{display:block}
+.du-hide-bad{display:none}
+.du-hide-good{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.du-cbx:has(.du-hide-good:focus-visible) .du-box{outline:3px solid var(--focus);outline-offset:2px}
+.du-card-bad,.du-card-good{display:grid;gap:2px;padding:12px 14px;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--surface);width:100%}
+.du-card-bad span,.du-card-good span{font-size:.875rem;color:var(--muted)}
+.du-card-good{font:inherit;color:inherit;text-align:left;cursor:pointer;border-color:var(--line-strong);transition:border-color .12s,background-color .12s}
+.du-card-good:hover{border-color:var(--brand);background:var(--brand-soft)}
+.btn.du-dis:disabled{background:var(--surface-2);color:#B4BAC3;cursor:not-allowed}
+.du-out,.du-ok{font-size:.9375rem;font-weight:700}
+.du-ok{display:inline-flex;align-items:center;gap:4px;color:var(--success)}
+.du-ok .ic{width:18px;height:18px}
+.du-keep{position:relative}
+.du-spin{position:absolute;inset:0;margin:auto;width:18px;height:18px;border:2.5px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spin .8s linear infinite}
+.du-spin[hidden]{display:none}
+.btn[aria-disabled="true"]{cursor:progress}
+.du-chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center;min-height:44px}
+.du-chip{display:inline-flex;align-items:center;gap:2px;padding:2px 4px 2px 12px;border-radius:999px;background:var(--brand-soft);color:var(--ink);font-size:.875rem;font-weight:700;min-height:32px}
+.du-x-bad{font-size:11px;line-height:1;padding:0 6px 0 3px;cursor:pointer;color:var(--muted)}
+.du-x-good{width:32px;height:32px;margin:-2px -2px -2px 0;display:grid;place-items:center;border:0;border-radius:50%;background:transparent;color:var(--ink);cursor:pointer}
+.du-x-good:hover{background:color-mix(in srgb,var(--brand) 18%,transparent)}
+.du-x-good .ic{width:16px;height:16px}
+.du-dlg{padding:14px;border-radius:var(--radius-lg);box-shadow:var(--shadow);background:var(--surface)}
+.du-dlg p{margin:0 0 12px;font-size:.9375rem}
+.du-end{justify-content:flex-end}
+.du-rows{list-style:none;margin:0;padding:0;display:grid}
+.du-rows li{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:44px;padding:0 0 0 4px;border-bottom:1px solid var(--line)}
+.du-li-act{display:inline-flex;align-items:center;gap:6px}
+.du-ask{font-size:.875rem;font-weight:700}
+.btn.du-sm{min-height:36px;padding:0 12px;font-size:.875rem}
+.du-banner{margin:0;padding:10px 12px;border-radius:var(--radius-sm);background:var(--danger-bg);color:var(--danger);font-weight:700;font-size:.9375rem}
+.du-hov-bad .icon-btn{opacity:0}
+.du-hov-bad li:hover .icon-btn{opacity:1}
+.du-hov-good .icon-btn{opacity:.6}
+.du-hov-good li:hover .icon-btn,.du-hov-good li:focus-within .icon-btn{opacity:1}
+@media (hover:none){.du-hov-good .icon-btn{opacity:1}}
+.du-split{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.btn.du-danger{color:var(--danger)}
+.btn.du-danger:hover{background:var(--danger-bg)}
+.du-feed{display:grid;gap:8px;justify-items:start}
+.du-slot{width:100%}
+.du-slot-fix{min-height:56px;display:grid;place-items:center;border:1px dashed var(--line-strong);border-radius:var(--radius-sm)}
+.du-ad{width:100%;min-height:56px;border:0;border-radius:var(--radius-sm);background:#FFD84D;color:#1B1B1B;font:inherit;font-weight:800;cursor:pointer}
+.du-lead{margin:0;font-weight:700}
+.du-replay{margin-top:10px;font-size:.875rem}
+.du-long{margin:0;font-size:.8125rem;line-height:1.35}
+.du-measure{margin:0;max-width:65ch;line-height:1.6}
+.du-center{margin:0;text-align:center}
+.du-img{height:160px;border-radius:var(--radius-sm);display:flex;align-items:flex-end;overflow:hidden;position:relative;
+  background:radial-gradient(circle at 25% 70%,#FFFFFF 0 14%,transparent 15%),radial-gradient(circle at 70% 85%,#FFF3B0 0 18%,transparent 19%),linear-gradient(115deg,#8ECAE6 0 22%,#F1F1F1 22% 38%,#219EBC 38% 52%,#FFFFFF 52% 64%,#FFB703 64% 78%,#E9F5FB 78%)}
+.du-scrim::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgb(0 0 0 / .78),rgb(0 0 0 / .35) 55%,transparent 85%)}
+.du-img-txt{position:relative;display:grid;padding:12px 14px;color:#FFFFFF}
+.du-img-txt b{font-size:1.125rem}
+.du-caps{margin:0;font-weight:700;letter-spacing:.02em}
+.du-files{list-style:none;margin:0;padding:0;display:grid;gap:6px;max-width:15em;font:500 .875rem/1.4 var(--font-mono)}
+.du-files li{padding:6px 10px;border:1px solid var(--line);border-radius:var(--radius-sm);overflow-wrap:anywhere}
+.du-trunc li{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.du-tools{display:flex;flex-wrap:wrap;gap:4px}
+.du-tool{display:grid;justify-items:center;gap:2px;min-width:64px;padding:6px 4px;border:0;border-radius:var(--radius-sm);background:transparent;color:var(--ink);font:inherit;font-size:.75rem;cursor:pointer}
+.du-tool:hover{background:var(--surface-2)}
+/* Quiz */
+.du-quiz{margin-top:24px;position:relative}
+.du-qhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.lesson .du-qhead h2{margin:0}
+.du-score{font:600 .875rem/1 var(--font-mono);color:var(--muted)}
+.du-qbar{margin:12px 0 16px}
+.du-answer{margin-top:16px}
+.du-result{margin-top:16px;padding:16px 18px;border-radius:var(--radius-lg);border:2px solid}
+.du-right{border-color:var(--success);background:var(--success-bg)}
+.du-wrong{border-color:var(--danger);background:var(--danger-bg)}
+.lesson .du-result h3{display:flex;align-items:center;gap:8px;margin:0 0 6px;font:700 1.0625rem/1.3 var(--font-body)}
+.du-right h3{color:var(--success)}
+.du-wrong h3{color:var(--danger)}
+.du-result p{margin:0 0 12px;max-width:68ch}
+.du-end-card{padding:20px;border:1.5px solid var(--line);border-radius:var(--radius-lg);background:var(--surface)}
+.lesson .du-end-card h2{margin:0 0 8px}
+.du-end-card ul{margin:0 0 16px;padding-left:1.2em;display:grid;gap:4px}</style>
 </head>
 <body>
 
@@ -3364,6 +3483,300 @@ const KOMPASS=[
 ];
 const K_BY_ID=Object.fromEntries(KOMPASS.map(k=>[k.id,k]));
 
+/* ---------- Gut & Schlecht ---------- */
+const D_GROUPS=['Formulare','Buttons & Klicks','Feedback','Text & Layout'];
+const duValid=v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
+const duTime=()=>new Intl.DateTimeFormat('de-AT',{hour:'2-digit',minute:'2-digit'}).format(new Date());
+function duList(el,names,bad){
+  /* Löschliste für „Rückgängig schlägt Nachfrage“ */
+  let items=[...names];
+  const ul=$('ul',el);
+  const draw=()=>{
+    ul.innerHTML=items.length?items.map((n,i)=>`<li><span>${n}</span><span class="du-li-act" data-i="${i}"><button type="button" class="btn btn-ghost du-sm" data-del="${i}">Löschen</button></span></li>`).join(''):'<li class="hint">Alles gelöscht.</li>';
+  };
+  ul.addEventListener('click',e=>{
+    const del=e.target.closest('[data-del]'),yes=e.target.closest('[data-yes]'),no=e.target.closest('[data-no]');
+    if(del&&bad){const i=+del.dataset.del;del.parentElement.innerHTML=`<span class="du-ask">Wirklich?</span><button type="button" class="btn btn-danger du-sm" data-yes="${i}">Ja</button><button type="button" class="btn btn-ghost du-sm" data-no>Nein</button>`;$('[data-yes]',ul).focus()}
+    else if(del){const i=+del.dataset.del,[gone]=items.splice(i,1);draw();
+      toast({msg:`„${gone}“ gelöscht.`,action:{label:'Rückgängig',fn:()=>{items.splice(i,0,gone);draw()}}})}
+    else if(yes){items.splice(+yes.dataset.yes,1);draw()}
+    else if(no)draw();
+  });
+  draw();
+}
+
+/* Jedes Paar: bad/good sind HTML mit {p} als eindeutigem Präfix, init(el) macht sie lebendig */
+const DUELS=[
+{id:'radio-label',grp:0,topic:'Radio-Buttons',title:'Radio-Button: Der Text gehört zur Klickfläche',lesson:'forms',
+ try:'Klick auf das Wort „Express“ statt auf den kleinen Kreis.',
+ bad:`<fieldset class="du-fs"><legend>Versand</legend><div class="du-plain"><input type="radio" name="{p}" checked><span>Standard, 3–5 Tage</span></div><div class="du-plain"><input type="radio" name="{p}"><span>Express, morgen da</span></div></fieldset>`,
+ good:`<fieldset class="du-fs"><legend>Versand</legend><label class="du-choice"><input type="radio" name="{p}" checked>Standard, 3–5 Tage</label><label class="du-choice"><input type="radio" name="{p}">Express, morgen da</label></fieldset>`,
+ why:'Ein <code>&lt;label&gt;</code> macht den Text zur Klickfläche: Aus einem 14-px-Kreis wird eine ganze Zeile. Screenreader lesen den Text als Namen des Radios vor. Hover-Hintergrund und <code>cursor: pointer</code> zeigen, dass die ganze Zeile reagiert.'},
+{id:'placeholder',grp:0,topic:'Eingabefelder',title:'Der Platzhalter ist kein Label',lesson:'forms',
+ try:'Tipp in beide Felder etwas ein. Weißt du danach noch, welches Feld welches war?',
+ bad:`<div class="du-stack"><input class="input du-ph" placeholder="IBAN" aria-label="IBAN"><input class="input du-ph" placeholder="BIC" aria-label="BIC"></div>`,
+ good:`<div class="du-stack"><div class="field"><label for="{p}-i">IBAN</label><input class="input" id="{p}-i" aria-describedby="{p}-h"><p class="hint" id="{p}-h">AT und 18 Ziffern, Leerzeichen egal</p></div><div class="field"><label for="{p}-b">BIC <span class="opt">optional</span></label><input class="input" id="{p}-b"></div></div>`,
+ why:'Der Platzhalter verschwindet mit dem ersten Buchstaben – genau dann, wenn man prüfen will, ob man im richtigen Feld ist. Meist ist er auch zu hell für 4,5 : 1 und wirkt, als wäre das Feld schon ausgefüllt.'},
+{id:'validation',grp:0,topic:'Validierung',title:'Fehler nicht beim ersten Tastendruck zeigen',lesson:'forms',
+ try:'Tipp langsam eine E-Mail-Adresse ein und verlass dann das Feld mit Tab.',
+ bad:`<div class="field"><label for="{p}">E-Mail</label><input class="input" id="{p}" type="email" autocomplete="off"><p class="du-red" hidden>Ungültige E-Mail-Adresse!</p></div>`,
+ good:`<div class="field"><label for="{p}">E-Mail</label><input class="input" id="{p}" type="email" autocomplete="off" aria-describedby="{p}-e"><p class="err" id="{p}-e" hidden></p></div>`,
+ init:{bad(el){const i=$('input',el),e=$('.du-red',el);i.addEventListener('input',()=>{e.hidden=!i.value||duValid(i.value)})},
+  good(el){const i=$('input',el),e=$('.err',el);
+   const show=()=>{const v=i.value.trim();if(!v||duValid(v)){e.hidden=true;i.removeAttribute('aria-invalid');return}
+     e.innerHTML=ic('alert')+(v.includes('@')?'Nach dem @ fehlt noch die Domain, etwa firma.at.':'Es fehlt das @, etwa name@firma.at.');e.hidden=false;i.setAttribute('aria-invalid','true')};
+   i.addEventListener('blur',show);i.addEventListener('input',()=>{if(!e.hidden)show()})}},
+ why:'„Früh loben, spät tadeln“: Fehler erst zeigen, wenn jemand das Feld verlässt – einen behobenen Fehler aber sofort wegnehmen. Wer beim ersten Buchstaben angemeckert wird, ist noch gar nicht fertig. Und die Meldung sagt, was fehlt.'},
+{id:'few-options',grp:0,topic:'Auswahl',title:'Zwei, drei Optionen nicht im Dropdown verstecken',lesson:'forms',
+ try:'Wähl in beiden eine Zahlungsart und zähl die Klicks.',
+ bad:`<div class="field"><label for="{p}">Zahlungsart</label><select id="{p}"><option>Bitte wählen …</option><option>Rechnung</option><option>Kreditkarte</option></select></div>`,
+ good:`<fieldset class="seg"><legend>Zahlungsart</legend><div class="seg-opts"><label><input type="radio" name="{p}">Rechnung</label><label><input type="radio" name="{p}">Kreditkarte</label></div></fieldset>`,
+ why:'Ein Dropdown versteckt die Optionen hinter einem Klick und braucht einen zweiten zum Wählen. Bis etwa fünf Optionen sind sichtbare Radios oder ein Segmented Control schneller – und man sieht auf einen Blick, was es gibt.'},
+{id:'custom-checkbox',grp:0,topic:'Eigene Checkbox',title:'Eigene Checkbox: das Input nie mit display: none verstecken',lesson:'focus',
+ try:'Spring mit Tab zu den Checkboxen und drück die Leertaste.',
+ bad:`<label class="du-cbx"><input type="checkbox" class="du-hide-bad"><span class="du-box" aria-hidden="true"></span>Newsletter abonnieren</label>`,
+ good:`<label class="du-cbx"><input type="checkbox" class="du-hide-good"><span class="du-box" aria-hidden="true"></span>Newsletter abonnieren</label>`,
+ why:'<code>display: none</code> nimmt das Input aus der Tab-Reihenfolge und aus dem Accessibility Tree – mit der Maus geht es, mit Tastatur und Screenreader nicht. Richtig: das Input nur optisch verstecken (oder <code>appearance: none</code> und selbst gestalten) und den Fokusring an die eigene Box hängen.'},
+{id:'field-width',grp:0,topic:'Adressformular',title:'Die Feldbreite verrät die erwartete Länge',lesson:'forms',
+ try:'Nur hinschauen: Wo erkennst du schneller, was wohin gehört?',
+ bad:`<div class="du-stack"><div class="field"><label for="{p}-1">Straße</label><input class="input" id="{p}-1"></div><div class="field"><label for="{p}-2">Hausnummer</label><input class="input" id="{p}-2"></div><div class="field"><label for="{p}-3">PLZ</label><input class="input" id="{p}-3"></div><div class="field"><label for="{p}-4">Ort</label><input class="input" id="{p}-4"></div></div>`,
+ good:`<div class="du-stack"><div class="du-row2"><div class="field du-grow"><label for="{p}-1">Straße</label><input class="input" id="{p}-1" autocomplete="address-line1"></div><div class="field du-w5"><label for="{p}-2">Nr.</label><input class="input" id="{p}-2"></div></div><div class="du-row2"><div class="field du-w6"><label for="{p}-3">PLZ</label><input class="input" id="{p}-3" inputmode="numeric" autocomplete="postal-code"></div><div class="field du-grow"><label for="{p}-4">Ort</label><input class="input" id="{p}-4" autocomplete="address-level2"></div></div></div>`,
+ why:'Die Breite ist ein stiller Hinweis: Ein kurzes Feld sagt „hier kommt wenig hin“. Vier gleich breite Felder zwingen dazu, jedes Label zu lesen – und brauchen doppelt so viel Höhe. Aber nie so schmal, dass die Eingabe abgeschnitten wird.'},
+
+{id:'clickable-card',grp:1,topic:'Klickbare Karte',title:'Was klickbar ist, sieht klickbar aus',lesson:'buttons',
+ try:'Fahr mit der Maus über beide Karten, klick drauf – oder spring mit Tab hin.',
+ bad:`<div class="du-card-bad"><b>Projekt Alpha</b><span>3 offene Aufgaben</span></div>`,
+ good:`<button type="button" class="du-card-good"><b>Projekt Alpha</b><span>3 offene Aufgaben</span></button>`,
+ init:{bad(el){$('.du-card-bad',el).addEventListener('click',()=>toast({msg:'Projekt Alpha geöffnet – hättest du gewusst, dass das geht?',duration:3000}))},
+  good(el){$('.du-card-good',el).addEventListener('click',()=>toast({msg:'Projekt Alpha geöffnet.',duration:3000}))}},
+ why:'Affordance heißt: Ein Element zeigt, was man damit tun kann. Hover-Zustand, Zeiger und Fokusring sind die Signale fürs Klicken. Die schlechte Karte reagiert zwar, verrät es aber nicht – und mit der Tastatur kommt man gar nicht hin.',
+ note:'Streitfall <code>cursor: pointer</code>: Browser geben die Hand nur Links. Viele Design-Systeme setzen sie auch auf Buttons, native Apps von Apple und Microsoft nicht. Beides ist vertretbar. Falsch ist nur, wenn Klickbares gar kein Signal gibt – oder Nicht-Klickbares eine Hand zeigt.'},
+{id:'disabled-button',grp:1,topic:'Absende-Button',title:'Kein grauer Button ohne Grund',lesson:'buttons',
+ try:'Tipp „Al“ ein und versuch abzuschicken.',
+ bad:`<div class="du-stack"><div class="field"><label for="{p}">Benutzername</label><input class="input" id="{p}" autocomplete="off"></div><div><button type="button" class="btn du-dis" disabled>Registrieren</button></div></div>`,
+ good:`<div class="du-stack"><div class="field"><label for="{p}">Benutzername</label><input class="input" id="{p}" autocomplete="off" aria-describedby="{p}-e"><p class="err" id="{p}-e" hidden></p></div><div><button type="button" class="btn btn-primary">Registrieren</button></div></div>`,
+ init:{bad(el){const i=$('input',el),b=$('button',el);i.addEventListener('input',()=>{b.disabled=i.value.trim().length<3})},
+  good(el){const i=$('input',el),e=$('.err',el);
+   $('button',el).addEventListener('click',()=>{const n=i.value.trim().length;
+     if(n<3){e.innerHTML=ic('alert')+`Mindestens 3 Zeichen – bisher ${n}.`;e.hidden=false;i.setAttribute('aria-invalid','true');i.focus()}
+     else{e.hidden=true;i.removeAttribute('aria-invalid');toast({msg:'Registriert.',type:'success',duration:2500})}});
+   i.addEventListener('input',()=>{if(!e.hidden&&i.value.trim().length>=3){e.hidden=true;i.removeAttribute('aria-invalid')}})}},
+ why:'Ein grauer Button sagt „geht nicht“, aber nicht warum. Aktiv lassen und beim Klick zeigen, was fehlt, führt direkt zur Lösung. Dazu kommt: <code>disabled</code> ist nicht fokussierbar, Screenreader-Nutzer finden ihn oft gar nicht, und das Grau hat selten genug Kontrast.'},
+{id:'double-submit',grp:1,topic:'Bestell-Button',title:'Ein Doppelklick bestellt doppelt',lesson:'loading',
+ try:'Doppelklick auf „Bestellen“.',
+ bad:`<div class="btn-row"><button type="button" class="btn btn-primary">Bestellen</button><span class="du-out" role="status"></span></div>`,
+ good:`<div class="btn-row"><button type="button" class="btn btn-primary du-keep"><span class="du-lbl">Bestellen</span><span class="du-spin" hidden></span></button><span class="du-out" role="status"></span></div>`,
+ init:{bad(el){let n=0;const o=$('.du-out',el);$('button',el).addEventListener('click',()=>{n++;setTimeout(()=>{o.textContent=n===1?'1 Bestellung ausgelöst.':`${n} Bestellungen ausgelöst – ${n}-mal abgebucht.`},700)})},
+  good(el){let busy=false;const b=$('button',el),l=$('.du-lbl',el),s=$('.du-spin',el),o=$('.du-out',el);
+   b.addEventListener('click',()=>{if(busy)return;busy=true;b.setAttribute('aria-disabled','true');l.style.visibility='hidden';s.hidden=false;o.textContent='Wird bestellt …';
+     setTimeout(()=>{l.style.visibility='';s.hidden=true;o.textContent='Genau 1 Bestellung ausgelöst.';
+       setTimeout(()=>{busy=false;b.removeAttribute('aria-disabled')},1500)},1200)})}},
+ why:'Netzwerk dauert. Wer nichts sieht, klickt noch einmal. Den Button sofort in einen Ladezustand setzen und weitere Klicks ignorieren – und im Backend trotzdem mit einem Idempotency Key absichern, denn Nutzer finden immer einen Weg.'},
+{id:'loading-width',grp:1,topic:'Speichern-Button',title:'Ladezustand ohne springende Breite',lesson:'loading',
+ try:'Klick auf „Speichern“ und schau, wo „Abbrechen“ danach steht.',
+ bad:`<div class="btn-row"><button type="button" class="btn btn-primary">Speichern</button><button type="button" class="btn btn-secondary">Abbrechen</button></div>`,
+ good:`<div class="btn-row"><button type="button" class="btn btn-primary du-keep"><span class="du-lbl">Speichern</span><span class="du-spin" hidden></span></button><button type="button" class="btn btn-secondary">Abbrechen</button><span class="sr-only" role="status"></span></div>`,
+ init:{bad(el){const [b,c]=$$('button',el);b.addEventListener('click',()=>{b.textContent='Wird gespeichert, bitte warten …';setTimeout(()=>{b.textContent='Speichern'},1600)});
+   c.addEventListener('click',()=>toast({msg:'Abgebrochen – deine Änderung ist weg.',type:'error',duration:3000}))},
+  good(el){const [b,c]=$$('button',el),l=$('.du-lbl',el),s=$('.du-spin',el),st=$('[role=status]',el);
+   b.addEventListener('click',()=>{if(b.getAttribute('aria-busy'))return;b.setAttribute('aria-busy','true');l.style.visibility='hidden';s.hidden=false;st.textContent='Wird gespeichert';
+     setTimeout(()=>{b.removeAttribute('aria-busy');l.style.visibility='';s.hidden=true;st.textContent='Gespeichert'},1600)});
+   c.addEventListener('click',()=>toast({msg:'Abgebrochen.',duration:2500}))}},
+ why:'Ändert sich die Breite, springt alles daneben – und der nächste Klick landet womöglich auf „Abbrechen“. Breite halten, Spinner in den Button, den Status für Screenreader separat ansagen.'},
+{id:'icon-hit',grp:1,topic:'Chip entfernen',title:'Kleines Icon, große Klickfläche',lesson:'touch-targets',
+ try:'Entferne alle Städte über das ×. Am besten am Handy oder mit dem Touchpad.',
+ bad:`<div class="du-chips"></div>`,
+ good:`<div class="du-chips"></div>`,
+ init:{bad(el){duChips(el,false)},good(el){duChips(el,true)}},
+ why:'Das Icon darf klein sein, die Klickfläche nicht. Padding vergrößert das Ziel, ohne die Optik zu ändern. WCAG 2.5.8 verlangt mindestens 24 × 24 px, bequem sind 44.'},
+{id:'button-labels',grp:1,topic:'Bestätigungsdialog',title:'Buttons sagen, was passiert',lesson:'buttons',
+ try:'Lies nur die Buttons, nicht den Text darüber. Was passiert bei „Abbrechen“?',
+ bad:`<div class="du-dlg"><p><b>Möchtest du wirklich abbrechen?</b> Nicht gespeicherte Änderungen gehen verloren.</p><div class="btn-row du-end"><button type="button" class="btn btn-secondary">Abbrechen</button><button type="button" class="btn btn-primary">OK</button></div></div>`,
+ good:`<div class="du-dlg"><p><b>Änderungen verwerfen?</b> Drei Felder sind noch nicht gespeichert.</p><div class="btn-row du-end"><button type="button" class="btn btn-secondary">Weiter bearbeiten</button><button type="button" class="btn btn-danger">Verwerfen</button></div></div>`,
+ why:'„OK / Abbrechen“ zwingt dazu, die Frage zu lesen – und „Abbrechen“ kann hier beides heißen: den Dialog oder die Bearbeitung. Verben, die das Ergebnis beschreiben, versteht man auch beim Überfliegen.'},
+
+{id:'silent-save',grp:2,topic:'Speichern',title:'Kein Klick ohne Rückmeldung',lesson:'toast',
+ try:'Klick in beiden auf „Speichern“. Hat es geklappt?',
+ bad:`<div class="btn-row"><button type="button" class="btn btn-primary">Speichern</button></div>`,
+ good:`<div class="btn-row"><button type="button" class="btn btn-primary">Speichern</button><span class="du-ok" role="status"></span></div>`,
+ init:{good(el){const s=$('.du-ok',el);$('button',el).addEventListener('click',()=>{s.innerHTML=`${ic('check')} Gespeichert um ${duTime()}`})}},
+ why:'Ohne Rückmeldung weiß niemand, ob es geklappt hat – also wird noch einmal geklickt oder die Seite neu geladen. Die Bestätigung gehört dorthin, wo man gerade hinschaut: direkt neben den Button.'},
+{id:'confirm-undo',grp:2,topic:'Löschen',title:'Rückgängig schlägt Nachfrage',lesson:'toast',
+ try:'Lösch in beiden drei Einträge hintereinander.',
+ bad:`<ul class="du-rows"></ul>`,
+ good:`<ul class="du-rows"></ul>`,
+ init:{bad(el){duList(el,['Einkaufsliste','Urlaubsfotos','Steuer 2025','Alte Notizen'],true)},good(el){duList(el,['Einkaufsliste','Urlaubsfotos','Steuer 2025','Alte Notizen'],false)}},
+ why:'Wer zehnmal „Wirklich?“ gefragt wird, klickt irgendwann blind auf „Ja“ – die Nachfrage schützt dann nicht mehr. Sofort löschen und ein paar Sekunden „Rückgängig“ anbieten ist schneller und sicherer. Nachfragen nur, wenn es wirklich endgültig ist.'},
+{id:'error-place',grp:2,topic:'Formularfehler',title:'Fehler dort zeigen, wo sie sind',lesson:'forms',
+ try:'Schick beide Formulare leer ab.',
+ bad:`<form class="du-stack" novalidate><p class="du-banner" hidden>Das Formular enthält Fehler.</p><div class="field"><label for="{p}-a">Vorname</label><input class="input" id="{p}-a"></div><div class="field"><label for="{p}-b">Telefon</label><input class="input" id="{p}-b"></div><div><button class="btn btn-primary">Absenden</button></div></form>`,
+ good:`<form class="du-stack" novalidate><div class="field"><label for="{p}-a">Vorname</label><input class="input" id="{p}-a" aria-describedby="{p}-ae" autocomplete="given-name"><p class="err" id="{p}-ae" hidden></p></div><div class="field"><label for="{p}-b">Telefon</label><input class="input" id="{p}-b" aria-describedby="{p}-be" type="tel" autocomplete="tel"><p class="err" id="{p}-be" hidden></p></div><div><button class="btn btn-primary">Absenden</button></div></form>`,
+ init:{bad(el){const f=$('form',el);f.addEventListener('submit',e=>{e.preventDefault();$('.du-banner',el).hidden=$$('input',el).every(i=>i.value.trim())})},
+  good(el){const f=$('form',el),msg=['Bitte deinen Vornamen eingeben.','Bitte eine Telefonnummer eingeben, etwa 0664 123 45 67.'];
+   f.addEventListener('submit',e=>{e.preventDefault();let first=null;
+     $$('input',el).forEach((i,k)=>{const er=$('#'+i.getAttribute('aria-describedby'),el),bad=!i.value.trim();er.hidden=!bad;er.innerHTML=bad?ic('alert')+msg[k]:'';
+       if(bad){i.setAttribute('aria-invalid','true');first??=i}else i.removeAttribute('aria-invalid')});
+     if(first)first.focus();else toast({msg:'Abgeschickt.',type:'success',duration:2500})})}},
+ why:'Ein Banner oben sagt nur „irgendwo ist was falsch“ – suchen muss man selbst, und mit Screenreader findet man es kaum. Die Meldung gehört ans Feld, mit <code>aria-invalid</code> verknüpft, und der Fokus springt zum ersten Fehler.'},
+{id:'hover-only',grp:2,topic:'Zeilen-Aktionen',title:'Aktionen nicht nur beim Hover zeigen',lesson:'gestures',
+ try:'Wie löschst du eine Zeile? Probier es dann nur mit Tab – oder am Handy.',
+ bad:`<ul class="du-rows du-hov-bad"><li><span>Rechnung März</span><button type="button" class="icon-btn" aria-label="Rechnung März löschen">${ic('trash')}</button></li><li><span>Rechnung April</span><button type="button" class="icon-btn" aria-label="Rechnung April löschen">${ic('trash')}</button></li></ul>`,
+ good:`<ul class="du-rows du-hov-good"><li><span>Rechnung März</span><button type="button" class="icon-btn" aria-label="Rechnung März löschen">${ic('trash')}</button></li><li><span>Rechnung April</span><button type="button" class="icon-btn" aria-label="Rechnung April löschen">${ic('trash')}</button></li></ul>`,
+ init:{bad(el){el.addEventListener('click',e=>{if(e.target.closest('button'))toast({msg:'Gelöscht (Demo).',duration:2000})})},good(el){el.addEventListener('click',e=>{if(e.target.closest('button'))toast({msg:'Gelöscht (Demo).',duration:2000})})}},
+ why:'Touch kennt kein Hover, die Tastatur auch nicht. Was nur beim Drüberfahren erscheint, gibt es für viele gar nicht – links fokussierst du mit Tab einen unsichtbaren Button. Mindestens <code>:focus-within</code> mitnehmen und bei <code>@media (hover: none)</code> immer zeigen.'},
+{id:'destructive',grp:2,topic:'Speichern & Löschen',title:'Löschen gehört nicht direkt neben Speichern',lesson:'buttons',
+ try:'Klick schnell den zweiten Button, ohne genau hinzusehen.',
+ bad:`<div class="btn-row"><button type="button" class="btn btn-primary">Speichern</button><button type="button" class="btn btn-primary">Löschen</button></div>`,
+ good:`<div class="du-split"><button type="button" class="btn btn-ghost du-danger">Projekt löschen …</button><button type="button" class="btn btn-primary">Speichern</button></div>`,
+ init:{bad(el){const [s,d]=$$('button',el);s.addEventListener('click',()=>toast({msg:'Gespeichert.',type:'success',duration:2000}));d.addEventListener('click',()=>toast({msg:'Projekt gelöscht. Ups.',type:'error',duration:3000}))},
+  good(el){const [d,s]=$$('button',el);s.addEventListener('click',()=>toast({msg:'Gespeichert.',type:'success',duration:2000}));d.addEventListener('click',()=>toast({msg:'Hier käme jetzt eine Bestätigung – Löschen ist endgültig.',duration:3000}))}},
+ why:'Gleich aussehende Buttons nebeneinander werden verwechselt, besonders unter Zeitdruck. Die gefährliche Aktion bekommt eine andere Optik, Abstand und – wenn sie endgültig ist – eine Bestätigung. Die Auslassungspunkte im Text kündigen an, dass noch ein Schritt folgt.'},
+{id:'layout-shift',grp:2,topic:'Nachladender Inhalt',title:'Inhalt springt nicht unter dem Finger weg',lesson:'performance',
+ try:'Klick auf „Artikel lesen“, sobald du ihn siehst. Mit „Nochmal“ startet es neu.',
+ bad:`<div class="du-feed"><div class="du-slot"></div><p class="du-lead">Neue Studie: Warum wir Buttons verfehlen.</p><button type="button" class="btn btn-secondary du-read">Artikel lesen</button></div><button type="button" class="linkbtn du-replay">Nochmal</button>`,
+ good:`<div class="du-feed"><div class="du-slot du-slot-fix"><span class="hint">Anzeige wird geladen …</span></div><p class="du-lead">Neue Studie: Warum wir Buttons verfehlen.</p><button type="button" class="btn btn-secondary du-read">Artikel lesen</button></div><button type="button" class="linkbtn du-replay">Nochmal</button>`,
+ init:{bad(el){duShift(el)},good(el){duShift(el)}},
+ why:'Lädt etwas über dem Inhalt nach, rutscht alles nach unten – der Klick trifft, was jetzt dort liegt. Das misst Google als Cumulative Layout Shift. Lösung: den Platz vorher reservieren, mit fester Höhe oder <code>aspect-ratio</code>.'},
+
+{id:'line-length',grp:3,topic:'Fließtext',title:'Zeilenlänge: 45 bis 75 Zeichen',lesson:'typography',wide:true,
+ try:'Lies beide Absätze. Bei welchem findest du leichter in die nächste Zeile?',
+ bad:`<p class="du-long">Das Auge springt am Zeilenende zurück an den Anfang der nächsten Zeile. Ist die Zeile zu lang, verfehlt es sie und liest dieselbe Zeile noch einmal oder überspringt eine. Ist sie zu kurz, zerhackt sie den Satz und das Auge springt ständig. Seit dem Buchdruck gelten deshalb 45 bis 75 Zeichen pro Zeile als angenehm.</p>`,
+ good:`<p class="du-measure">Das Auge springt am Zeilenende zurück an den Anfang der nächsten Zeile. Ist die Zeile zu lang, verfehlt es sie und liest dieselbe Zeile noch einmal oder überspringt eine. Ist sie zu kurz, zerhackt sie den Satz und das Auge springt ständig. Seit dem Buchdruck gelten deshalb 45 bis 75 Zeichen pro Zeile als angenehm.</p>`,
+ why:'Im Web begrenzt <code>max-width: 65ch</code> die Zeile auf rund 65 Zeichen der aktuellen Schrift – egal wie breit der Bildschirm ist. Dazu eine Zeilenhöhe von etwa 1,5.'},
+{id:'centered',grp:3,topic:'Textausrichtung',title:'Lange Texte nicht zentrieren',lesson:'typography',
+ try:'Lies beide Absätze bis zum Ende.',
+ bad:`<p class="du-center">Zentrierter Fließtext hat links und rechts einen unruhigen Rand. Das Auge findet den Anfang der nächsten Zeile nicht an derselben Stelle wieder, sondern muss ihn jedes Mal neu suchen.</p>`,
+ good:`<p>Linksbündiger Text hat eine feste Kante, an der jede Zeile beginnt. Das Auge springt immer an dieselbe Stelle zurück. Zentrieren ist für eine kurze Überschrift in Ordnung, für Absätze nicht.</p>`,
+ why:'Leserichtung braucht einen festen Startpunkt. Bei zentriertem Text beginnt jede Zeile woanders, das bremst ab der zweiten Zeile spürbar – bei Legasthenie noch mehr.'},
+{id:'text-image',grp:3,topic:'Text auf Bild',title:'Text auf einem Bild braucht einen Schleier',lesson:'contrast',
+ try:'Kannst du Titel und Uhrzeit in beiden sofort lesen?',
+ bad:`<div class="du-img"><div class="du-img-txt"><b>Wanderung am Dachstein</b><span>Samstag, 9 Uhr</span></div></div>`,
+ good:`<div class="du-img du-scrim"><div class="du-img-txt"><b>Wanderung am Dachstein</b><span>Samstag, 9 Uhr</span></div></div>`,
+ why:'Ein Foto hat helle und dunkle Stellen – weißer Text ist irgendwo immer unlesbar, und der Kontrast ändert sich mit jedem Bild. Ein dunkler Verlauf hinter dem Text macht ihn unabhängig vom Motiv lesbar.'},
+{id:'all-caps',grp:3,topic:'Hinweistext',title:'Großbuchstaben nur für Kurzes',lesson:'typography',
+ try:'Lies beide Hinweise. Welcher ist schneller erfasst?',
+ bad:`<p class="du-caps">WICHTIG: BITTE BRINGEN SIE ZUM TERMIN IHRE E-CARD, EINEN LICHTBILDAUSWEIS UND ALLE VORBEFUNDE DER LETZTEN ZWEI JAHRE MIT.</p>`,
+ good:`<p class="eyebrow" style="margin:0 0 4px">Wichtig</p><p style="margin:0">Bitte bringen Sie zum Termin Ihre E-Card, einen Lichtbildausweis und alle Vorbefunde der letzten zwei Jahre mit.</p>`,
+ why:'Wir lesen Wortbilder: Ober- und Unterlängen geben jedem Wort eine Form. In Großbuchstaben sind alle Wörter gleich hohe Blöcke, das Lesen wird langsamer – und es wirkt wie Schreien. Versalien für kurze Labels, und dann per <code>text-transform</code>, nicht im Quelltext.'},
+{id:'truncation',grp:3,topic:'Dateiliste',title:'Nicht abschneiden, bis alles gleich aussieht',lesson:'tables',
+ try:'Finde die Rechnung vom März.',
+ bad:`<ul class="du-files du-trunc"><li>Rechnung_2026_Kunde_Maier_Jänner.pdf</li><li>Rechnung_2026_Kunde_Maier_Februar.pdf</li><li>Rechnung_2026_Kunde_Maier_März.pdf</li></ul>`,
+ good:`<ul class="du-files"><li><span aria-hidden="true">Rechnung_2026_…_Jänner.pdf</span><span class="sr-only">Rechnung_2026_Kunde_Maier_Jänner.pdf</span></li><li><span aria-hidden="true">Rechnung_2026_…_Februar.pdf</span><span class="sr-only">Rechnung_2026_Kunde_Maier_Februar.pdf</span></li><li><span aria-hidden="true">Rechnung_2026_…_März.pdf</span><span class="sr-only">Rechnung_2026_Kunde_Maier_März.pdf</span></li></ul>`,
+ why:'Bei Dateinamen, Pfaden und IDs steckt der Unterschied oft am Ende. Abschneiden am Ende macht sie ununterscheidbar. Besser umbrechen – oder in der Mitte kürzen und den vollen Namen für Screenreader und im Tooltip behalten.'},
+{id:'icon-only',grp:3,topic:'Werkzeugleiste',title:'Icons brauchen Text',lesson:'navigation',
+ try:'Was macht das zweite und das dritte Symbol?',
+ bad:`<div class="du-tools">${['star','tag','copy','file','more'].map((n,i)=>`<button type="button" class="icon-btn" aria-label="${['Favorit','Etikett','Duplizieren','Exportieren','Mehr'][i]}">${ic(n)}</button>`).join('')}</div>`,
+ good:`<div class="du-tools">${['star','tag','copy','file','more'].map((n,i)=>`<button type="button" class="du-tool">${ic(n)}<span>${['Favorit','Etikett','Duplizieren','Exportieren','Mehr'][i]}</span></button>`).join('')}</div>`,
+ why:'Nur wenige Icons sind wirklich eindeutig: Suche, Schließen, vielleicht Drucken. Alles andere ist ein Ratespiel („Mystery Meat Navigation“). Ein kurzes Label darunter kostet etwas Platz und spart jedes Rätseln – und Sprachsteuerung braucht einen sichtbaren Namen.'}
+];
+function duChips(el,good){
+  const box=$('.du-chips',el);let cities=['Wien','Graz','Linz','Salzburg'];
+  const draw=()=>{box.innerHTML=cities.length?cities.map((c,i)=>`<span class="du-chip">${c}${good?`<button type="button" class="du-x-good" data-i="${i}" aria-label="${c} entfernen">${ic('x')}</button>`:`<span class="du-x-bad" role="button" tabindex="0" data-i="${i}" aria-label="${c} entfernen">×</span>`}</span>`).join(''):'<button type="button" class="linkbtn" data-reset>Alle wieder da</button>'};
+  box.addEventListener('click',e=>{const x=e.target.closest('[data-i]');if(x){cities.splice(+x.dataset.i,1);draw();($('[data-i]',box)||$('[data-reset]',box))?.focus()}
+    if(e.target.closest('[data-reset]')){cities=['Wien','Graz','Linz','Salzburg'];draw()}});
+  draw();
+}
+function duShift(el){
+  const slot=$('.du-slot',el),fixed=slot.classList.contains('du-slot-fix');let t;
+  const play=()=>{clearTimeout(t);if(!fixed)slot.innerHTML='';else slot.innerHTML='<span class="hint">Anzeige wird geladen …</span>';
+    t=setTimeout(()=>{slot.innerHTML='<button type="button" class="du-ad">Anzeige: Jetzt Kredit sichern!</button>'},1100)};
+  el.addEventListener('click',e=>{
+    if(e.target.closest('.du-ad'))toast({msg:'Anzeige geklickt – eigentlich wolltest du den Artikel.',type:'error',duration:3000});
+    if(e.target.closest('.du-read'))toast({msg:'Artikel geöffnet.',type:'success',duration:2000});
+    if(e.target.closest('.du-replay'))play();
+  });
+  play();
+}
+const D_BY=Object.fromEntries(DUELS.map(d=>[d.id,d]));
+const duPane=(d,good,label,prefix)=>`<figure class="du-pane ${label?'':good?'du-good':'du-bad'}"><figcaption class="du-cap">${label??`${ic(good?'ok':'xc')}${good?'Gut':'Schlecht'}`}</figcaption><div class="du-show" data-side="${good?'good':'bad'}">${(good?d.good:d.bad).replaceAll('{p}',prefix)}</div></figure>`;
+const duInit=(d,root)=>$$('.du-show',root).forEach(el=>d.init?.[el.dataset.side]?.(el));
+
+function duGalleryHTML(){
+  return `<article class="lesson" aria-labelledby="lesson-title">
+  <p class="eyebrow">Gut &amp; Schlecht</p>
+  <h1 id="lesson-title" tabindex="-1">${DUELS.length} UI-Details im direkten Vergleich</h1>
+  <p class="rule">Kleinigkeiten, die niemand bemerkt, wenn sie stimmen – und alle, wenn nicht. Jedes Paar ist live: links die schlechte, rechts die gute Variante. Probier beide aus, dann merkst du den Unterschied in der Hand statt im Kopf.</p>
+  <p style="margin-top:16px"><a class="btn btn-primary" href="#details-quiz">${ic('star')} Lieber raten? Zum Quiz</a></p>
+  <form class="sf-filters du-filter" id="du-filter" aria-label="Details filtern" data-anno="Filter (form)">${kSeg('du','Bereich',[['','Alle'],...D_GROUPS.map((g,i)=>[String(i),g])])}</form>
+  ${D_GROUPS.map((g,gi)=>`<section class="du-sec" data-grp="${gi}" aria-labelledby="du-g${gi}"><h2 id="du-g${gi}">${g}</h2>${DUELS.filter(d=>d.grp===gi).map((d,i)=>`<article class="du-item${d.wide?' du-wide':''}" id="du-${d.id}" data-id="${d.id}" aria-labelledby="du-${d.id}-h"${gi+i?'':' data-anno="Vergleich (zwei figures)"'}>
+    <h3 id="du-${d.id}-h" tabindex="-1">${d.title}</h3>
+    <p class="du-try"${gi+i?'':' data-anno="Hinweis (Aufgabe)"'}>${ic('keyboard')}<span><b>Probier:</b> ${d.try}</span></p>
+    <div class="du-pair">${duPane(d,false,null,`du-${d.id}-b`)}${duPane(d,true,null,`du-${d.id}-g`)}</div>
+    <p class="du-why">${d.why}</p>${d.note?`<p class="du-note" data-anno="Callout (Streitfall)">${d.note}</p>`:''}
+    <p class="du-more"${gi+i?'':' data-anno="Links"'}><a href="#${d.lesson}">Lektion: ${BY_ID[d.lesson].title}</a> · <a href="#details/${d.id}">Link zu diesem Paar</a></p>
+  </article>`).join('')}</section>`).join('')}
+  <nav class="pager" aria-label="Weiter" data-anno="Pager"><a class="prev" href="#start"><small>← Zurück zum</small>Start</a><a class="next" href="#details-quiz"><small>Weiter →</small>Quiz: Was ist besser?</a></nav>
+</article>`;
+}
+function duGalleryInit(root,sub,params){
+  DUELS.forEach(d=>{const el=$('#du-'+d.id,root);if(el)duInit(d,el)});
+  const secs=$$('.du-sec',root);
+  const apply=v=>secs.forEach(s=>{s.hidden=!!v&&s.dataset.grp!==v});
+  const v=params.get('bereich')||'';
+  ($(`input[name="k-du"][value="${CSS.escape(v)}"]`,root)||$('input[name="k-du"]',root)).checked=true;apply(v);
+  $('#du-filter',root).addEventListener('change',e=>{const g=e.target.value;apply(g);history.replaceState(null,'','#details'+(g?'?bereich='+g:''))});
+  const hit=D_BY[sub]&&$('#du-'+sub,root);
+  if(hit){hit.classList.add('du-hit');requestAnimationFrame(()=>hit.scrollIntoView({block:'start'}))}
+}
+
+function duQuizHTML(){
+  return `<article class="lesson" aria-labelledby="lesson-title">
+  <p class="eyebrow">Gut &amp; Schlecht</p>
+  <h1 id="lesson-title" tabindex="-1">Quiz: Was ist besser?</h1>
+  <p class="rule">Zehn zufällige Paare, ohne Etikett und in zufälliger Reihenfolge. Probier beide Varianten aus und entscheide dann. Nach jeder Antwort kommt die Begründung.</p>
+  <div id="du-quiz" class="du-quiz" data-anno="Quiz"></div>
+  <p class="sr-only" id="du-live" role="status"></p>
+</article>`;
+}
+function duQuizInit(root){
+  const box=$('#du-quiz',root),live=$('#du-live',root);
+  let round,i,score,missed;
+  const shuffle=a=>{a=[...a];for(let k=a.length-1;k>0;k--){const j=Math.floor(Math.random()*(k+1));[a[k],a[j]]=[a[j],a[k]]}return a};
+  function start(){round=shuffle(DUELS).slice(0,10).map(d=>({d,goodFirst:Math.random()<.5}));i=0;score=0;missed=[];ask(false)}
+  function ask(focus){
+    const {d,goodFirst}=round[i];
+    const panes=goodFirst?[true,false]:[false,true];
+    box.innerHTML=`<div class="du-qhead"><h2 id="du-q" tabindex="-1">Frage ${i+1} von ${round.length}: ${d.topic}</h2><span class="du-score">${score} richtig</span></div>
+    <div class="bar du-qbar" data-anno="Progress Bar" role="progressbar" aria-label="Fortschritt im Quiz" aria-valuemin="0" aria-valuemax="${round.length}" aria-valuenow="${i}" style="--p:${i/round.length*100}%"><span></span></div>
+    <p class="du-try">${ic('keyboard')}<span><b>Probier:</b> ${d.try}</span></p>
+    <div class="du-pair${d.wide?' du-wide':''}">${panes.map((g,k)=>duPane(d,g,`Variante ${'AB'[k]}`,`du-q${i}-${k}`)).join('')}</div>
+    <div class="btn-row du-answer" data-anno="Buttons (Antwort)"><button type="button" class="btn btn-secondary" data-pick="0">A ist besser</button><button type="button" class="btn btn-secondary" data-pick="1">B ist besser</button></div>
+    <div id="du-result"></div>`;
+    duInit(d,box);
+    if(focus)$('#du-q',box).focus();
+  }
+  function answer(k){
+    const {d,goodFirst}=round[i],right=(k===0)===goodFirst;
+    if(right)score++;else missed.push(d);
+    $$('[data-pick]',box).forEach(b=>b.disabled=true);
+    $$('.du-pane',box).forEach((p,n)=>{const g=(n===0)===goodFirst;p.classList.add(g?'du-good':'du-bad');$('.du-cap',p).innerHTML=`${ic(g?'ok':'xc')}Variante ${'AB'[n]} · ${g?'Gut':'Schlecht'}`});
+    const last=i===round.length-1;
+    $('#du-result',box).innerHTML=`<div class="du-result ${right?'du-right':'du-wrong'}" data-anno="Feedback-Box"><h3 id="du-r" tabindex="-1">${ic(right?'ok':'xc')}${right?'Richtig!':`Leider nein – Variante ${goodFirst?'A':'B'} ist besser.`}</h3><p><b>${d.title}.</b> ${d.why}</p><div class="btn-row"><button type="button" class="btn btn-primary" id="du-next">${last?'Auswertung':'Nächstes Paar'} ${ic('fwd')}</button><a href="#details/${d.id}">In der Galerie ansehen</a></div></div>`;
+    live.textContent=right?'Richtig.':'Leider falsch.';
+    $('#du-r',box).focus();
+  }
+  function finish(){
+    const best=Math.max(score,store.get('duell-best',0));store.set('duell-best',best);
+    box.innerHTML=`<div class="du-end-card" data-anno="Card (Auswertung)"><h2 id="du-q" tabindex="-1">${score} von ${round.length} richtig</h2><p>${score===round.length?'Alles richtig – dir entgeht kein Detail.':score>=7?'Stark. Die paar Ausreißer unten lohnen einen zweiten Blick.':'Die Paare unten lohnen einen zweiten Blick – in der Galerie siehst du beide Varianten mit Etikett.'} Dein Bestwert: ${best} von ${round.length}.</p>
+    ${missed.length?`<h3>Nochmal ansehen</h3><ul>${missed.map(d=>`<li><a href="#details/${d.id}">${d.title}</a></li>`).join('')}</ul>`:''}
+    <div class="btn-row"><button type="button" class="btn btn-primary" id="du-again">Neue Runde</button><a class="btn btn-secondary" href="#details">Zur Galerie</a></div></div>`;
+    $('#du-q',box).focus();
+  }
+  box.addEventListener('click',e=>{
+    const p=e.target.closest('[data-pick]');if(p){answer(+p.dataset.pick);return}
+    if(e.target.closest('#du-next')){i++;if(i<round.length)ask(true);else finish();return}
+    if(e.target.closest('#du-again'))start(),$('#du-q',box).focus();
+  });
+  start();
+}
+
+const DUELL_PAGES=[
+ {id:'details',title:'Detail-Galerie',icon:'star',short:`${DUELS.length} UI-Details als Paar: schlecht und gut, beide zum Ausprobieren.`,keys:'gut schlecht vergleich details mikro radio label cursor pointer hover klickfläche',render:duGalleryHTML,init:duGalleryInit,
+  docTitle:sub=>D_BY[sub]?`${D_BY[sub].title} · Gut & Schlecht`:'Gut & Schlecht: UI-Details',focus:(root,sub)=>D_BY[sub]&&$('#du-'+sub+'-h',root)},
+ {id:'details-quiz',title:'Quiz: Was ist besser?',icon:'check',short:'Zehn zufällige Paare ohne Etikett – erkennst du die gute Variante?',keys:'quiz raten spiel test gut schlecht',render:duQuizHTML,init:duQuizInit}
+];
+const VIEWS={...K_BY_ID,...Object.fromEntries(DUELL_PAGES.map(p=>[p.id,p]))};
+
 /* ---------- Learned progress ---------- */
 const learned=new Set(store.get('learned',[]).filter(id=>BY_ID[id]));
 function updateProgress(){
@@ -3381,8 +3794,10 @@ function renderList(){
   const match=l=>!q||norm(`${l.title} ${l.short} ${l.cat} ${l.keys}`).includes(q);
   let html='',count=0;
   if(!q)html+=`<ul class="items"><li>${itemHTML(START)}</li></ul>`;
-  const ks=KOMPASS.filter(k=>!q||norm(`${k.title} ${k.short} ${k.keys}`).includes(q));
-  if(ks.length){count+=ks.length;html+=`<p class="grp" id="grp-k">WCAG-Kompass</p><ul class="items" aria-labelledby="grp-k">${ks.map(k=>`<li>${itemHTML(k)}</li>`).join('')}</ul>`}
+  [['k','WCAG-Kompass',KOMPASS],['d','Gut &amp; Schlecht',DUELL_PAGES]].forEach(([key,label,pages])=>{
+    const ps=pages.filter(k=>!q||norm(`${k.title} ${k.short} ${k.keys}`).includes(q));if(!ps.length)return;count+=ps.length;
+    html+=`<p class="grp" id="grp-${key}">${label}</p><ul class="items" aria-labelledby="grp-${key}">${ps.map(k=>`<li>${itemHTML(k)}</li>`).join('')}</ul>`;
+  });
   CATS.forEach((cat,ci)=>{
     const ls=LESSONS.filter(l=>l.cat===cat&&match(l));if(!ls.length)return;count+=ls.length;
     html+=`<p class="grp" id="grp-${ci}">${cat}</p><ul class="items" aria-labelledby="grp-${ci}">${ls.map(l=>`<li>${itemHTML(l)}</li>`).join('')}</ul>`;
@@ -3391,7 +3806,7 @@ function renderList(){
   listEl.innerHTML=html;
   markActive(currentId);
   clearTimeout(statusTimer);
-  statusTimer=setTimeout(()=>{qStatus.textContent=q?(count===1?'1 Treffer':`${count} Treffer`):`${LESSONS.length} Lektionen in ${CATS.length} Kapiteln, dazu der WCAG-Kompass`},q?450:0);
+  statusTimer=setTimeout(()=>{qStatus.textContent=q?(count===1?'1 Treffer':`${count} Treffer`):`${LESSONS.length} Lektionen in ${CATS.length} Kapiteln, dazu Kompass und Detail-Galerie`},q?450:0);
 }
 function markActive(id){
   $$('.item',listEl).forEach(a=>{
@@ -3447,6 +3862,7 @@ function startHTML(){
     <div class="tile"><h3>${ic('keyboard')} Tastatur</h3><p><kbd>Tab</kbd> zum Weiterspringen, <kbd>/</kbd> für die Suche, <kbd>Esc</kbd> schließt Dialoge.</p></div>
     <div class="tile"><h3>${ic('ok')} Fortschritt</h3><p>Am Ende jeder Lektion kannst du sie als gelernt markieren. Das bleibt in diesem Browser gespeichert.</p></div>
     <div class="tile"><h3>${ic('compass')} WCAG-Kompass</h3><p>Was die Barrierefreiheits-Norm von dir als Frontend-Dev will – nach Bauteil sortiert, mit Angular-Hinweisen und Checkliste.</p><a class="btn btn-secondary" href="#wcag">Kompass öffnen</a></div>
+    <div class="tile"><h3>${ic('star')} Gut &amp; Schlecht</h3><p>${DUELS.length} UI-Details als Paar zum Ausprobieren – und ein Quiz, ob du die gute Variante erkennst.</p><a class="btn btn-secondary" href="#details">Galerie öffnen</a></div>
   </div>
   <h2>Aufbau jeder Lektion</h2>
   <ol class="anatomy"><li><b>Die Regel</b> in ein, zwei Sätzen</li><li><b>Die Zahlen</b> – Maße, Zeiten, Verhältnisse zum Merken</li><li><b>Live-Beispiel</b> zum Anfassen</li><li><b>Richtig</b> als Liste, <b>Falsch</b> mit einem Negativbeispiel pro Punkt – zum Anschauen und teils zum Ausprobieren</li><li><b>Warum?</b> – der Grund hinter der Regel</li><li><b>In dieser App</b> – wo du sie hier wiederfindest</li></ol>
@@ -3466,7 +3882,7 @@ function notFoundHTML(id){
 
 function updateTitle(){
   const b=BRANDS[document.documentElement.dataset.brand||'fjord'];
-  const k=K_BY_ID[currentId];
+  const k=VIEWS[currentId];
   if(k){document.title=`${k.docTitle?.(kSub)||k.title} · ${b.app}`;return}
   const l=BY_ID[currentId]||(currentId==='start'?START:null);
   document.title=l?`${l.title} · ${b.app}`:`Nicht gefunden · ${b.app}`;
@@ -3488,8 +3904,8 @@ function route(fromUser){
     const c=entry.init?.(view);if(typeof c==='function')cleanup=c;
     $$('.bad-show',view).forEach(el=>BAD[id]?.[+el.dataset.bad]?.init?.(el));
   }
-  else if(K_BY_ID[base]){
-    currentId=base;kSub=sub;entry=K_BY_ID[base];view.innerHTML=entry.render(sub);
+  else if(VIEWS[base]){
+    currentId=base;kSub=sub;entry=VIEWS[base];view.innerHTML=entry.render(sub);
     const c=entry.init?.(view,sub,new URLSearchParams(qs));if(typeof c==='function')cleanup=c;
     focusEl=entry.focus?.(view,sub)||null;
   }

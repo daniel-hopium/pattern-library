@@ -25,6 +25,9 @@ Systemschrift ein.
 | Layout & Marke | Typografie, Responsive & Reflow, White-Label & Design Tokens |
 | Qualität | Performance (Core Web Vitals), Internationalisierung, Dark Patterns |
 
+Jede Lektion hat denselben Aufbau: **Regel → Die Zahlen → Live-Beispiel → Richtig →
+Falsch (mit Negativbeispiel pro Punkt) → Warum → In dieser App**.
+
 ## WCAG-Kompass
 
 Ein eigener Bereich (`index.html#wcag`) übersetzt WCAG 2.2 in Frontend-Arbeit, Umfang
@@ -43,8 +46,14 @@ A + AA (55 Kriterien):
 
 Die WCAG-Chips in den Lektionen verlinken direkt auf das jeweilige Kriterium.
 
-Jede Lektion hat denselben Aufbau: **Regel → Die Zahlen → Live-Beispiel → Richtig →
-Falsch (mit Negativbeispiel pro Punkt) → Warum → In dieser App**.
+## Gut & Schlecht
+
+24 UI-Details als Paar – links die schlechte, rechts die gute Variante, beide live zum
+Ausprobieren (`index.html#details`). Vier Bereiche: Formulare, Buttons & Klicks,
+Feedback, Text & Layout. Jedes Paar hat eine eigene Adresse (`#details/radio-label`).
+
+Das Quiz (`#details-quiz`) zeigt zehn zufällige Paare ohne Etikett als Variante A und B;
+nach jeder Antwort folgt die Begründung, am Ende eine Liste zum Nachlesen.
 
 ## Bedienung
 

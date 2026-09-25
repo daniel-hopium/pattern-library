@@ -12,6 +12,9 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
 ## Unveröffentlicht
 
 ### Neu
+- Gut & Schlecht: 24 UI-Details als Paar zum Ausprobieren – vom klickbaren Radio-Text
+  über Doppelklick-Bestellungen bis zu springendem Inhalt –, dazu ein Quiz, das zehn
+  zufällige Paare ohne Etikett zeigt.
 - WCAG-Kompass: WCAG 2.2 auf Stufe A und AA, übersetzt für Frontend-Devs – Überblick
   mit Rechtslage, zehn Bauteile mit Angular-Hinweisen und Code „so nicht / so“, alle 55
   Kriterien filterbar, Test-Routine mit CI-Setup und eine Checkliste für den Pull Request.

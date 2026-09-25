@@ -12,6 +12,7 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
 ## Unveröffentlicht
 
 ### Neu
+- Ein Klick auf das Logo führt zur Startseite.
 - Gut & Schlecht wächst auf 50 Paare, mit dem neuen Bereich „Navigation & Inhalte“:
   unter anderem Passwort anzeigen, IBAN-Kästchen, `type="number"` bei der PLZ,
   Fokus im Löschdialog, Fortschritt statt Spinner, Hellgrau als Textfarbe,

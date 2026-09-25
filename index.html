@@ -1087,6 +1087,9 @@ dialog.sheet{margin:auto auto 0;width:min(560px,100%);max-width:100%;border-radi
 .lesson .du-end-card h2{margin:0 0 8px}
 .du-end-card ul{margin:0 0 16px;padding-left:1.2em;display:grid;gap:4px}
 @media (prefers-reduced-motion: reduce){.du-spin{animation-duration:2.4s}}
+a.logo{color:inherit;text-decoration:none;border-radius:var(--radius-sm);padding:2px 8px 2px 2px;margin-left:-2px}
+a.logo:hover{background:var(--surface-2)}
+.logo-name{display:block}
 </style>
 </head>
 <body>
@@ -1094,10 +1097,10 @@ dialog.sheet{margin:auto auto 0;width:min(560px,100%);max-width:100%;border-radi
 <div class="app">
   <a class="skip" href="#hauptinhalt" id="skip">Zum Inhalt springen</a>
   <header class="appbar" data-anno="App Bar (header)">
-    <div class="logo" data-anno="Logo-Slot (White-Label)">
+    <a class="logo" href="#start" data-anno="Logo-Slot (Link zum Start)">
       <span class="logo-mark" id="logo-mark" aria-hidden="true">F</span>
-      <p class="logo-name"><span id="app-name">Fjord Kompass</span><span class="logo-sub">UI-Regeln zum Anfassen</span></p>
-    </div>
+      <span class="logo-name"><span id="app-name">Fjord Kompass</span><span class="logo-sub">UI-Regeln zum Anfassen</span></span><span class="sr-only">, Startseite</span>
+    </a>
     <div class="hdr-ctl" data-anno="Select">
       <label for="brand-select">Marke</label>
       <select id="brand-select">

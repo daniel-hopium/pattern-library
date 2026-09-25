@@ -50,3 +50,6 @@ Alles steckt bewusst in einer Datei:
   Falsch-Liste. Reine Anschauungsbeispiele sind `inert`, damit absichtlich kaputte
   Beispiele die Barrierefreiheit der App selbst nicht beschädigen.
 - **Router**: Hash-Routing, Fokus nach jedem Wechsel auf die neue `h1`.
+
+Die Icons (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`) erzeugt
+`python tools/make_icons.py` aus einer gemeinsamen Geometrie (braucht Pillow).

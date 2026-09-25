@@ -12,6 +12,8 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
 ## Unveröffentlicht
 
 ### Neu
+- Eigenes Favicon: ein Daumenabdruck im Linienstil und in den Farben der mind app, als
+  SVG für moderne Browser, ICO als Rückfall und PNG für den iOS-Homescreen.
 - Selbsterklärende UI-Pattern-Library als einzelne Web-App: 29 Lektionen in 8 Kapiteln,
   jeweils mit Regel, Kennzahlen, Live-Beispiel, Richtig-Liste, Negativbeispielen und
   dem Hinweis, wo die Regel in der App selbst steckt.

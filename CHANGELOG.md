@@ -12,6 +12,8 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
 ## Unveröffentlicht
 
 ### Neu
+- Neue Startseiten-Kachel für den ARIA-Kompass, die Schwester-App zu WAI-ARIA. Die Buttons
+  zu CSS-Atlas und ARIA-Kompass tragen ein Symbol für externe Links.
 - Zweisprachig: Die ganze App gibt es auf Deutsch und Englisch – Lektionen, Live-Beispiele,
   Negativbeispiele, WCAG-Kompass, alle 50 Paare von Gut & Schlecht und das Quiz. Ein Link oben
   rechts wechselt die Sprache; sie steht als `?lang=en` in der Adresse und wird gemerkt.

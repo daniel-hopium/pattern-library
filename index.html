@@ -1226,6 +1226,7 @@ const P={
   play:'<rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M10.5 9.5v5l4-2.5z"/>',
   code:'<path d="M8.5 7L3.5 12l5 5M15.5 7l5 5-5 5"/>',
   compass:'<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',
+  ext:'<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/>',
   wifioff:'<path d="M3 3l18 18M8.5 16.3a5 5 0 016.2-.6M5 12.6a10 10 0 014.6-2.6M19 12.6a10 10 0 00-2.4-1.8M2 8.8a15 15 0 014-2.5M22 8.8A15 15 0 0011.5 5M12 20h.01"/>'
 };
 const ic=(n,cls='')=>`<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="ic ${cls}">${P[n]}</svg>`;
@@ -4226,6 +4227,7 @@ const VIEWS={...K_BY_ID,...Object.fromEntries(DUELL_PAGES.map(p=>[p.id,p]))};
 
 /* Links zur Schwester-App tragen die Sprache mit */
 const ATLAS=`https://daniel-hopium.github.io/css-atlas/?lang=${LANG}`;
+const ARIA=`https://daniel-hopium.github.io/aria-compass/?lang=${LANG}`;
 
 /* ---------- Learned progress ---------- */
 const learned=new Set(store.get('learned',[]).filter(id=>BY_ID[id]));
@@ -4313,7 +4315,8 @@ function startHTML(){
     <div class="tile"><h3>${ic('ok')} ${tx('Fortschritt','Progress')}</h3><p>${tx('Am Ende jeder Lektion kannst du sie als gelernt markieren. Das bleibt in diesem Browser gespeichert.','At the end of each lesson you can mark it as learned. That stays stored in this browser.')}</p></div>
     <div class="tile"><h3>${ic('compass')} ${tx('WCAG-Kompass','WCAG Compass')}</h3><p>${tx('Was die Barrierefreiheits-Norm von dir als Frontend-Dev will – nach Bauteil sortiert, mit Angular-Hinweisen und Checkliste.','What the accessibility standard expects from you as a frontend dev – sorted by component, with Angular hints and a checklist.')}</p><a class="btn btn-secondary" href="#wcag">${tx('Kompass öffnen','Open Compass')}</a></div>
     <div class="tile"><h3>${ic('star')} ${tx('Gut &amp; Schlecht','Good &amp; Bad')}</h3><p>${tx(`${DUELS.length} UI-Details als Paar zum Ausprobieren – und ein Quiz, ob du die gute Variante erkennst.`,`${DUELS.length} UI details as pairs to try out – and a quiz to see if you can spot the good one.`)}</p><a class="btn btn-secondary" href="#details">${tx('Galerie öffnen','Open gallery')}</a></div>
-    <div class="tile"><h3>${ic('palette')} CSS-Atlas</h3><p>${tx('Die CSS-Referenz mit Live-Vorschau ist eine eigene App: 53 Eigenschaften und Selektoren, Wert anklicken, Wirkung sehen.','The CSS reference with live previews is a separate app: 53 properties and selectors – click a value, see the effect.')}</p><a class="btn btn-secondary" href="${ATLAS}">${tx('Atlas öffnen','Open Atlas')}<span class="sr-only"> ${tx('(andere App)','(other app)')}</span></a></div>
+    <div class="tile"><h3>${ic('palette')} CSS-Atlas</h3><p>${tx('Die CSS-Referenz mit Live-Vorschau ist eine eigene App: 53 Eigenschaften und Selektoren, Wert anklicken, Wirkung sehen.','The CSS reference with live previews is a separate app: 53 properties and selectors – click a value, see the effect.')}</p><a class="btn btn-secondary" href="${ATLAS}">${tx('Atlas öffnen','Open Atlas')}<span class="sr-only"> ${tx('(andere App)','(other app)')}</span>${ic('ext')}</a></div>
+    <div class="tile"><h3>${ic('code')} ${tx('ARIA-Kompass','ARIA Compass')}</h3><p>${tx('WAI-ARIA zum Anfassen, ebenfalls als eigene App: Rollen, Namen und Zustände mit Live-Beispielen und einem Inspektor, der zeigt, was der Screenreader hört.','WAI-ARIA hands-on, also a separate app: roles, names and states with live examples and an inspector that shows what the screen reader hears.')}</p><a class="btn btn-secondary" href="${ARIA}">${tx('ARIA-Kompass öffnen','Open ARIA Compass')}<span class="sr-only"> ${tx('(andere App)','(other app)')}</span>${ic('ext')}</a></div>
   </div>
   <h2>${tx('Aufbau jeder Lektion','How each lesson is built')}</h2>
   <ol class="anatomy">${tx('<li><b>Die Regel</b> in ein, zwei Sätzen</li><li><b>Die Zahlen</b> – Maße, Zeiten, Verhältnisse zum Merken</li><li><b>Live-Beispiel</b> zum Anfassen</li><li><b>Richtig</b> als Liste, <b>Falsch</b> mit einem Negativbeispiel pro Punkt – zum Anschauen und teils zum Ausprobieren</li><li><b>Warum?</b> – der Grund hinter der Regel</li><li><b>In dieser App</b> – wo du sie hier wiederfindest</li>','<li><b>The rule</b> in one or two sentences</li><li><b>The numbers</b> – sizes, timings and ratios worth remembering</li><li><b>Live example</b> to play with</li><li><b>Do</b> as a list, <b>Don’t</b> with a negative example per item – to look at and partly to try</li><li><b>Why?</b> – the reason behind the rule</li><li><b>In this app</b> – where you find it here</li>')}</ol>

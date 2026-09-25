@@ -59,11 +59,16 @@ nicht erkannt hast. Nach jeder Antwort folgt die Begründung; die Auswertung zei
 Ergebnis pro Bereich und bietet „Fehler üben“ an. Der Lernstand pro Paar liegt im
 `localStorage` und lässt sich zurücksetzen.
 
-## CSS-Atlas
+## Schwester-Apps
 
-Die CSS-Referenz mit Live-Vorschau ist eine eigene App:
-[css-atlas](https://daniel-hopium.github.io/css-atlas/). Alte Adressen wie
-`#css-flex/gap` leiten dorthin weiter.
+- **CSS-Atlas:** Die CSS-Referenz mit Live-Vorschau ist eine eigene App:
+  [css-atlas](https://daniel-hopium.github.io/css-atlas/). Alte Adressen wie
+  `#css-flex/gap` leiten dorthin weiter.
+- **ARIA-Kompass:** WAI-ARIA mit Live-Beispielen und Accessibility-Inspektor:
+  [aria-compass](https://daniel-hopium.github.io/aria-compass/).
+
+Beide sind auf der Startseite als Kachel verlinkt; das Pfeil-Symbol am Button zeigt, dass
+der Link die App verlässt.
 
 ## Bedienung
 

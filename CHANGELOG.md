@@ -12,6 +12,9 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
 ## Unveröffentlicht
 
 ### Neu
+- CSS-Atlas: 53 CSS-Eigenschaften und Selektoren mit Live-Vorschau, CSS-Code und
+  Tailwind-Klasse – Wert anklicken, Wirkung sehen. Mit Stolperfallen, Messwerten (etwa
+  Breite bei box-sizing) und einer durchsuchbaren Übersicht.
 - Gut & Schlecht: 24 UI-Details als Paar zum Ausprobieren – vom klickbaren Radio-Text
   über Doppelklick-Bestellungen bis zu springendem Inhalt –, dazu ein Quiz, das zehn
   zufällige Paare ohne Etikett zeigt.

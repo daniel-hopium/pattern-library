@@ -55,6 +55,15 @@ Feedback, Text & Layout. Jedes Paar hat eine eigene Adresse (`#details/radio-lab
 Das Quiz (`#details-quiz`) zeigt zehn zufällige Paare ohne Etikett als Variante A und B;
 nach jeder Antwort folgt die Begründung, am Ende eine Liste zum Nachlesen.
 
+## CSS-Atlas
+
+53 CSS-Eigenschaften und Selektoren im Stil der Tailwind-Doku (`index.html#css`): Wert
+anklicken, Wirkung in der Live-Vorschau sehen, darunter das CSS mit hervorgehobener Zeile
+und die passende Tailwind-Klasse. Neun Kapitel von Layout über Flexbox und Grid bis zu
+Selektoren und Spezifität; jeder Eintrag hat eine Stolperfalle, einen MDN-Link und eine
+eigene Adresse (`#css-flex/justify-content`). Der Überblick hat eine durchsuchbare Tabelle
+aller Einträge.
+
 ## Bedienung
 
 - **Bauteile zeigen** (oben rechts) beschriftet jedes Element mit seinem Fachbegriff.

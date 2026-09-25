@@ -50,5 +50,9 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
   Schwester-Apps“ unter den Kapiteln – an derselben Stelle wie in den beiden anderen Apps.
 
 ### Behoben
+- Fachliche Durchsicht aller Lektionen, des WCAG-Kompass und der 50 Paare: rund 40 Aussagen
+  korrigiert – etwa dass Links nur auf Enter reagieren, dass `aria-invalid` eine Fehlermeldung
+  nicht verknüpft, Details zu Angular Material, die Stufen „Tool hilft“ bei 1.4.1, 1.4.4 und
+  3.1.2, die Spacing-Demo auf der eigenen Skala und veraltete Leseforschung bei Großbuchstaben.
 - „Bauteile zeigen“ beschriftet jetzt auch die Seiten des WCAG-Kompass; die Etiketten
   verdecken keine Chips und Links mehr.

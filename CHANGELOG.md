@@ -12,6 +12,9 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
 ## Unveröffentlicht
 
 ### Neu
+- Zweisprachig: Die ganze App gibt es auf Deutsch und Englisch – Lektionen, Live-Beispiele,
+  Negativbeispiele, WCAG-Kompass, alle 50 Paare von Gut & Schlecht und das Quiz. Ein Link oben
+  rechts wechselt die Sprache; sie steht als `?lang=en` in der Adresse und wird gemerkt.
 - Ein Klick auf das Logo führt zur Startseite.
 - Gut & Schlecht wächst auf 50 Paare, mit dem neuen Bereich „Navigation & Inhalte“:
   unter anderem Passwort anzeigen, IBAN-Kästchen, `type="number"` bei der PLZ,

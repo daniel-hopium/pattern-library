@@ -2,7 +2,7 @@
 
 Eine selbsterklärende Web-App, die UI-Best-Practices nicht beschreibt, sondern vorführt.
 Statt Blindtext steht in jeder Ansicht, *warum* etwas so gebaut ist – und die App hält sich
-selbst an jede Regel, die sie erklärt.
+selbst an jede Regel, die sie erklärt. Auf Deutsch und Englisch.
 
 ## Starten
 
@@ -67,12 +67,16 @@ Die CSS-Referenz mit Live-Vorschau ist eine eigene App:
 
 ## Bedienung
 
+- **Sprache:** Der Link oben rechts („English“ / „Deutsch“) wechselt die Sprache. Sie steht
+  als `?lang=en` in der Adresse (teilbar), wird im `localStorage` gemerkt und folgt sonst der
+  Browsersprache.
 - **Bauteile zeigen** (oben rechts) beschriftet jedes Element mit seinem Fachbegriff.
 - **Marke** wechselt zwischen drei fiktiven Marken (Fjord, Glut, Moos) – gleicher Code,
   andere Design Tokens. Das ist der White-Label-Teil.
 - Tastatur: `Tab` / `Shift+Tab`, `/` springt in die Suche, `Esc` schließt Dialoge,
   `Strg+Z` macht ein Löschen rückgängig, solange der Toast sichtbar ist.
 - Jede Lektion hat eine eigene Adresse (`index.html#toast`), der Zurück-Button funktioniert.
+- Das Logo führt zur Startseite.
 - Der Lernfortschritt liegt im `localStorage` dieses Browsers.
 
 ## Aufbau
@@ -87,6 +91,13 @@ Alles steckt bewusst in einer Datei:
   Falsch-Liste. Reine Anschauungsbeispiele sind `inert`, damit absichtlich kaputte
   Beispiele die Barrierefreiheit der App selbst nicht beschädigen.
 - **Router**: Hash-Routing, Fokus nach jedem Wechsel auf die neue `h1`.
+- **Zweisprachig:** `tx('Deutsch','English')` steht direkt neben jedem Text und liefert die
+  Sprache des Seitenaufrufs. Der Umschalter lädt die Seite neu – so darf `tx()` auch in
+  Daten stehen, die beim Start einmal ausgewertet werden. `LOCALE` (`de-AT` / `en-US`) steuert
+  `Intl` für Zahlen und Daten. Wer einen deutschen Text ändert, sieht die englische Fassung
+  daneben und passt sie mit an.
+  Das Kapitel einer Lektion (`cat`) bleibt als interner Schlüssel deutsch, übersetzt wird
+  nur die Anzeige (`catName()`).
 
 Die Icons (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`) erzeugt
 `python tools/make_icons.py` aus einer gemeinsamen Geometrie (braucht Pillow).

@@ -46,6 +46,7 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
 - Lernfortschritt pro Lektion, Suche über alle Lektionen, eigene Adresse je Lektion.
 
 ### Verbessert
+- Die Kachel zum CSS-Atlas nennt dessen neuen Umfang: über 100 Einträge.
 - Die Kacheln zu CSS-Atlas und ARIA-Kompass stehen jetzt in einem eigenen Abschnitt „Die
   Schwester-Apps“ unter den Kapiteln – an derselben Stelle wie in den beiden anderen Apps.
 

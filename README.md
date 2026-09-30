@@ -65,9 +65,13 @@ Ergebnis pro Bereich und bietet „Fehler üben“ an. Der Lernstand pro Paar li
   [css-atlas](https://daniel-hopium.github.io/css-atlas/). Alte Adressen wie
   `#css-flex/gap` leiten dorthin weiter.
 - **ARIA-Kompass:** WAI-ARIA mit Live-Beispielen und Accessibility-Inspektor:
-  [aria-compass](https://daniel-hopium.github.io/aria-compass/).
+  [aria-compass](https://daniel-hopium.github.io/aria-compass/), mit Screenreader-Trainer.
+- **HTML-Atlas:** HTML-Elemente und Attribute mit Live-Vorschau und Accessibility-Zeile:
+  [html-atlas](https://daniel-hopium.github.io/html-atlas/).
+- **Angular-Patterns:** modernes Angular mit Live-Simulationen:
+  [angular-patterns](https://daniel-hopium.github.io/angular-patterns/).
 
-Beide sind auf der Startseite als Kachel verlinkt; das Pfeil-Symbol am Button zeigt, dass
+Alle sind auf der Startseite als Kachel verlinkt; das Pfeil-Symbol am Button zeigt, dass
 der Link die App verlässt.
 
 ## Bedienung
